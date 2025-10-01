@@ -1,0 +1,1 @@
+Place art assets here. (Sprites, textures, temporary placeholders)

@@ -1,0 +1,1 @@
+Place C# scripts here. Example: DialogueManager.cs, TradingSystem.cs

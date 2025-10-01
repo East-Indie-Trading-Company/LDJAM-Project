@@ -1,0 +1,1 @@
+Place UI prefabs and canvases here. Example: DialogueCanvas.prefab
