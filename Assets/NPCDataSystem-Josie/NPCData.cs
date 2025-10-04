@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "NPCData", menuName = "Scriptable Object/NPCData")]
@@ -16,7 +17,7 @@ public class NPCData : ScriptableObject
     [SerializeField] DialogueConversation[] npcRumorDialogueLines; 
     
     //
-    [SerializeField] List<string> npcGreetingDialogueLines;
+    [SerializeField] string[] npcGreetingDialogueLines;
     
     
     // insert Reputation Impact, whatever that is here
@@ -28,7 +29,7 @@ public class NPCData : ScriptableObject
         Array.ForEach(npcDialogueLines, line => {
                     if (!line.hasPlayed)
                     {
-                        if (line.hasFlag)
+                        if (FlagManager.Instance.GetFlag(line.flag))
                         {
                             //Check Priority of Dialogue Lines
                             // Trigger Dialogue System to start conversation with this NPC
@@ -46,7 +47,7 @@ public class NPCData : ScriptableObject
        Array.ForEach(npcRumorDialogueLines, line => {
                     if (!line.hasPlayed)
                     {
-                        if (line.hasFlag)
+                        if (FlagManager.Instance.GetFlag(line.flag))
                         {
                             //Check Priority of Dialogue Lines
                             // Trigger Dialogue System to start conversation with this NPC
@@ -63,8 +64,8 @@ public class NPCData : ScriptableObject
     void Greeting()
     { 
         Array.ForEach(npcGreetingDialogueLines, greet => {
-                    // Trigger Dialogue System to start conversation with this NPC
-                
+            // Trigger Dialogue System to start conversation with this NPC
+            return;
                     //check flag or something
 
             }
