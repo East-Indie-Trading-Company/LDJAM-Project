@@ -2,15 +2,11 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "NPCData", menuName = "Scriptable Objects/NPCData")]
 
-public enum GreetingFlag
-{
-    None,
-    Friendly,
-    Neutral,
-    Hostile
-}
+
 public class NPCData : ScriptableObject
 {
+    
+    [SerializeField] public GameObject objPrefab; 
     [SerializeField] string npcName;
     [SerializeField] Texture2D npcPotraitID;
     
@@ -18,10 +14,9 @@ public class NPCData : ScriptableObject
     [SerializeField] DialogueConversation[] npcDialogueLines; 
     [SerializeField] DialogueConversation[] npcRumorDialogueLines; 
     
+    //
+    [SerializeField] List<string> npcGreetingDialogueLines;
     
-    [SerializeField] Dictionary<GreetingFlag, string> npcGreetingDialogueLines;
-    
-    privat
     
     // insert Reputation Impact, whatever that is here
     [SerializeField] private int npcReputationImpact;
@@ -66,22 +61,8 @@ public class NPCData : ScriptableObject
     { 
         Array.ForEach(npcGreetingDialogueLines, greet => {
                     // Trigger Dialogue System to start conversation with this NPC
-
-                    switch (greet.Key)
-                    {
-                        case GreetingFlag.Friendly:
-                            // Friendly Greeting Logic
-                            break;
-                        case GreetingFlag.Neutral:
-                            // Neutral Greeting Logic
-                            break;
-                        case GreetingFlag.Hostile:
-                            // Hostile Greeting Logic
-                            break;
-                        default:
-                            // Default Greeting Logic
-                            break;
-                    }
+                
+                    //check flag or something
 
             }
             );
