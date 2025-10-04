@@ -15,13 +15,20 @@ public class DialogueManager : MonoBehaviour
 
     [Header("UI References")]
     [SerializeField] TextMeshProUGUI npcNameText;
+    [SerializeField] TextMeshProUGUI townNameText;
     [SerializeField] TextMeshProUGUI npcText;
+    [SerializeField] TextMeshProUGUI choiceText;
+    [SerializeField] Button buttonA;
+    [SerializeField] Button buttonB;
+    [SerializeField] GameObject choicePanel;
     [SerializeField] GameObject dialogueCanvas;
 
     int currentLineIndex;
     DialogueConversation currentConversation;
+    DialogueLine currentLine;
     string currentTextToDisplay;
     bool isTyping = false;
+    bool waitingForChoice = false;
 
     void Awake()
     {
@@ -33,10 +40,17 @@ public class DialogueManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+    void Start()
+    {
+        buttonA.onClick.AddListener(ChoiceA);
+        buttonB.onClick.AddListener(ChoiceB);
+    }
+
     
     public void StartDialogue(DialogueConversation conversation)
     {
-        // TODO:: Make UI visible
+        dialogueCanvas.SetActive(true);
+        choicePanel.SetActive(false);
         if (conversation.lines[0] != null)
         {
             currentConversation = conversation;
@@ -60,9 +74,20 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-        currentTextToDisplay = currentConversation.lines[currentLineIndex].dialogueText;
+        currentLine = currentConversation.lines[currentLineIndex];
+        currentTextToDisplay = currentLine.dialogueText;
         StartCoroutine(StartTyping(currentTextToDisplay));
-        // TODO:: if choice is not null, show choices
+
+        // If choice is not null, show choices
+        if (currentLine.choice != null)
+        {
+            waitingForChoice = true;
+            // Show choices
+            choicePanel.SetActive(true);
+            choiceText.text = currentLine.choice.displayLine;
+            buttonA.GetComponentInChildren<TextMeshProUGUI>().text = currentLine.choice.optionA.buttonText;
+            buttonB.GetComponentInChildren<TextMeshProUGUI>().text = currentLine.choice.optionB.buttonText;
+        }
 
     }
     IEnumerator StartTyping(string currentText)
@@ -78,7 +103,7 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
 
         yield return new WaitForSeconds(autoContinueSpeed);
-        if (allowAutoContinue)
+        if (allowAutoContinue && !waitingForChoice)
         {
             NextLine();
         }
@@ -87,7 +112,7 @@ public class DialogueManager : MonoBehaviour
     // Skips typing or advances to the next line, should be triggered on player click
     public void AdvanceDialogue()
     {
-        if (currentConversation == null) return;
+        if (currentConversation == null || waitingForChoice) return;
 
         if (isTyping)
         {
@@ -109,6 +134,7 @@ public class DialogueManager : MonoBehaviour
         npcText.text = currentTextToDisplay; // Display full line of text immediately
         isTyping = false;
     }
+
     // Procede to the next line
     void NextLine()
     {
@@ -116,14 +142,24 @@ public class DialogueManager : MonoBehaviour
         ShowDialogue();
     }
 
-    void Choice()
+    void ChoiceA()
     {
-
+        waitingForChoice = false;
+        choicePanel.SetActive(false);
+        // TODO:: Update inventory/rep/flags
+        StartTyping(currentLine.choice.optionA.responseText);
+    }
+    void ChoiceB()
+    {
+        waitingForChoice = false;
+        choicePanel.SetActive(false);
+        // TODO:: Update inventory/rep/flags
+        StartTyping(currentLine.choice.optionB.responseText);
     }
 
     void EndDialogue()
     {
-        // TODO:: Close ui
+        dialogueCanvas.SetActive(false);
         currentConversation = null;
     }
     

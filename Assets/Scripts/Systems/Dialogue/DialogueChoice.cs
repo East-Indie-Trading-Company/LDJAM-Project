@@ -3,12 +3,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "Scriptable Object/Dialogue Choice")]
 public class DialogueChoice : ScriptableObject
 {
-    [SerializeField]
-    DialogueOption optionA; // The text displayed on the choice button
-    [SerializeField]
-    DialogueOption optionB; // The text displayed on the choice button
-    [SerializeField]
-    string DisplayLine; // Branching NPC dialogue based on player choice
+    public DialogueOption optionA;
+    public DialogueOption optionB;
+    
+    public string displayLine; // Dialogue informing player about choice
 
 
 }
@@ -16,10 +14,10 @@ public class DialogueChoice : ScriptableObject
 [System.Serializable]
 public class DialogueOption
 {
-    string buttonText;
-    string responseText;
+    public string buttonText;
+    public string responseText;
 
-    string flagToRaise;
+    public string flagToRaise;
 
     // TODO:: Inventory effect
 
