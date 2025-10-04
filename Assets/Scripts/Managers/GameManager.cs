@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
+        this.instance.EconomyManager = GetComponent<EconomyManager>();
         DontDestroyOnLoad(gameObject);
     }
 
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     {
         CurrentDay++;
         FlagManager.Instance?.TriggerDayAdvanced(CurrentDay);
+        EconomyManager.Instance?.AdvanceDay();
         Debug.Log($"Day advanced to {CurrentDay}");
     }
 
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
+            EconomyManager.Instance?.AdvanceDay();
             AdvanceDay();
         }
     }

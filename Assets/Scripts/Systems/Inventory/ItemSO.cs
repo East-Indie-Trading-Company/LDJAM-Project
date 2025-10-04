@@ -10,7 +10,8 @@ namespace Trading
         /// The name, description, and icon of the item. Visible features to be shown in UI.
         /// </summary>
         [Header("Display")]
-        public string itemName;
+        public string itemName; // Name of the item with Town
+        public string displayName; // Name of the item without Town
         [TextArea] public string description;
         public Sprite icon;
 
