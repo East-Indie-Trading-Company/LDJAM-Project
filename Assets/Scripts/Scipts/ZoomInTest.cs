@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.InputSystem; // se estiveres a usar o New Input System
 
-public class CameraZoomOnClick : MonoBehaviour
+public class ZoomInTest : MonoBehaviour
 {
     [Header("Camera Settings")]
     public Camera mainCamera;
