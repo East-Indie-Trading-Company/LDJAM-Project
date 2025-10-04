@@ -1,4 +1,5 @@
 using UnityEngine;
+using Trading;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,13 +22,15 @@ public class GameManager : MonoBehaviour
     {
         CurrentDay++;
         FlagManager.Instance?.TriggerDayAdvanced(CurrentDay);
-        
+        EconomyManager.Instance?.AdvanceDay();
+        Debug.Log($"Day advanced to {CurrentDay}");
     }
 
     public void AdvanceDays(int amount)
     {
         for (int i = 0; i < amount; i++)
         {
+            EconomyManager.Instance?.AdvanceDay();
             AdvanceDay();
         }
     }
