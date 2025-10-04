@@ -9,11 +9,11 @@ public abstract class DayAdvanceListener : MonoBehaviour
             FlagManager.Instance.OnDayAdvancedEvent += HandleDayAdvanced;
         }
     }
-    protected virtual void OnEnable()
-    {
-        if (FlagManager.Instance != null)
-            FlagManager.Instance.OnDayAdvancedEvent += HandleDayAdvanced;
-    }
+    // protected virtual void OnEnable()
+    // {
+    //     if (FlagManager.Instance != null)
+    //         FlagManager.Instance.OnDayAdvancedEvent += HandleDayAdvanced;
+    // }
 
     protected virtual void OnDisable()
     {
