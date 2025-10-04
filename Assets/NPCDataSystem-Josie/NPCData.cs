@@ -1,6 +1,7 @@
 using UnityEngine;
+using System.Collections.Generic;
 
-[CreateAssetMenu(fileName = "NPCData", menuName = "Scriptable Objects/NPCData")]
+[CreateAssetMenu(fileName = "NPCData", menuName = "Scriptable Object/NPCData")]
 
 
 public class NPCData : ScriptableObject
@@ -31,6 +32,7 @@ public class NPCData : ScriptableObject
                         {
                             //Check Priority of Dialogue Lines
                             // Trigger Dialogue System to start conversation with this NPC
+                            DialogueManager.Instance.StartDialogue(line);
                             line.hasPlayed = true; // Set hasPlayed to true after triggering
                         }
                         return;
@@ -48,6 +50,7 @@ public class NPCData : ScriptableObject
                         {
                             //Check Priority of Dialogue Lines
                             // Trigger Dialogue System to start conversation with this NPC
+                            DialogueManager.Instance.StartDialogue(line);
                             line.hasPlayed = true; // Set hasPlayed to true after triggering
 
                         }
