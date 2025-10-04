@@ -29,14 +29,24 @@ public class NPCData : ScriptableObject
         Array.ForEach(npcDialogueLines, line => {
                     if (!line.hasPlayed)
                     {
-                        if (FlagManager.Instance.GetFlag(line.flag))
+                        bool flagsTrue = true;
+                        foreach (string flag in line.flags)
+                        {
+                            // If any flag is not true, set false
+                            if (!FlagManager.Instance.GetFlag(flag))
+                            {
+                                flagsTrue = false;
+                            }
+                        }
+                        if (flagsTrue)
                         {
                             //Check Priority of Dialogue Lines
                             // Trigger Dialogue System to start conversation with this NPC
                             DialogueManager.Instance.StartDialogue(line);
-                            line.hasPlayed = true; // Set hasPlayed to true after triggering
-                        }
-                        return;
+                            // line.hasPlayed = true; // Set hasPlayed to true after triggering /////////////// You won't need this line. Dialogue manager will handle it
+                            return;
+                        }        
+
                     }
                 }
             );
@@ -47,15 +57,23 @@ public class NPCData : ScriptableObject
        Array.ForEach(npcRumorDialogueLines, line => {
                     if (!line.hasPlayed)
                     {
-                        if (FlagManager.Instance.GetFlag(line.flag))
+                        bool flagsTrue = true;
+                        foreach (string flag in line.flags)
+                        {
+                            // If any flag is not true, set false
+                            if (!FlagManager.Instance.GetFlag(flag))
+                            {
+                                flagsTrue = false;
+                            }
+                        }
+                        if (flagsTrue)
                         {
                             //Check Priority of Dialogue Lines
                             // Trigger Dialogue System to start conversation with this NPC
                             DialogueManager.Instance.StartDialogue(line);
-                            line.hasPlayed = true; // Set hasPlayed to true after triggering
-
-                        }
-                        return;
+                            // line.hasPlayed = true; // Set hasPlayed to true after triggering /////////////// You won't need this line. Dialogue manager will handle it
+                            return;
+                        }    
                     }
                 }
             );
