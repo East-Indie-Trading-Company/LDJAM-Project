@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[System.Serializable]
-public class DialogueChoice
+[CreateAssetMenu(fileName = "New Dialogue", menuName = "Scriptable Object/Dialogue Choice")]
+public class DialogueChoice : ScriptableObject
 {
     [SerializeField]
     string choiceText; // The text displayed on the choice button

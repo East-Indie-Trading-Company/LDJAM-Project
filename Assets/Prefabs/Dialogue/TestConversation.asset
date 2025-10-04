@@ -12,19 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1bb3f9a2130d840ba2b8ba51e9463d, type: 3}
   m_Name: TestConversation
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
-  npcName: TestNPC
-  lines:
-  - dialogueText: Hello world!
-    choiceOne:
-      choiceText: 
-      responseLine: 
-    choiceTwo:
-      choiceText: 
-      responseLine: 
-  - dialogueText: Bye bye!
-    choiceOne:
-      choiceText: 
-      responseLine: 
-    choiceTwo:
-      choiceText: 
-      responseLine: 
+  npcName: 
+  lines: []
