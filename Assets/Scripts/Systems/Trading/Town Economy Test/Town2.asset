@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Trading.TownStock
   townName: Town
   notes: I'm town 2!
-  market: []
+  market:
+  - item: {fileID: 11400000, guid: f7bd0f0cd9aef224c9d14b2e2d4ca542, type: 2}
+    stock: 4
+    basePriceOverride: 0
+    itemEconomy: {fileID: 0}

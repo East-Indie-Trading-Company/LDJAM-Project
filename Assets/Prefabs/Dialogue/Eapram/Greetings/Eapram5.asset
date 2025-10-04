@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Eapram5
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
   npcName: 
-  lines: []
+  lines:
+  - dialogueText: "What fleeting vanity brings you to this somber place?\t\t\t\t\t\t"
+    choiceOne: {fileID: 0}
+    choiceTwo: {fileID: 0}
   hasPlayed: 0
   flag: 
