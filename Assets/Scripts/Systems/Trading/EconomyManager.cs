@@ -49,10 +49,10 @@ namespace Trading
                 foreach (var entry in town.market)
                 {
                     if (entry.item == null) continue;
-                    var cfg = entry.itemEconomy;
-                    if (cfg == null) continue;
+                    var townItemConfig = entry.itemEconomy;
+                    if (townItemConfig == null) continue;
 
-                    var delta = Random.Range(cfg.dailyDeltaRange.x, cfg.dailyDeltaRange.y + 1);
+                    int delta = townItemConfig.GetDailyStockDelta();
                     entry.stock = Mathf.Max(0, entry.stock + delta);
                 }
             }
