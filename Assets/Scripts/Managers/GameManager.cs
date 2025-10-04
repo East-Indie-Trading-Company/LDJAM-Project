@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
-        this.instance.EconomyManager = GetComponent<EconomyManager>();
         DontDestroyOnLoad(gameObject);
     }
 
