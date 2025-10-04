@@ -4,7 +4,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public int CurrentDay { get; private set; } = 0;
+    public int CurrentDay { get; private set; } = 1;
 
     private void Awake()
     {
@@ -17,15 +17,18 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
-    {
-        // Initialize subsystems here later
-    }
-
     public void AdvanceDay()
     {
         CurrentDay++;
-        FlagManager.Instance?.OnDayAdvanced(CurrentDay);
+        FlagManager.Instance?.TriggerDayAdvanced(CurrentDay);
         Debug.Log($"Day advanced to {CurrentDay}");
+    }
+
+    public void AdvanceDays(int amount)
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            AdvanceDay();
+        }
     }
 }

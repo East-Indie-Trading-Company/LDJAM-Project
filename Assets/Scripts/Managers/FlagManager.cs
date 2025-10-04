@@ -9,6 +9,7 @@ public class FlagManager : MonoBehaviour
     private Dictionary<string, bool> flags = new Dictionary<string, bool>();
     private Dictionary<string, int> counters = new Dictionary<string, int>();
 
+    // Evento público que outros sistemas vão escutar
     public event Action<int> OnDayAdvancedEvent;
 
     private void Awake()
@@ -43,8 +44,10 @@ public class FlagManager : MonoBehaviour
         return counters.ContainsKey(key) ? counters[key] : 0;
     }
 
-    public void OnDayAdvanced(int newDay)
+    // Novo nome, mais claro: dispara os callbacks de "dia avançado"
+    public void TriggerDayAdvanced(int newDay)
     {
+        Debug.Log($"[FlagManager] Triggering Day Advanced {newDay}");
         OnDayAdvancedEvent?.Invoke(newDay);
     }
 }
