@@ -1,4 +1,5 @@
 using UnityEngine;
+using Trading;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +15,6 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
-        this.instance.EconomyManager = GetComponent<EconomyManager>();
         DontDestroyOnLoad(gameObject);
     }
 
