@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class DragonTaxCollectorManager : DayAdvanceListener
@@ -11,13 +12,21 @@ public class DragonTaxCollectorManager : DayAdvanceListener
 
     private int lastTriggeredDay = -1;
 
+    // Evento que notifica outros sistemas (narrativa, UI especial, etc.)
+    public event Action OnDragonEncounter;
+
     protected override void HandleDayAdvanced(int newDay)
     {
         if (newDay >= firstCollectionDay && (newDay - firstCollectionDay) % taxInterval == 0)
         {
             lastTriggeredDay = newDay;
             Debug.Log($"[DragonTaxCollector] Day {newDay}: Dragon arrives to collect taxes!");
-            // TODO: trigger event/cutscene/UI
+
+            // Disparar evento narrativo
+            OnDragonEncounter?.Invoke();
+
+            // Aqui também podes tocar SFX ou chamar UI
+            // audioSource.PlayOneShot(dragonArrivalSFX);
         }
     }
 

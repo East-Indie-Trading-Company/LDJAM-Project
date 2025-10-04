@@ -6,7 +6,6 @@ public abstract class DayAdvanceListener : MonoBehaviour
     {
         if (FlagManager.Instance != null)
         {
-            Debug.Log($"[DayAdvanceListener] Late subscription for {name}");
             FlagManager.Instance.OnDayAdvancedEvent += HandleDayAdvanced;
         }
     }
