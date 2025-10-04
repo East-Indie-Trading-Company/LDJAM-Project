@@ -2,6 +2,14 @@ using UnityEngine;
 
 public abstract class DayAdvanceListener : MonoBehaviour
 {
+    protected virtual void Start()
+    {
+        if (FlagManager.Instance != null)
+        {
+            Debug.Log($"[DayAdvanceListener] Late subscription for {name}");
+            FlagManager.Instance.OnDayAdvancedEvent += HandleDayAdvanced;
+        }
+    }
     protected virtual void OnEnable()
     {
         if (FlagManager.Instance != null)
