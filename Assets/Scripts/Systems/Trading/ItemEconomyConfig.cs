@@ -29,7 +29,7 @@ namespace Trading
 
         [Header("Economy Factors")]
         [Tooltip("How valuable the item is when demand is high. Higher demand = higher purchase price.")]
-        [Range(0.1f, 5f)] public float demandMultiplier = 1.0f;
+        [Range(0.1f, 10f)] public float demandMultiplier = 1.0f;
 
         [Tooltip("How much of this item is produced daily in towns. Positive values increase stock.")]
         [Range(0f, 100f)] public float productionRate = 10f;
