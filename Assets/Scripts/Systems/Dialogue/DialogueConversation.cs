@@ -7,7 +7,7 @@ public class DialogueConversation : ScriptableObject
     public string npcName;
     public List<DialogueLine> lines;
     public bool hasPlayed;
-    public string flag;
+    public string[] flag;
 
     // TODO:: Add list of flags required
 }

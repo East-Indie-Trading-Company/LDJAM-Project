@@ -4,13 +4,24 @@ using UnityEngine;
 public class DialogueChoice : ScriptableObject
 {
     [SerializeField]
-    string choiceText; // The text displayed on the choice button
+    DialogueOption optionA; // The text displayed on the choice button
     [SerializeField]
-    string responseLine; // Branching NPC dialogue based on player choice
+    DialogueOption optionB; // The text displayed on the choice button
+    [SerializeField]
+    string DisplayLine; // Branching NPC dialogue based on player choice
+
+
+}
+
+[System.Serializable]
+public class DialogueOption
+{
+    string buttonText;
+    string responseText;
+
+    string flagToRaise;
 
     // TODO:: Inventory effect
 
     // TODO:: Reputation effect
-    // TODO:: Flag to raise
-
 }
