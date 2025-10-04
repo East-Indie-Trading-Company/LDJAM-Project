@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     {
         CurrentDay++;
         FlagManager.Instance?.TriggerDayAdvanced(CurrentDay);
-        Debug.Log($"Day advanced to {CurrentDay}");
+        
     }
 
     public void AdvanceDays(int amount)
