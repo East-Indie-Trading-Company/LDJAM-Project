@@ -12,5 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1bb3f9a2130d840ba2b8ba51e9463d, type: 3}
   m_Name: TestConversation
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
-  npcName: 
-  lines: []
+  npcName: TestNPC
+  lines:
+  - dialogueText: Hello World! This is the first line of text to be displayed.
+    choiceOne: {fileID: 0}
+    choiceTwo: {fileID: 0}
+  - dialogueText: This is the second line of text that will be displayed in the test
+      conversation.
+    choiceOne: {fileID: 0}
+    choiceTwo: {fileID: 0}
+  - dialogueText: This is the last line. Bye!
+    choiceOne: {fileID: 0}
+    choiceTwo: {fileID: 0}
+  hasPlayed: 0

@@ -9,6 +9,7 @@ public class DialogueChoice : ScriptableObject
     string responseLine; // Branching NPC dialogue based on player choice
 
     // TODO:: Inventory effect
+
     // TODO:: Reputation effect
     // TODO:: Flag to raise
 
