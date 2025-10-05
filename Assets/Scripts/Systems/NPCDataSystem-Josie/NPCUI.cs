@@ -35,6 +35,7 @@ public class NPCUI : MonoBehaviour
     // Set the npc ui to the values held in the npcData object
     public void DisplayNPCUI(NPCData newData)
     {
+        marketCanvas.SetActive(true);
         npcData = newData;
         if (npcData == null)
         {

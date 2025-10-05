@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed558470323453347a9e3ab4d78cfbf7, type: 3}
   m_Name: VerellaData
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  objPrefab: {fileID: 0}
-  displayInfo: {fileID: 11400000, guid: 5b312832538eeeb4aab29331a5f1eb10, type: 2}
+  displayInfo: {fileID: 11400000, guid: 1675d500d37ee3f4aa27191578a9adda, type: 2}
+  townStock: {fileID: 11400000, guid: 9097f50ae04ea7b4b8fe6670a86471a5, type: 2}
   npcDialogueLines:
   - {fileID: 11400000, guid: f5614116e2445dd40958b37b5a05e2a3, type: 2}
   - {fileID: 11400000, guid: 27381f32a0ae7d54c8316bb04e23b970, type: 2}
@@ -80,4 +80,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 15a4b5063b3022b4d888a244e80c3e49, type: 2}
   - {fileID: 11400000, guid: 93051725dffc57642a290633a2208b94, type: 2}
   - {fileID: 11400000, guid: 1f6d2795b9ef48247b49ef10f5e18db9, type: 2}
-  npcReputationImpact: 0
