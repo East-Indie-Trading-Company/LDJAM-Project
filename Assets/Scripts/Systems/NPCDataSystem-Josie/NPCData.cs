@@ -33,21 +33,23 @@ public class NPCData : ScriptableObject
 
     public void Greeting(TextMeshProUGUI textComponent)
     {
-        textComponent.text = PullDialogue(npcGreetingDialogueLines);
+        DialogueConversation convo =  PullDialogue(npcGreetingDialogueLines);
+        textComponent.text = convo.lines[0].dialogueText;
     }
 
 
     DialogueConversation PullDialogue(DialogueConversation[] conversations)
     {
-        DialogueConversation convoToWrite;
+        DialogueConversation convoToWrite = null;
+        // TODO:: List/array of convos that don't need flags here
         Array.ForEach(conversations, convo =>
         {
-            if (!line.hasPlayed) // If the line is repeatable or has not played yet.
+            if (!convo.hasPlayed) // If the line is repeatable or has not played yet.
             {
                 if (convo.flags[0] != null) // If the conversation has at least one requirement, check requirements.
                 {
                     bool flagsTrue = true;
-                    foreach (string flag in line.flags) // Check all flags
+                    foreach (string flag in convo.flags) // Check all flags
                     {
                         if (!FlagManager.Instance.GetFlag(flag))
                         {
