@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884f3b5dfe72f934a916c38e762efc62, type: 3}
   m_Name: ItemSO_Reagents
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemSO
-  itemName: 
-  displayName: 
+  itemName: Reagents
   description: 
   icon: {fileID: 0}
   baseValue: 1

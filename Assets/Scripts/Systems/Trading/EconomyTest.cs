@@ -10,10 +10,6 @@ namespace Trading.Tests
         [Header("Refs (assign in Inspector)")]
         [SerializeField] private EconomyManager economy; // optional: auto-grab Instance
         [SerializeField] private TownStock town;         // REQUIRED: the town asset to inspect
-
-        [Header("Town Buyback Margin (for SELL price calc)")]
-        [Range(0.1f, 1f)] public float townSellMargin = 0.85f;
-
         private void EnsureRefs()
         {
             if (!economy) economy = EconomyManager.Instance;
