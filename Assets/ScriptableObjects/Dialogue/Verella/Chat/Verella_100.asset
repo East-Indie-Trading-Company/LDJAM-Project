@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd1bb3f9a2130d840ba2b8ba51e9463d, type: 3}
-  m_Name: Eapram41
+  m_Name: Verella_100
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
-  npc: {fileID: 11400000, guid: d1d50ab825af1254598ba5711804067c, type: 2}
+  npc: {fileID: 11400000, guid: 1675d500d37ee3f4aa27191578a9adda, type: 2}
   lines:
-  - dialogueText: "Is that a smile? Disgusting. I demand you nevermore.\t\t\t\t\t\t"
-    choice: {fileID: 0}
+  - dialogueText: Have you happened to come across any fine spirits?  All this grave
+      dust makes me thirsty.
+    choice: {fileID: 11400000, guid: 182674c3e6f454b4ab147835fe294da6, type: 2}
   isOneOff: 1
   flags:
-  - 
+  - Act2
+  - HasAlcohol
   hasPlayed: 0
