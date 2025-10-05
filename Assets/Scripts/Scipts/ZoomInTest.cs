@@ -14,7 +14,7 @@ public class ZoomInTest : MonoBehaviour
     public GameObject rightPanel;
     public Image npcImage; //  Add this reference in the Inspector
 
-    public DialogueTrigger dialogueTrigger;
+    public TownUI townUI;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
     private bool isZoomed = false;
@@ -54,10 +54,10 @@ public class ZoomInTest : MonoBehaviour
                     if (rightPanel != null)
                         rightPanel.SetActive(true);
 
-                    if (townData != null && dialogueTrigger != null)
+                    if (townData != null && townUI != null)
                     {
                         
-                        dialogueTrigger.SetNPC(townData.npcData); // 👈 this updates the NPC data
+                        townUI.SetTownUI(townData.npcData); // 👈 this updates the NPC data [Arwen edit this to be updated with new implementation]
                     }
                 }
 

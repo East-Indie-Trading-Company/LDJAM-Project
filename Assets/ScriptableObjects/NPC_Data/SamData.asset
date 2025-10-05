@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed558470323453347a9e3ab4d78cfbf7, type: 3}
   m_Name: SamData
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  objPrefab: {fileID: 0}
-  displayInfo: {fileID: 11400000, guid: 5b312832538eeeb4aab29331a5f1eb10, type: 2}
+  displayInfo: {fileID: 11400000, guid: 2b9034908e65964479bb08d9fd99effb, type: 2}
+  townStock: {fileID: 11400000, guid: 4ef143cab4d9c5d478b9d2f41e62605e, type: 2}
   npcDialogueLines:
   - {fileID: 11400000, guid: 75e3ccc382fdf104589df6ccfb38330f, type: 2}
   npcRumorDialogueLines:
@@ -21,4 +21,3 @@ MonoBehaviour:
   npcGreetingDialogueLines:
   - {fileID: 11400000, guid: fea0d889b6c8dbb4ba91359dbea89025, type: 2}
   - {fileID: 11400000, guid: f2dce1c0ed36e76408e65df0d078a868, type: 2}
-  npcReputationImpact: 0

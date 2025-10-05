@@ -8,18 +8,14 @@ using TMPro;
 
 public class NPCData : ScriptableObject
 {
-
-    [SerializeField] public GameObject objPrefab;
+    [Header("References")]
     public NpcDisplayInfo displayInfo; // This contains npc name, portrait, town name, and (not implemented town icon)
+    public Trading.TownStock townStock;
 
-    //DialogueConversation - vars : hasPlayed, ; methods : Trigger()
+    [Header("Dialogue Pools")]
     [SerializeField] DialogueConversation[] npcDialogueLines;
     [SerializeField] DialogueConversation[] npcRumorDialogueLines;
     [SerializeField] DialogueConversation[] npcGreetingDialogueLines;
-
-
-    // insert Reputation Impact, whatever that is here
-    [SerializeField] private int npcReputationImpact;
 
     public void Talk()
     {
