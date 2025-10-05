@@ -4,6 +4,5 @@ using UnityEngine;
 public class DialogueLine 
 {
     public string dialogueText;  // The text for the NPC's dialogue
-    [SerializeField] DialogueChoice choiceOne;
-    [SerializeField] DialogueChoice choiceTwo;
+    public DialogueChoice choice;
 }

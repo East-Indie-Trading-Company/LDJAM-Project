@@ -4,10 +4,11 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "Scriptable Object/Dialogue Conversation")]
 public class DialogueConversation : ScriptableObject
 {
-    public string npcName;
+    public NpcDisplayInfo npc;
     public List<DialogueLine> lines;
+    public bool isOneOff;
+    public string[] flags;
     public bool hasPlayed;
-    public string flag;
 
     // TODO:: Add list of flags required
 }
