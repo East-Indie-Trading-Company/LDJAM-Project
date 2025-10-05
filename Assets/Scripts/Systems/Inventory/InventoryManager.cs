@@ -48,7 +48,11 @@ namespace Trading
         /// <summary>
         /// Adds gold to the player's inventory.
         /// </summary>
-        public void AddGold(int amount) { gold = Mathf.Max(0, gold + Mathf.Max(0, amount)); }
+        public void AddGold(int amount)
+        {
+            gold = Mathf.Max(0, gold + Mathf.Max(0, amount));
+            GameManager.Instance?.onCurrencyChanged.Invoke(gold);
+        }
 
         /// <summary>
         /// Attempts to remove gold from the player's inventory. Returns true if successful.
@@ -58,6 +62,7 @@ namespace Trading
             amount = Mathf.Max(0, amount);
             if (gold < amount) return false;
             gold -= amount; return true;
+            GameManager.Instance?.onCurrencyChanged.Invoke(gold);
         }
 
         /// <summary>
