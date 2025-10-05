@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db986408bf78344ab413ccba7786039, type: 3}
+  m_Name: Hesta_Choice
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
+  optionA:
+    buttonText: I could use a break.
+    responseText: Even the swiftest of rivers eventually slow. *Hands you a cup of
+      something hot and fragrant*
+    flagToRaise: +rep
+  optionB:
+    buttonText: I have no need for whatever *you're* drinking.
+    responseText: Hahaha! Mayhaps that's for the best. Lowlanders fare poorly in
+      our gorge.
+    flagToRaise: -rep
+  displayLine: Do you share a drink with Hesta?

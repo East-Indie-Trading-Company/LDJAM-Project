@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd1bb3f9a2130d840ba2b8ba51e9463d, type: 3}
+  m_Name: Hesta_Rumors 5
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
+  npc: {fileID: 0}
+  lines:
+  - dialogueText: "If you\u2019re to sate that beast\u2019s hunger for pretty things,
+      you\u2019d be better talking to that dressed-up fool in Taraval. You don't
+      get far by splashing around in the shallows, child. "
+    choice: {fileID: 0}
+  isOneOff: 0
+  flags:
+  - Act2
+  hasPlayed: 0
