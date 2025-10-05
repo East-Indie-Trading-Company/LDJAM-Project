@@ -16,6 +16,7 @@ MonoBehaviour:
   lines:
   - dialogueText: "Is that a smile? Disgusting. I demand you nevermore.\t\t\t\t\t\t"
     choice: {fileID: 0}
-  isOneOff: 0
-  flags: []
+  isOneOff: 1
+  flags:
+  - 
   hasPlayed: 0
