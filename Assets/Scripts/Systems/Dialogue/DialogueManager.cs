@@ -52,8 +52,9 @@ public class DialogueManager : MonoBehaviour
         // Set the UI
         dialogueCanvas.SetActive(true);
         DisableChoicePanel();
+        townNameText.text = conversation.npc.townName;
+        npcNameText.text = conversation.npc.npcName;
 
-        // TODO:: Assign npc info
         if (conversation.lines[0] != null)
         {
             currentConversation = conversation;
@@ -87,8 +88,10 @@ public class DialogueManager : MonoBehaviour
             waitingForChoice = true;
             // Show choices
             choicePanel.alpha = 1f;
+
             choicePanel.interactable = true;
             choicePanel.blocksRaycasts = true;
+            // Set text
             choiceText.text = currentLine.choice.displayLine;
             buttonA.GetComponentInChildren<TextMeshProUGUI>().text = currentLine.choice.optionA.buttonText;
             buttonB.GetComponentInChildren<TextMeshProUGUI>().text = currentLine.choice.optionB.buttonText;
@@ -151,6 +154,7 @@ public class DialogueManager : MonoBehaviour
 
     void ChoiceA()
     {
+        if (isTyping) return;
         Debug.Log($"You picked choice A. Response will be: {currentLine.choice.optionA.responseText}");
         waitingForChoice = false;
         DisableChoicePanel();
@@ -159,6 +163,7 @@ public class DialogueManager : MonoBehaviour
     }
     void ChoiceB()
     {
+        if (isTyping) return;
         Debug.Log($"You picked choice B. Response will be: {currentLine.choice.optionB.responseText}");
         waitingForChoice = false;
         DisableChoicePanel();
