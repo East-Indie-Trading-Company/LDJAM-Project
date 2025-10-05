@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI choiceText;
     [SerializeField] Button buttonA;
     [SerializeField] Button buttonB;
-    [SerializeField] GameObject choicePanel;
+    [SerializeField] CanvasGroup choicePanel;
     [SerializeField] GameObject dialogueCanvas;
 
     int currentLineIndex;
@@ -46,11 +46,14 @@ public class DialogueManager : MonoBehaviour
         buttonB.onClick.AddListener(ChoiceB);
     }
 
-    
+
     public void StartDialogue(DialogueConversation conversation)
     {
+        // Set the UI
         dialogueCanvas.SetActive(true);
-        choicePanel.SetActive(false);
+        DisableChoicePanel();
+
+        // TODO:: Assign npc info
         if (conversation.lines[0] != null)
         {
             currentConversation = conversation;
@@ -83,7 +86,9 @@ public class DialogueManager : MonoBehaviour
         {
             waitingForChoice = true;
             // Show choices
-            choicePanel.SetActive(true);
+            choicePanel.alpha = 1f;
+            choicePanel.interactable = true;
+            choicePanel.blocksRaycasts = true;
             choiceText.text = currentLine.choice.displayLine;
             buttonA.GetComponentInChildren<TextMeshProUGUI>().text = currentLine.choice.optionA.buttonText;
             buttonB.GetComponentInChildren<TextMeshProUGUI>().text = currentLine.choice.optionB.buttonText;
@@ -92,6 +97,7 @@ public class DialogueManager : MonoBehaviour
     }
     IEnumerator StartTyping(string currentText)
     {
+        Debug.Log($"[DialogueManager] Begin typing: {currentText}");
         isTyping = true; // Set typing flag to true
         npcText.text = "";  // Clear existing text
         allowAutoContinue = true; // Reenable autoplay
@@ -102,9 +108,10 @@ public class DialogueManager : MonoBehaviour
         }
         isTyping = false;
 
-        yield return new WaitForSeconds(autoContinueSpeed);
+        
         if (allowAutoContinue && !waitingForChoice)
         {
+            yield return new WaitForSeconds(autoContinueSpeed);
             NextLine();
         }
     }
@@ -144,23 +151,32 @@ public class DialogueManager : MonoBehaviour
 
     void ChoiceA()
     {
+        Debug.Log($"You picked choice A. Response will be: {currentLine.choice.optionA.responseText}");
         waitingForChoice = false;
-        choicePanel.SetActive(false);
+        DisableChoicePanel();
         // TODO:: Update inventory/rep/flags
-        StartTyping(currentLine.choice.optionA.responseText);
+        StartCoroutine(StartTyping(currentLine.choice.optionA.responseText));
     }
     void ChoiceB()
     {
+        Debug.Log($"You picked choice B. Response will be: {currentLine.choice.optionB.responseText}");
         waitingForChoice = false;
-        choicePanel.SetActive(false);
+        DisableChoicePanel();
         // TODO:: Update inventory/rep/flags
-        StartTyping(currentLine.choice.optionB.responseText);
+        StartCoroutine(StartTyping(currentLine.choice.optionB.responseText));
     }
 
     void EndDialogue()
     {
         dialogueCanvas.SetActive(false);
         currentConversation = null;
+    }
+
+    void DisableChoicePanel()
+    {
+        choicePanel.alpha = 0f;
+        choicePanel.interactable = false; 
+        choicePanel.blocksRaycasts = false;
     }
     
 }
