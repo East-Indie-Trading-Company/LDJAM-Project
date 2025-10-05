@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ItemEconomy_Trestel_Alcohol
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemEconomyConfig
   item: {fileID: 11400000, guid: cd6db6897c119934d8cfefc7a6db8ba2, type: 2}
-  demandMultiplier: 1
-  productionRate: 10
+  demandMultiplier: 2
+  productionRate: 4
   consumptionRate: 8
   purchasePriceMultiplier: 1
   minStock: 0

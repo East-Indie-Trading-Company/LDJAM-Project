@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -12,10 +11,15 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip[] soundEffects;
     [Range(0f, 1f)] [SerializeField] private float defaultVolume = 0.8f;
 
+    [Header("Trade BGM")]
+    [SerializeField] private AudioClip bgAudioClipOne;
+    [SerializeField] private AudioClip bgAudioClipTwo;
+    [SerializeField] private AudioClip bgAudioClipThree;
+
     [Header("Trade SFX")]
     [SerializeField] private AudioClip buyItemAudioClip;
 
-    // Vocalizations
+    [Header("Vocal SFX")]
     [SerializeField] private AudioClip[] dragonVocalSoundEffects;
     [SerializeField] private AudioClip[] eapramVocalSoundEffects;
     [SerializeField] private AudioClip[] hectorVocalSoundEffects;
@@ -38,6 +42,12 @@ public class AudioManager : MonoBehaviour
 
     private bool isMuted;
 
+    private int currentBGMIndex;
+    private const int MAX_BGM_TRACKS = 3;
+    private const int BGM_TRACK_ONE = 1;
+    private const int BGM_TRACK_TWO = 2;
+    private const int BGM_TRACK_THREE = 3;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -52,7 +62,7 @@ public class AudioManager : MonoBehaviour
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
-            audioSource.loop = true;
+            audioSource.loop = false;
             audioSource.playOnAwake = false;
         }
 
@@ -68,18 +78,24 @@ public class AudioManager : MonoBehaviour
         {
             PlayMusic(currentClip);
         }
+
+        currentBGMIndex = BGM_TRACK_ONE;
+}
+
+    private void Update()
+    {
+        if (audioSource.isPlaying == false)
+        {
+            UpdateBGMTrack();
+        }
     }
 
-    private void PlayMusic(AudioClip clip, bool restartIfSame = false)
+    private void PlayMusic(AudioClip clip)
     {
         if (clip == null) return;
 
-        if (!restartIfSame && audioSource.clip == clip && audioSource.isPlaying)
-        {
-            return;
-        }
-
-        audioSource.clip = clip;
+        currentClip = clip;
+        audioSource.clip = currentClip;
         audioSource.Play();
     }
 
@@ -108,6 +124,34 @@ public class AudioManager : MonoBehaviour
     {
         int randomIndex = Random.Range(0, vocalAudioClipArray.Length);
         return vocalAudioClipArray[randomIndex];
+    }
+
+    private void UpdateBGMTrack()
+    {
+        if (currentBGMIndex >= MAX_BGM_TRACKS)
+        {
+            currentBGMIndex = BGM_TRACK_ONE;
+        }
+        else
+        {
+            currentBGMIndex++;
+        }
+
+        switch (currentBGMIndex)
+        {
+            case BGM_TRACK_ONE:
+                PlayMusic(bgAudioClipOne);
+                break;
+            case BGM_TRACK_TWO:
+                PlayMusic(bgAudioClipTwo);
+                break;
+            case BGM_TRACK_THREE:
+                PlayMusic(bgAudioClipThree);
+                break;
+            default:
+                PlayMusic(bgAudioClipOne);
+                break;
+        }
     }
 
     public void PlayBuyItemSFX()

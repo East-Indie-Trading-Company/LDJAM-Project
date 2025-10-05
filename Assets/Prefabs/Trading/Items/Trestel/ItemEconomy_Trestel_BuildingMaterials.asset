@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ItemEconomy_Trestel_BuildingMaterials
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemEconomyConfig
   item: {fileID: 11400000, guid: 925f827e6300c1b4bbadad093f3d7940, type: 2}
-  demandMultiplier: 1
-  productionRate: 10
-  consumptionRate: 8
+  demandMultiplier: 8
+  productionRate: 2
+  consumptionRate: 6
   purchasePriceMultiplier: 1
   minStock: 0
   maxStock: 200

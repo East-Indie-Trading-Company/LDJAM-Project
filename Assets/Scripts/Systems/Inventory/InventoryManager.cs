@@ -43,6 +43,7 @@ namespace Trading
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            gold = 500; // Starting gold
         }
 
         /// <summary>

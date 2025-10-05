@@ -9,11 +9,11 @@ namespace Trading
         /// Calculates the price at which a town will buy an item for the player.
         /// </summary>
         /// <param name="entry"></param>
-        /// <param name="playerReputation"></param>
+        /// <param name="playerReputation"></param> -> needs to be added
         /// <param name="inflationIndex"></param>
         /// <returns></returns>
         public static int GetBuyPriceForPlayer(
-            TownStock.MarketEntry entry,
+            TownStock.MarketEntry entry, 
             float inflationIndex)
         {
             if (entry == null || entry.itemEconomy == null)
@@ -33,7 +33,7 @@ namespace Trading
         /// Calculates the price at which a town will sell an item to the player.
         /// </summary>
         /// <param name="entry"></param>
-        /// <param name="playerReputation"></param>
+        /// <param name="playerReputation"></param> -> needs to be added
         /// <param name="inflationIndex"></param>
         /// <returns></returns>
         public static int GetSellPriceToPlayer(

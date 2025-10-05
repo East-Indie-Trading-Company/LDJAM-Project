@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ItemEconomy_ScorchedVillage_AnimalProduce
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemEconomyConfig
   item: {fileID: 11400000, guid: 7e5805cf2e069b349a5d21b884104ee9, type: 2}
-  demandMultiplier: 1
-  productionRate: 10
+  demandMultiplier: 7
+  productionRate: 2
   consumptionRate: 8
   purchasePriceMultiplier: 1
   minStock: 0

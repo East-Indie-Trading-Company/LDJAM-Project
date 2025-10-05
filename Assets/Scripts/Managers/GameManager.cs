@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public void OnEnable()
     {
         onCurrencyChanged.AddListener(OnCurrencyChanged);
+        PermaUIManager.Instance?.SetCurrencyUI(InventoryManager.Instance.Gold);
     }
 
     public void AdvanceDay()
