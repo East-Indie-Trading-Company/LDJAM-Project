@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac806ca5c45cc9d40ba2dec25c6d6aef, type: 3}
-  m_Name: Verella_2
+  m_Name: Verella
   m_EditorClassIdentifier: Assembly-CSharp::NpcDisplayInfo
   npcName: Verella Gravefeather
   npcIcon: {fileID: 21300000, guid: ae35add356b505c4da7ae75edfc59158, type: 3}
