@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db986408bf78344ab413ccba7786039, type: 3}
+  m_Name: Hesta_Choice 1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
+  optionA:
+    buttonText: What's in this tea you gave me?
+    responseText: Pine needles for memory, river-moss for clarity, and a bit of my
+      special herbs. Clears the head. Or muddies it. Depends on the head.
+    flagToRaise: +rep
+  optionB:
+    buttonText: This concotion is foul! Have you tried to poison me?
+    responseText: ' Careful with your words, child. The river doesn''t take kindly
+      to those who don''t respect it.'
+    flagToRaise: -rep
+  displayLine: Do you share a drink with Hesta?
