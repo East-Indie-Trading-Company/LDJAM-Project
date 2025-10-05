@@ -4,7 +4,8 @@ using System.Collections;
 
 public class MapManager : MonoBehaviour
 {
-    [SerializeField] Transform target; // Either one of the towns or the entire map 
+    [SerializeField] Transform target; // Either one of the towns or the entire map
+    //[SerializeField] Button town1Button;
     //public Vector3 targetPosition = new Vector3(0, 5, -10);
     public float zoomDuration = 1.0f;
     public float zoomSpeed = 5f;
