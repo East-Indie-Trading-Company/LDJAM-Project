@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ItemEconomy_Styx&Stones_AnimalProduce
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemEconomyConfig
   item: {fileID: 11400000, guid: 7e5805cf2e069b349a5d21b884104ee9, type: 2}
-  demandMultiplier: 1
-  productionRate: 10
-  consumptionRate: 8
+  demandMultiplier: 2
+  productionRate: 1
+  consumptionRate: 2
   purchasePriceMultiplier: 1
   minStock: 0
   maxStock: 200
