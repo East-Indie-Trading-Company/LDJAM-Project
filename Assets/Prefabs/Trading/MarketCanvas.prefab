@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 905304740750814232}
   - component: {fileID: 3508029095048269357}
   m_Layer: 0
-  m_Name: RightColumn
+  m_Name: TradingUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -650,8 +650,9 @@ MonoBehaviour:
   playerGoldText: {fileID: 0}
   headerFormat: '{0} Market'
   goldFormat: 'Gold: {0}'
-  defaultTown: {fileID: 11400000, guid: d7bdde93229f2e2428d1f31d11dcb77b, type: 2}
+  defaultTown: {fileID: 11400000, guid: 25bb33eeca5eaea4f98f1233faf98956, type: 2}
   defaultRowHeight: 80
+  logMissingRefs: 1
 --- !u!1 &2793978150795186623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,7 +1786,7 @@ GameObject:
   - component: {fileID: 5131385877084013350}
   - component: {fileID: 6765863742326771696}
   m_Layer: 0
-  m_Name: LeftColumn
+  m_Name: DialogueUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

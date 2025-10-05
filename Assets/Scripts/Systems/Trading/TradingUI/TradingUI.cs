@@ -6,8 +6,8 @@ using TMPro;
 namespace Trading
 {
     /// <summary>
-    /// Builds and refreshes the market UI: populates item rows, updates a dynamic header with the current town,
-    /// and shows a live-updating player gold label anchored at the top-right.
+    /// Market UI builder for a specific town. Populates rows, updates a header with the town name,
+    /// and shows a live player gold label. Town is set via SetTown(...) or defaultTown; never inferred.
     /// </summary>
     public class TradingUI : MonoBehaviour
     {
@@ -18,14 +18,17 @@ namespace Trading
         [Header("Header & Gold")]
         [SerializeField] private TMP_Text headerTitleText;
         [SerializeField] private TMP_Text playerGoldText;
-        [SerializeField] private string headerFormat = "Market Interface";
-        [SerializeField] private string goldFormat = "Gold: {0}";
+        [SerializeField] private string headerFormat = "{0} Market";
+        [SerializeField] private string goldFormat   = "Gold: {0}";
 
         [Header("Defaults")]
         [SerializeField] private TownStock defaultTown;
 
         [Header("Row Config")]
         [SerializeField] private float defaultRowHeight = 80f;
+
+        [Header("Diagnostics")]
+        [SerializeField] private bool logMissingRefs = true;
 
         private TownStock town;
         private readonly List<TradingItemRowUI> liveRows = new();
@@ -34,38 +37,59 @@ namespace Trading
         private InventoryManager inventory;
 
         /// <summary>
-        /// Performs best-effort auto-wiring for required UI elements and resolves managers.
+        /// Resolves managers and UI references without choosing a town.
         /// </summary>
         private void Awake()
         {
+            if (!trading)   trading   = TradingManager.Instance;
+            if (!inventory) inventory = InventoryManager.Instance;
+
             TryAutoFindRowsParent();
             TryAutoFindHeaderAndGold();
-
-            if (!trading) trading = TradingManager.Instance;
-            if (!inventory) inventory = InventoryManager.Instance;
         }
 
         /// <summary>
-        /// Ensures a town is present and triggers initial build.
+        /// Binds default town if none has been provided and builds UI.
         /// </summary>
         private void Start()
         {
-            if (town == null) town = defaultTown;
+            if (town == null && defaultTown != null)
+            {
+                town = defaultTown;
+                Debug.Log($"[TradingUI] Town set from defaultTown: {town.townName}");
+            }
+            else if (town == null && logMissingRefs)
+            {
+                Debug.LogWarning("[TradingUI] No town provided. Assign defaultTown or call SetTown(...).");
+            }
+
             Rebuild();
         }
 
         /// <summary>
-        /// Swaps the active town and rebuilds the list.
+        /// Exposes the current town.
+        /// </summary>
+        public TownStock CurrentTown => town;
+
+        /// <summary>
+        /// Sets the active town explicitly and rebuilds if changed.
         /// </summary>
         public void SetTown(TownStock newTown)
         {
+            if (newTown == null)
+            {
+                if (logMissingRefs) Debug.LogWarning("[TradingUI] SetTown(null) ignored.");
+                return;
+            }
             if (newTown == town) return;
+
             town = newTown;
+            Debug.Log($"[TradingUI] Town set via SetTown: {town.townName}");
             Rebuild();
         }
 
         /// <summary>
-        /// Redraws rows and updates header/gold labels.
+        /// Redraws all rows and updates header/gold.
         /// </summary>
         public void RefreshAll()
         {
@@ -77,14 +101,15 @@ namespace Trading
         }
 
         /// <summary>
-        /// Rebuilds the market list from the active town and updates header/gold.
+        /// Clears and rebuilds rows for the current town and updates header/gold.
         /// </summary>
         public void Rebuild()
         {
-            if (trading == null) trading = TradingManager.Instance;
+            if (trading == null)   trading   = TradingManager.Instance;
             if (inventory == null) inventory = InventoryManager.Instance;
 
             if (!rowsParent) TryAutoFindRowsParent();
+
             ClearChildren(rowsParent);
             liveRows.Clear();
 
@@ -106,7 +131,7 @@ namespace Trading
                 {
                     go = Instantiate(rowPrefab, rowsParent);
                     var le = go.GetComponent<LayoutElement>() ?? go.AddComponent<LayoutElement>();
-                    if (le.preferredHeight <= 0)
+                    if (le.preferredHeight <= 0f)
                     {
                         le.preferredHeight = defaultRowHeight;
                         le.minHeight = defaultRowHeight;
@@ -125,7 +150,7 @@ namespace Trading
         }
 
         /// <summary>
-        /// Hook for rows or external systems to indicate a completed transaction.
+        /// Transaction callback that re-syncs UI elements.
         /// </summary>
         public void OnTransactionCompleted()
         {
@@ -133,34 +158,43 @@ namespace Trading
         }
 
         /// <summary>
-        /// Updates the header title using the current town and configured format.
+        /// Updates the header label based on the current town.
         /// </summary>
         private void UpdateHeaderUI()
         {
-            if (!headerTitleText) return;
-            var name = town?.townName ?? "Market";
+            if (!headerTitleText)
+            {
+                if (logMissingRefs) Debug.LogWarning("[TradingUI] Header text reference is missing.");
+                return;
+            }
+            var name = town ? town.townName : "Market";
             headerTitleText.text = string.Format(headerFormat, name);
         }
 
         /// <summary>
-        /// Updates the player gold label using the current inventory and configured format.
+        /// Updates the gold label from InventoryManager.
         /// </summary>
         private void UpdateGoldUI()
         {
-            if (!playerGoldText) return;
+            if (!playerGoldText)
+            {
+                if (logMissingRefs) Debug.LogWarning("[TradingUI] Gold text reference is missing.");
+                return;
+            }
             var gold = inventory ? inventory.Gold : 0;
             playerGoldText.text = string.Format(goldFormat, gold);
         }
 
         /// <summary>
-        /// Attempts to find common ScrollView Content transforms and bind them as the rows parent.
+        /// Finds a ScrollRect content for rows if not assigned.
         /// </summary>
         private void TryAutoFindRowsParent()
         {
             if (rowsParent) return;
 
-            Transform content = transform.Find("MarketScrollView/Viewport/Content")
-                               ?? transform.Find("RightColumn/MarketScrollView/Viewport/Content")
+            Transform content = transform.Find("RightColumn/MarketScrollView/Viewport/Content")
+                               ?? transform.Find("LeftColumn/MarketScrollView/Viewport/Content")
+                               ?? transform.Find("MarketScrollView/Viewport/Content")
                                ?? transform.Find("Viewport/Content");
 
             if (!content)
@@ -170,22 +204,32 @@ namespace Trading
             }
 
             rowsParent = content ? content.GetComponent<RectTransform>() : null;
+
+            if (!rowsParent && logMissingRefs)
+                Debug.LogWarning("[TradingUI] Could not locate rows parent. Assign it in the inspector.");
         }
 
         /// <summary>
-        /// Binds existing header and gold text elements if present; creates a top-right gold label if none is found.
+        /// Binds header and gold labels; searches LeftColumn/Header/Title first, then other common paths.
+        /// Creates a top-right gold label if none is found.
         /// </summary>
         private void TryAutoFindHeaderAndGold()
         {
             if (!headerTitleText)
             {
-                var t = transform.Find("RightColumn/Header/Title") ?? transform.Find("Header/Title");
+                var t =
+                    transform.Find("LeftColumn/Header/Title") ??
+                    transform.Find("RightColumn/Header/Title") ??
+                    transform.Find("Header/Title");
                 headerTitleText = t ? t.GetComponent<TMP_Text>() : null;
             }
 
             if (!playerGoldText)
             {
-                var t = transform.Find("RightColumn/Header/Gold") ?? transform.Find("Header/Gold");
+                var t =
+                    transform.Find("RightColumn/Header/Gold") ??
+                    transform.Find("LeftColumn/Header/Gold")  ??
+                    transform.Find("Header/Gold");
                 playerGoldText = t ? t.GetComponent<TMP_Text>() : null;
             }
 
@@ -198,10 +242,10 @@ namespace Trading
                 var rt = go.GetComponent<RectTransform>();
                 rt.anchorMin = new Vector2(1f, 1f);
                 rt.anchorMax = new Vector2(1f, 1f);
-                rt.pivot = new Vector2(1f, 1f);
+                rt.pivot     = new Vector2(1f, 1f);
                 rt.anchoredPosition = new Vector2(-24f, -24f);
                 rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 260f);
-                rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 40f);
+                rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,   40f);
 
                 var tmp = go.GetComponent<TextMeshProUGUI>();
                 tmp.enableAutoSizing = true;
@@ -209,11 +253,15 @@ namespace Trading
                 tmp.raycastTarget = false;
 
                 playerGoldText = tmp;
+                if (logMissingRefs) Debug.Log("[TradingUI] Created top-right Gold label.");
             }
+
+            if (!headerTitleText && logMissingRefs)
+                Debug.LogWarning("[TradingUI] Could not locate header title text. Drag it into the inspector.");
         }
 
         /// <summary>
-        /// Destroys all children of a RectTransform.
+        /// Destroys all children under a RectTransform.
         /// </summary>
         private static void ClearChildren(RectTransform rt)
         {
@@ -223,7 +271,7 @@ namespace Trading
         }
 
         /// <summary>
-        /// Creates a minimal, code-built row with a TradingItemRowUI and basic visuals for fallback use.
+        /// Creates a minimal fallback row with TradingItemRowUI.
         /// </summary>
         private GameObject CreateFallbackRow(RectTransform parent, ItemSO item)
         {
@@ -241,7 +289,7 @@ namespace Trading
             var iconRT = new GameObject("Icon", typeof(RectTransform)).GetComponent<RectTransform>();
             iconRT.SetParent(row.transform, false);
             iconRT.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 48);
-            iconRT.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 48);
+            iconRT.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,   48);
             var iconImg = iconRT.gameObject.AddComponent<Image>();
             iconImg.sprite = item ? item.icon : null;
             var leIcon = iconRT.gameObject.AddComponent<LayoutElement>();
@@ -252,7 +300,7 @@ namespace Trading
             var nameTMP = nameGO.AddComponent<TextMeshProUGUI>();
             nameTMP.text = item ? item.itemName : "(Item)";
             nameTMP.fontSize = 28;
-            nameTMP.color = Color.black;
+            nameTMP.color = Color.white;
             var leName = nameGO.AddComponent<LayoutElement>();
             leName.flexibleWidth = 1;
 
@@ -261,22 +309,22 @@ namespace Trading
             var infoTMP = infoGO.AddComponent<TextMeshProUGUI>();
             infoTMP.text = "Sell [X] at [Price]";
             infoTMP.fontSize = 24;
-            infoTMP.color = new Color(0, 0, 0, 0.85f);
+            infoTMP.color = new Color(1, 1, 1, 0.85f);
 
             var btnGO = new GameObject("Btn_Buy", typeof(RectTransform), typeof(Image), typeof(Button));
             btnGO.transform.SetParent(row.transform, false);
             var img = btnGO.GetComponent<Image>();
-            img.color = new Color(0, 0, 0, 0.15f);
+            img.color = new Color(1, 1, 1, 0.15f);
             var labelGO = new GameObject("Label", typeof(RectTransform));
             labelGO.transform.SetParent(btnGO.transform, false);
             var label = labelGO.AddComponent<TextMeshProUGUI>();
             label.text = "Buy";
             label.fontSize = 24;
-            label.color = Color.black;
+            label.color = Color.white;
             label.alignment = TextAlignmentOptions.Center;
             var rt = btnGO.GetComponent<RectTransform>();
             rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 100);
-            rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 40);
+            rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,   40);
             var leBtn = btnGO.AddComponent<LayoutElement>();
             leBtn.preferredWidth = 100;
 
