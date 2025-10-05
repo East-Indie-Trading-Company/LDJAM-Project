@@ -33,8 +33,9 @@ public class NPCUI : MonoBehaviour
         npcData.Rumor();
     }
     // Set the npc ui to the values held in the npcData object
-    public void DisplayNPCUI(NPCData npcData)
+    public void DisplayNPCUI(NPCData newData)
     {
+        npcData = newData;
         if (npcData == null)
         {
             Debug.LogWarning("[DialogueTrigger] npcData is NULL!");

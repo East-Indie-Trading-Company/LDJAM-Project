@@ -30,6 +30,8 @@ public class NPCData : ScriptableObject
     public void Greeting(TextMeshProUGUI textComponent)
     {
         DialogueConversation convo =  PullDialogue(npcGreetingDialogueLines);
+        Debug.Log($"[NPCData] Has convo? {convo == null}");
+        Debug.Log($"[NPCData] {convo.lines[0].dialogueText}");
         textComponent.text = convo.lines[0].dialogueText;
     }
 
@@ -42,7 +44,7 @@ public class NPCData : ScriptableObject
         {
             if (!convo.hasPlayed) // If the line is repeatable or has not played yet.
             {
-                if (convo.flags[0] != null) // If the conversation has at least one requirement, check requirements.
+                if (convo.flags.Length > 0) // If the conversation has at least one requirement, check requirements.
                 {
                     bool flagsTrue = true;
                     foreach (string flag in convo.flags) // Check all flags
