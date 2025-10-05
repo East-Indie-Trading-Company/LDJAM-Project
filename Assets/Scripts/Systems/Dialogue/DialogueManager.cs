@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] Button buttonB;
     [SerializeField] CanvasGroup choicePanel;
     [SerializeField] GameObject dialogueCanvas;
+    [SerializeField] GameObject marketCanvas;
 
     int currentLineIndex;
     DialogueConversation currentConversation;
@@ -72,7 +73,7 @@ public class DialogueManager : MonoBehaviour
         if (conversation.lines[0] != null)
         {
             currentConversation = conversation;
-            // Check if it is a one off and if true, set hasPlayed to true
+            // TODO:: Check if it is a one off and if true, set hasPlayed to true
             currentLineIndex = 0;
             ShowDialogue();
 
@@ -188,6 +189,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         dialogueCanvas.SetActive(false);
+        marketCanvas.SetActive(true);
         currentConversation = null;
     }
 
