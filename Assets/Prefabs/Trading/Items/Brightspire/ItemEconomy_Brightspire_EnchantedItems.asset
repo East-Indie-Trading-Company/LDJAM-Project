@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemEconomyConfig
   item: {fileID: 11400000, guid: 161e232ced80a1c48aae0634833d89d2, type: 2}
   demandMultiplier: 1
-  productionRate: 10
-  consumptionRate: 8
+  productionRate: 1
+  consumptionRate: 1
   purchasePriceMultiplier: 1
   minStock: 0
   maxStock: 200
