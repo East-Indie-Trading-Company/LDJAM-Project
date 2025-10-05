@@ -17,6 +17,8 @@ public class DragonTaxCollectorManager : DayAdvanceListener
 
     protected override void HandleDayAdvanced(int newDay)
     {
+        PermaUIManager.Instance?.SetDayTrackerUI(newDay);
+
         if (newDay >= firstCollectionDay && (newDay - firstCollectionDay) % taxInterval == 0)
         {
             lastTriggeredDay = newDay;
@@ -25,7 +27,7 @@ public class DragonTaxCollectorManager : DayAdvanceListener
             // Disparar evento narrativo
             OnDragonEncounter?.Invoke();
 
-            // Aqui também podes tocar SFX ou chamar UI
+            // Aqui tamb?m podes tocar SFX ou chamar UI
             // audioSource.PlayOneShot(dragonArrivalSFX);
         }
     }
@@ -33,15 +35,18 @@ public class DragonTaxCollectorManager : DayAdvanceListener
     public int GetNextCollectionDay(int currentDay)
     {
         if (currentDay < firstCollectionDay)
+            PermaUIManager.Instance?.SetDayTrackerUI(firstCollectionDay);
             return firstCollectionDay;
 
         int cycles = (currentDay - firstCollectionDay) / taxInterval + 1;
+        PermaUIManager.Instance?.SetDayTrackerUI(firstCollectionDay);
         return firstCollectionDay + cycles * taxInterval;
     }
 
     public int GetDaysUntilNextCollection(int currentDay)
     {
         int next = GetNextCollectionDay(currentDay);
+        PermaUIManager.Instance?.SetDayTrackerUI(Mathf.Max(0, next - currentDay));
         return Mathf.Max(0, next - currentDay);
     }
 }
