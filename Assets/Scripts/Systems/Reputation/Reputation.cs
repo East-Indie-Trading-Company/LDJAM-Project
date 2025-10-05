@@ -24,7 +24,6 @@ namespace Trading
                 if (Mathf.Approximately(maxValue, minValue))
                     return 0f;
 
-                // Clamp first to designer-set range
                 float clamped = Mathf.Clamp(currentValue, minValue, maxValue);
 
                 // Map to -1..+1
