@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 1129007657448218860}
   - component: {fileID: 6461164476753687462}
   - component: {fileID: 4028897606916944342}
+  - component: {fileID: 8679660303289771501}
   m_Layer: 0
   m_Name: Town 4
   m_TagString: Untagged
@@ -161,7 +162,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3867834065437829146}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -223,3 +224,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8679660303289771501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867834065437829146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91dfc1da832164549956310e309af218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TownData
+  townName: Styx
+  npcData: {fileID: 11400000, guid: 7230868df12fb92498818dd3fb3a23ba, type: 2}
