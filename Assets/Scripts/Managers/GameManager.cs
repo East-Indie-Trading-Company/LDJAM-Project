@@ -48,6 +48,6 @@ public class GameManager : MonoBehaviour
 
     public void OnCurrencyChanged(int newCurrencyAmount)
     {
-
+        PermaUIManager.Instance?.SetCurrencyUI(newCurrencyAmount);
     }
 }

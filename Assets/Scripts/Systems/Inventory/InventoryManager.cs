@@ -60,9 +60,9 @@ namespace Trading
         public bool RemoveGold(int amount)
         {
             amount = Mathf.Max(0, amount);
+            GameManager.Instance?.onCurrencyChanged.Invoke(gold);
             if (gold < amount) return false;
             gold -= amount; return true;
-            GameManager.Instance?.onCurrencyChanged.Invoke(gold);
         }
 
         /// <summary>
@@ -111,6 +111,7 @@ namespace Trading
         public void ClearAll()
         {
             gold = 0;
+            GameManager.Instance?.onCurrencyChanged.Invoke(gold);
             items.Clear();
         }
     }
