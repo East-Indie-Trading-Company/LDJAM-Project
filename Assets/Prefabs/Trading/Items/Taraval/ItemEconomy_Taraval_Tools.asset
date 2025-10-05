@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ItemEconomy_Taraval_Tools
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemEconomyConfig
   item: {fileID: 11400000, guid: 61f094e05a3546d47bce5bff41ca2d4c, type: 2}
-  demandMultiplier: 1
-  productionRate: 10
-  consumptionRate: 8
+  demandMultiplier: 6
+  productionRate: 2
+  consumptionRate: 3
   purchasePriceMultiplier: 1
   minStock: 0
   maxStock: 200
