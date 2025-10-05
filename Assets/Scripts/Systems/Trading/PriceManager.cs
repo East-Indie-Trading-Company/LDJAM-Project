@@ -35,7 +35,6 @@ namespace Trading
         /// <param name="entry"></param>
         /// <param name="playerReputation"></param>
         /// <param name="inflationIndex"></param>
-        /// <param name="tuning"></param>
         /// <returns></returns>
         public static int GetSellPriceToPlayer(
             TownStock.MarketEntry entry,

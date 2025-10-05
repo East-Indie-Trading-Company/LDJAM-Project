@@ -15,7 +15,7 @@ namespace Trading
 
         [Header("Inflation")]
         [Tooltip("Slow global rise in prices over time (applied multiplicatively).")]
-        [SerializeField, Range(0f, 0.02f)] private float dailyInflationRate = 0.001f; //changeable rate once we get this balanced
+        [SerializeField, Range(0f, 2f)] private float dailyInflationRate = 0.001f; //changeable rate once we get this balanced
         [SerializeField] private float inflationIndex = 1f; // inflation starts at 1 and never stops increasing
 
         public float InflationIndex => inflationIndex;
