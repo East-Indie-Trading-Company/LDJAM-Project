@@ -128,7 +128,7 @@ public class AudioManager : MonoBehaviour
 
     private void UpdateBGMTrack()
     {
-        if (currentBGMIndex > MAX_BGM_TRACKS)
+        if (currentBGMIndex >= MAX_BGM_TRACKS)
         {
             currentBGMIndex = BGM_TRACK_ONE;
         }
