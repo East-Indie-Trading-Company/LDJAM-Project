@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164fdad3c7e420342938803b0b3a8453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTest
-  testConversation: {fileID: 11400000, guid: a28d38104f1167f4aa06948dcd2934ee, type: 2}
+  testConversation: {fileID: 11400000, guid: f2dce1c0ed36e76408e65df0d078a868, type: 2}
 --- !u!4 &1180009415
 Transform:
   m_ObjectHideFlags: 0
@@ -362,6 +362,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1350209037 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7525586328453743278, guid: 07405e7aeab455348a5797be40fe4829, type: 3}
+  m_PrefabInstance: {fileID: 1872897269477028857}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1458976005
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +406,7 @@ MonoBehaviour:
   autoContinueSpeed: 3
   allowAutoContinue: 1
   npcNameText: {fileID: 1020667839}
+  npcPortrait: {fileID: 1350209037}
   townNameText: {fileID: 1872897269477028862}
   npcText: {fileID: 215900466}
   choiceText: {fileID: 1872897269477028861}
@@ -566,6 +578,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 41259870739110076, guid: 07405e7aeab455348a5797be40fe4829, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 722143566887662865, guid: 07405e7aeab455348a5797be40fe4829, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 722143566887662865, guid: 07405e7aeab455348a5797be40fe4829, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 722143566887662865, guid: 07405e7aeab455348a5797be40fe4829, type: 3}
+      propertyPath: m_BlocksRaycasts
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1682072726654966333, guid: 07405e7aeab455348a5797be40fe4829, type: 3}

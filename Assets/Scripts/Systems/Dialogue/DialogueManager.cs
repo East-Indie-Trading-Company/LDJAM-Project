@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
 
     [Header("UI References")]
     [SerializeField] TextMeshProUGUI npcNameText;
+    [SerializeField] Image npcPortrait;
     [SerializeField] TextMeshProUGUI townNameText;
     [SerializeField] TextMeshProUGUI npcText;
     [SerializeField] TextMeshProUGUI choiceText;
@@ -54,6 +55,7 @@ public class DialogueManager : MonoBehaviour
         DisableChoicePanel();
         townNameText.text = conversation.npc.townName;
         npcNameText.text = conversation.npc.npcName;
+        npcPortrait.sprite = conversation.npc.npcIcon;
 
         if (conversation.lines[0] != null)
         {
@@ -100,7 +102,7 @@ public class DialogueManager : MonoBehaviour
     }
     IEnumerator StartTyping(string currentText)
     {
-        Debug.Log($"[DialogueManager] Begin typing: {currentText}");
+        //Debug.Log($"[DialogueManager] Begin typing: {currentText}");
         isTyping = true; // Set typing flag to true
         npcText.text = "";  // Clear existing text
         allowAutoContinue = true; // Reenable autoplay
@@ -155,7 +157,7 @@ public class DialogueManager : MonoBehaviour
     void ChoiceA()
     {
         if (isTyping) return;
-        Debug.Log($"You picked choice A. Response will be: {currentLine.choice.optionA.responseText}");
+        //Debug.Log($"You picked choice A. Response will be: {currentLine.choice.optionA.responseText}");
         waitingForChoice = false;
         DisableChoicePanel();
         // TODO:: Update inventory/rep/flags
@@ -164,7 +166,7 @@ public class DialogueManager : MonoBehaviour
     void ChoiceB()
     {
         if (isTyping) return;
-        Debug.Log($"You picked choice B. Response will be: {currentLine.choice.optionB.responseText}");
+        //Debug.Log($"You picked choice B. Response will be: {currentLine.choice.optionB.responseText}");
         waitingForChoice = false;
         DisableChoicePanel();
         // TODO:: Update inventory/rep/flags
