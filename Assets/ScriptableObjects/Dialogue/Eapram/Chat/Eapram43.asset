@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd1bb3f9a2130d840ba2b8ba51e9463d, type: 3}
-  m_Name: Eapram5
+  m_Name: Eapram43
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
   npc: {fileID: 11400000, guid: d1d50ab825af1254598ba5711804067c, type: 2}
   lines:
-  - dialogueText: "What fleeting vanity brings you to this somber place?\t\t\t\t\t\t"
+  - dialogueText: You chase gold, merchant. But what price is a final breath? Tell
+      me that, Nevermore.
     choice: {fileID: 0}
   isOneOff: 0
   flags:
-  - Act1
+  - Act3
   hasPlayed: 0
