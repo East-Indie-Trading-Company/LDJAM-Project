@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
@@ -6,34 +6,57 @@ public class DialogueTrigger : MonoBehaviour
 {
     [Header("NPC DATA")]
     public NPCData npcData = null;
+
     [Header("UI References")]
-    [SerializeField] TextMeshProUGUI npcNameText; // To be implemented
+    [SerializeField] TextMeshProUGUI npcNameText;
     [SerializeField] Image npcPortrait;
-    [SerializeField] TextMeshProUGUI townNameText; // To be implemented
+    [SerializeField] TextMeshProUGUI townNameText;
     [SerializeField] TextMeshProUGUI npcText;
     [SerializeField] Button chatButton;
     [SerializeField] Button rumorButton;
     [SerializeField] GameObject marketCanvas;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         chatButton.onClick.AddListener(onChat);
         rumorButton.onClick.AddListener(onRumor);
-        DisplayTown(); // VERY SUPER TEMOIRARY
+    }
+
+    // Arwen this was Marco called by ZoomInTest when player clicks a town
+    public void SetNPC(NPCData newData)
+    {
+        npcData = newData;
+        DisplayTown();
     }
 
     void DisplayTown()
     {
-        if (npcData != null)
+        if (npcData == null)
         {
+            Debug.LogWarning("[DialogueTrigger] npcData is NULL!");
+            return;
+        }
+
+        if (npcData.displayInfo == null)
+        {
+            Debug.LogWarning($"[DialogueTrigger] displayInfo is NULL for {npcData.name}");
+            return;
+        }
+
+        
+
+        // ✅ Only update UI if everything exists
+        if (npcPortrait != null)
             npcPortrait.sprite = npcData.displayInfo.npcIcon;
+
+        if (npcNameText != null)
+            npcNameText.text = npcData.displayInfo.npcName;
+
+        if (townNameText != null)
+            townNameText.text = npcData.displayInfo.townName;
+
+        if (npcText != null)
             npcData.Greeting(npcText);
-        }
-        else
-        {
-            Debug.LogWarning("[DialogueTrigger] NPC data is missing!");
-        }
     }
 
     void onChat()
@@ -41,6 +64,7 @@ public class DialogueTrigger : MonoBehaviour
         marketCanvas.SetActive(false);
         npcData.Talk();
     }
+
     void onRumor()
     {
         marketCanvas.SetActive(false);

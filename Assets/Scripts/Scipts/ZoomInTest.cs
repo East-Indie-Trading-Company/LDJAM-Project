@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem; // se estiveres a usar o New Input System
+using UnityEngine.InputSystem;
 
 public class ZoomInTest : MonoBehaviour
 {
@@ -12,11 +12,16 @@ public class ZoomInTest : MonoBehaviour
 
     [Header("UI Panel")]
     public GameObject rightPanel;
+    public Image npcImage; //  Add this reference in the Inspector
 
+    public DialogueTrigger dialogueTrigger;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
     private bool isZoomed = false;
     private Transform target;
+
+    // 👇 NEW: Store the TownData reference
+    private TownData currentTown;
 
     void Start()
     {
@@ -43,13 +48,19 @@ public class ZoomInTest : MonoBehaviour
                 {
                     target = hit.collider.transform;
                     isZoomed = true;
+
+                    TownData townData = hit.collider.GetComponent<TownData>();
+
                     if (rightPanel != null)
                         rightPanel.SetActive(true);
+
+                    if (townData != null && dialogueTrigger != null)
+                    {
+                        
+                        dialogueTrigger.SetNPC(townData.npcData); // 👈 this updates the NPC data
+                    }
                 }
-                else
-                {
-                    ResetZoom();
-                }
+
             }
         }
 
@@ -72,14 +83,14 @@ public class ZoomInTest : MonoBehaviour
     {
         isZoomed = false;
         target = null;
+        currentTown = null;
         if (rightPanel != null)
             rightPanel.SetActive(false);
     }
 
-    // Estes métodos podem ser ligados aos botões da UI
+    // UI button methods
     public void OnTalkPressed() { Debug.Log("Talk button pressed"); }
     public void OnRumorsPressed() { Debug.Log("Rumors button pressed"); }
     public void OnTradePressed() { Debug.Log("Trade button pressed"); }
     public void OnBackPressed() { ResetZoom(); }
 }
-
