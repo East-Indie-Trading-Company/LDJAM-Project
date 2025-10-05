@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemSO
   itemName: Relics
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 07d2549ac72ff3e46a00f5a7718ccc50, type: 3}
   baseValue: 1
   category: 2
   tags: []

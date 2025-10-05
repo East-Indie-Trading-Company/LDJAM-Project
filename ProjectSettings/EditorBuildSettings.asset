@@ -11,6 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScenes/Solomon_Trading_Test.unity
     guid: b8d40fa1d39c4b646a0738fa8b5c5922
+    path: Assets/Scenes/TestLocalMika.unity
+    guid: 64468eb317fc7f94c85033b5c28c44be
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

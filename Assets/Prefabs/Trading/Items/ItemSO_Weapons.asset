@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemSO
   itemName: Weapons
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 4775a952eb1a90941b7de538ea6f1d15, type: 3}
   baseValue: 1
   category: 2
   tags: []
