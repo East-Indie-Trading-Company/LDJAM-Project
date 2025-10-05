@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem; 
 
 public class DialogueManager : MonoBehaviour
 {
@@ -40,11 +41,22 @@ public class DialogueManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        dialogueCanvas.SetActive(false);
     }
     void Start()
     {
         buttonA.onClick.AddListener(ChoiceA);
         buttonB.onClick.AddListener(ChoiceB);
+    }
+
+    // This function is here in leu of a player input system
+    void Update()
+    {
+        if (Mouse.current.leftButton.wasPressedThisFrame || Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.enterKey.wasPressedThisFrame)
+        {
+            AdvanceDialogue();
+        }
     }
 
 
