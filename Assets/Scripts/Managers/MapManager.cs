@@ -5,13 +5,37 @@ using System.Collections;
 public class MapManager : MonoBehaviour
 {
     [SerializeField] Transform target; // Either one of the towns or the entire map
-    //[SerializeField] Button town1Button;
+
+    [SerializeField] GameObject gameMenu;
+
     //public Vector3 targetPosition = new Vector3(0, 5, -10);
     public float zoomDuration = 1.0f;
     public float zoomSpeed = 5f;
     public float stopDistance = 3f;
 
+    private bool isVisible = false;
     private bool isMoving = false;
+
+    public void Start()
+    {
+        gameMenu.gameObject.SetActive(false);
+    }
+
+    public void TravelMenuAppears()
+    {
+        if (!isVisible)
+        {
+            gameMenu.gameObject.SetActive(true);
+        }
+    }
+
+    public void TheTownsAppear()
+    {
+        if (!isVisible)
+        {
+            gameMenu.gameObject.SetActive(true);
+        }
+    }
 
     // Makes the camera zoom out to show the full map
     public void TravelBackToMap()
