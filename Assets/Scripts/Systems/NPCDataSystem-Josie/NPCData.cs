@@ -30,9 +30,14 @@ public class NPCData : ScriptableObject
     public void Greeting(TextMeshProUGUI textComponent)
     {
         DialogueConversation convo =  PullDialogue(npcGreetingDialogueLines);
-        Debug.Log($"[NPCData] Has convo? {convo == null}");
-        Debug.Log($"[NPCData] {convo.lines[0].dialogueText}");
-        textComponent.text = convo.lines[0].dialogueText;
+        // if (convo.lines[0].dialogueText != null)
+        // {
+        //     textComponent.text = convo.lines[0].dialogueText;
+        // }
+        // else
+        // {
+        //     Debug.Log($"[NPCData] convo.lines[0].dialogueText is null!");
+        // }
     }
 
 

@@ -251,6 +251,7 @@ namespace Trading
                 tmp.enableAutoSizing = true;
                 tmp.alignment = TextAlignmentOptions.Right;
                 tmp.raycastTarget = false;
+                tmp.color = Color.black;
 
                 playerGoldText = tmp;
                 if (logMissingRefs) Debug.Log("[TradingUI] Created top-right Gold label.");
