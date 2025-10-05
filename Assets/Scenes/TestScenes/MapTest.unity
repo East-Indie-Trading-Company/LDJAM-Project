@@ -931,14 +931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86b46edddd5dba24093343b4bc945b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
-  npcData: {fileID: 11400000, guid: 5129ca34aded30f42844aad7b22c7e06, type: 2}
-  npcNameText: {fileID: 0}
-  npcPortrait: {fileID: 1220015986}
-  townNameText: {fileID: 0}
-  npcText: {fileID: 27876879}
-  chatButton: {fileID: 766031108}
-  rumorButton: {fileID: 2022028983}
-  marketCanvas: {fileID: 1491925323}
 --- !u!4 &449241278
 Transform:
   m_ObjectHideFlags: 0
@@ -1634,7 +1626,7 @@ MonoBehaviour:
   rotateSpeed: 3
   rightPanel: {fileID: 1491925323}
   npcImage: {fileID: 1220015986}
-  dialogueTrigger: {fileID: 449241277}
+  townUI: {fileID: 0}
 --- !u!4 &801256485
 Transform:
   m_ObjectHideFlags: 0
@@ -2230,7 +2222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TownData
   townName: Town3
-  npcData: {fileID: 0}
+  npcData: {fileID: 11400000, guid: 9a73a88bffd5de147be3c2babeb5c84f, type: 2}
 --- !u!1 &1220015983
 GameObject:
   m_ObjectHideFlags: 0
