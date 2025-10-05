@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ItemEconomy_LockHaven_Reagents
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemEconomyConfig
   item: {fileID: 11400000, guid: 55f62c7109d7f9947bcffc26491b5a80, type: 2}
-  demandMultiplier: 1
-  productionRate: 10
-  consumptionRate: 8
+  demandMultiplier: 5
+  productionRate: 7
+  consumptionRate: 5
   purchasePriceMultiplier: 1
   minStock: 0
   maxStock: 200

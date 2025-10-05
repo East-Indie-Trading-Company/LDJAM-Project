@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ItemEconomy_LockHaven_Grains
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemEconomyConfig
   item: {fileID: 11400000, guid: f8ed0f119e1b33648bd5fc761e1c4bc1, type: 2}
-  demandMultiplier: 1
-  productionRate: 10
-  consumptionRate: 8
+  demandMultiplier: 8
+  productionRate: 3
+  consumptionRate: 5
   purchasePriceMultiplier: 1
   minStock: 0
   maxStock: 200

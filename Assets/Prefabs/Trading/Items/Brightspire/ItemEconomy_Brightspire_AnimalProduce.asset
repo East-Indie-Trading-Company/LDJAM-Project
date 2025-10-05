@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ItemEconomy_Brightspire_AnimalProduce
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemEconomyConfig
   item: {fileID: 11400000, guid: 7e5805cf2e069b349a5d21b884104ee9, type: 2}
-  demandMultiplier: 1
-  productionRate: 10
-  consumptionRate: 8
+  demandMultiplier: 6
+  productionRate: 1
+  consumptionRate: 3
   purchasePriceMultiplier: 1
   minStock: 0
   maxStock: 200
