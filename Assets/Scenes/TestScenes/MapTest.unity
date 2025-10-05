@@ -839,6 +839,69 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &417853112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 417853114}
+  - component: {fileID: 417853113}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &417853113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417853112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6a667a0f0b1044ab7b2409e8ef7138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  audioSource: {fileID: 0}
+  sfxSource: {fileID: 0}
+  currentClip: {fileID: 8300000, guid: 74cf9067868b1c048a22c46c80986eb4, type: 3}
+  soundEffects: []
+  defaultVolume: 0.8
+  buyItemAudioClip: {fileID: 0}
+  dragonVocalSoundEffects: []
+  eapramVocalSoundEffects:
+  - {fileID: 8300000, guid: 8893ccadc2a0ead4798be6e0320ff64c, type: 3}
+  - {fileID: 8300000, guid: c6928deea96b43d409a2905e1720ed58, type: 3}
+  - {fileID: 8300000, guid: 77ec26af73eabeb4eab4019d5c09c4f9, type: 3}
+  - {fileID: 8300000, guid: 33bac685800baa7478648302c2d966fa, type: 3}
+  hectorVocalSoundEffects: []
+  hestaVocalSoundEffects: []
+  rufkinVocalSoundEffects: []
+  sirElliotVocalSoundEffects: []
+  tarqueVocalSoundEffects: []
+  verellaSyllaVocalSoundEffects: []
+  wrenVocalSoundEffects: []
+--- !u!4 &417853114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417853112}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 826.9384, y: 0, z: -1087.8674}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &449241276
 GameObject:
   m_ObjectHideFlags: 0
@@ -4626,3 +4689,4 @@ SceneRoots:
   - {fileID: 915925566}
   - {fileID: 1118128080}
   - {fileID: 1787324978}
+  - {fileID: 417853114}
