@@ -6,8 +6,8 @@ using TMPro;
 namespace Trading
 {
     /// <summary>
-    /// Market UI builder for a specific town. Populates rows, updates a header with the town name,
-    /// and shows a live player gold label. Town is set via SetTown(...) or defaultTown; never inferred.
+    /// Market UI builder for a specific town. Populates rows, updates a header with the town name
+    ///  Town is set via SetTown(...) or defaultTown; never inferred.
     /// </summary>
     public class TradingUI : MonoBehaviour
     {
@@ -15,11 +15,9 @@ namespace Trading
         [SerializeField] private RectTransform rowsParent;
         [SerializeField] private GameObject rowPrefab;
 
-        [Header("Header & Gold")]
+        [Header("Header")]
         [SerializeField] private TMP_Text headerTitleText;
-        [SerializeField] private TMP_Text playerGoldText;
         [SerializeField] private string headerFormat = "{0} Market";
-        [SerializeField] private string goldFormat   = "Gold: {0}";
 
         [Header("Defaults")]
         [SerializeField] private TownStock defaultTown;
@@ -45,7 +43,7 @@ namespace Trading
             if (!inventory) inventory = InventoryManager.Instance;
 
             TryAutoFindRowsParent();
-            TryAutoFindHeaderAndGold();
+            TryAutoFindHeader();
         }
 
         /// <summary>
@@ -89,7 +87,7 @@ namespace Trading
         }
 
         /// <summary>
-        /// Redraws all rows and updates header/gold.
+        /// Redraws all rows and updates header.
         /// </summary>
         public void RefreshAll()
         {
@@ -97,11 +95,10 @@ namespace Trading
                 if (liveRows[i] != null) liveRows[i].Refresh();
 
             UpdateHeaderUI();
-            UpdateGoldUI();
         }
 
         /// <summary>
-        /// Clears and rebuilds rows for the current town and updates header/gold.
+        /// Clears and rebuilds rows for the current town and updates header.
         /// </summary>
         public void Rebuild()
         {
@@ -114,7 +111,6 @@ namespace Trading
             liveRows.Clear();
 
             UpdateHeaderUI();
-            UpdateGoldUI();
 
             if (town == null) return;
             if (town.market == null || town.market.Count == 0) return;
@@ -172,20 +168,6 @@ namespace Trading
         }
 
         /// <summary>
-        /// Updates the gold label from InventoryManager.
-        /// </summary>
-        private void UpdateGoldUI()
-        {
-            if (!playerGoldText)
-            {
-                if (logMissingRefs) Debug.LogWarning("[TradingUI] Gold text reference is missing.");
-                return;
-            }
-            var gold = inventory ? inventory.Gold : 0;
-            playerGoldText.text = string.Format(goldFormat, gold);
-        }
-
-        /// <summary>
         /// Finds a ScrollRect content for rows if not assigned.
         /// </summary>
         private void TryAutoFindRowsParent()
@@ -210,10 +192,9 @@ namespace Trading
         }
 
         /// <summary>
-        /// Binds header and gold labels; searches LeftColumn/Header/Title first, then other common paths.
-        /// Creates a top-right gold label if none is found.
+        /// Binds header labels; searches LeftColumn/Header/Title first, then other common paths.
         /// </summary>
-        private void TryAutoFindHeaderAndGold()
+        private void TryAutoFindHeader()
         {
             if (!headerTitleText)
             {
@@ -222,39 +203,6 @@ namespace Trading
                     transform.Find("RightColumn/Header/Title") ??
                     transform.Find("Header/Title");
                 headerTitleText = t ? t.GetComponent<TMP_Text>() : null;
-            }
-
-            if (!playerGoldText)
-            {
-                var t =
-                    transform.Find("RightColumn/Header/Gold") ??
-                    transform.Find("LeftColumn/Header/Gold")  ??
-                    transform.Find("Header/Gold");
-                playerGoldText = t ? t.GetComponent<TMP_Text>() : null;
-            }
-
-            if (!playerGoldText)
-            {
-                var canvasRoot = GetComponentInParent<Canvas>()?.transform ?? transform;
-                var go = new GameObject("GoldLabel", typeof(RectTransform), typeof(TextMeshProUGUI));
-                go.transform.SetParent(canvasRoot, false);
-
-                var rt = go.GetComponent<RectTransform>();
-                rt.anchorMin = new Vector2(1f, 1f);
-                rt.anchorMax = new Vector2(1f, 1f);
-                rt.pivot     = new Vector2(1f, 1f);
-                rt.anchoredPosition = new Vector2(-24f, -24f);
-                rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 260f);
-                rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,   40f);
-
-                var tmp = go.GetComponent<TextMeshProUGUI>();
-                tmp.enableAutoSizing = true;
-                tmp.alignment = TextAlignmentOptions.Right;
-                tmp.raycastTarget = false;
-                tmp.color = Color.black;
-
-                playerGoldText = tmp;
-                if (logMissingRefs) Debug.Log("[TradingUI] Created top-right Gold label.");
             }
 
             if (!headerTitleText && logMissingRefs)
