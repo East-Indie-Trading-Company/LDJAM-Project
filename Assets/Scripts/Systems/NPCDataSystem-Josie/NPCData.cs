@@ -31,6 +31,8 @@ public class NPCData : ScriptableObject
     {
         DialogueConversation convo =  PullDialogue(npcGreetingDialogueLines);
 
+        //Debug.Log($"[NPCData] Convo is null: {convo == null}");
+        //Debug.Log($"[NPCData] Convo.lines is null: {convo.lines == null}");
         if (convo.lines.Count > 0)
         {
             textComponent.text = convo.lines[0].dialogueText;
