@@ -58,11 +58,9 @@ public class DragonNarrativeTrigger : MonoBehaviour
         {
             Debug.Log("[DragonNarrativeTrigger] NO ACT IS TRIGGERED");
         }
-        //if (dialogueSystem != null && !string.IsNullOrEmpty(dialogueKey))
-        //{
-        //    dialogueSystem.StartDialogue(dialogueKey);
-        //}
 
-        // Aqui podes pausar gameplay, bloquear controlos, etc.
+        Debug.Log("[DragonNarrativeTrigger] Dialogue finished, check for flag");
+
+        
     }
 }
