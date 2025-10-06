@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ItemEconomy_Brightspire_Alcohol
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemEconomyConfig
   item: {fileID: 11400000, guid: cd6db6897c119934d8cfefc7a6db8ba2, type: 2}
-  demandMultiplier: 5
-  productionRate: 5
-  consumptionRate: 8
+  demandMultiplier: 3
+  productionRate: 1
+  consumptionRate: 4
   purchasePriceMultiplier: 1.2
   minStock: 0
   maxStock: 200

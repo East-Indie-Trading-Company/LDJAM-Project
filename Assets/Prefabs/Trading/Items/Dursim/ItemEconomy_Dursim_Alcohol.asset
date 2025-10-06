@@ -15,7 +15,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: cd6db6897c119934d8cfefc7a6db8ba2, type: 2}
   demandMultiplier: 5
   productionRate: 1
-  consumptionRate: 5
+  consumptionRate: 4
   purchasePriceMultiplier: 1
   minStock: 0
   maxStock: 200

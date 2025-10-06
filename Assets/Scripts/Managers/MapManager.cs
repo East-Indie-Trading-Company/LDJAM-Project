@@ -1,98 +1,75 @@
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using System.Collections;
 
 public class MapManager : MonoBehaviour
 {
-    [SerializeField] Transform target; // Either one of the towns or the entire map 
-    //public Vector3 targetPosition = new Vector3(0, 5, -10);
-    public float zoomDuration = 1.0f;
-    public float zoomSpeed = 5f;
-    public float stopDistance = 3f;
+    [Header("References")]
+    [SerializeField] private Transform[] towns;   // Town 1..7 in order
+    [SerializeField] private Transform mapView;   // overview position
+    [SerializeField] private GameManager gameManager;
+
+    [Header("Camera Settings")]
+    [SerializeField] private float zoomDuration = 1.0f;
+    [SerializeField] private float stopDistance = 3f;
 
     private bool isMoving = false;
 
-    // Makes the camera zoom out to show the full map
+    // Buttons call these
+    public void TravelToTown1() => TravelToTown(0);
+    public void TravelToTown2() => TravelToTown(1);
+    public void TravelToTown3() => TravelToTown(2);
+    public void TravelToTown4() => TravelToTown(3);
+    public void TravelToTown5() => TravelToTown(4);
+    public void TravelToTown6() => TravelToTown(5);
+    public void TravelToTown7() => TravelToTown(6);
+
     public void TravelBackToMap()
     {
-        if (!isMoving)
-        {
-            StartCoroutine(ZoomCameraCoroutine());
-        }
-    }
-    
-    // Each of these functions makes the camera zoom in to each corresponding town on the map
-    public void TravelToTown1()
-    {
-        if (!isMoving)
-        {
-            StartCoroutine(ZoomCameraCoroutine());
-        }
-    }
-    public void TravelToTown2()
-    {
-        if (!isMoving)
-        {
-            StartCoroutine(ZoomCameraCoroutine());
-        }
-    }
-    public void TravelToTown3()
-    {
-        if (!isMoving)
-        {
-            StartCoroutine(ZoomCameraCoroutine());
-        }
-
-    }
-    public void TravelToTown4()
-    {
-        if (!isMoving)
-        {
-            StartCoroutine(ZoomCameraCoroutine());
-        }
-    }
-    public void TravelToTown5()
-    {
-        if (!isMoving)
-        {
-            StartCoroutine(ZoomCameraCoroutine());
-        }
-    }
-    public void TravelToTown6()
-    {
-        if (!isMoving)
-        {
-            StartCoroutine(ZoomCameraCoroutine());
-        }
-    }
-    public void TravelToTown7()
-    {
-        if (!isMoving)
-        {
-            StartCoroutine(ZoomCameraCoroutine());
-        }
+        if (isMoving) return;
+        StartCoroutine(ZoomCameraCoroutine(mapView));
+        gameManager.ReturnToMap();
     }
 
-    private IEnumerator ZoomCameraCoroutine()
+    private void TravelToTown(int index)
+    {
+        if (isMoving || index < 0 || index >= towns.Length)
+            return;
+
+        Transform targetTown = towns[index];
+        StartCoroutine(ZoomCameraCoroutine(targetTown));
+
+        // tell GameManager to handle day logic
+        TownData data = targetTown.GetComponent<TownData>();
+        if (data != null)
+            gameManager.TravelToTown(data);
+    }
+
+    private IEnumerator ZoomCameraCoroutine(Transform target)
     {
         isMoving = true;
-        Vector3 startPosition = Camera.main.transform.position;
-        Vector3 targetPosition = target.position - (target.forward * stopDistance);
-        Quaternion startRotation = transform.rotation;
-        float elapsed = 0f;
 
-        while (elapsed < zoomDuration)
+        Camera cam = Camera.main;
+        if (cam == null)
         {
-            Camera.main.transform.position = Vector3.Lerp(startPosition, targetPosition, elapsed / zoomDuration);
-            //transform.rotation = Quaternion.Slerp(startRotation, targetPosition.rotation, elapsed / moveDuration);
-            elapsed += Time.deltaTime;
-            yield return null; // Wait until the next frame
+            Debug.LogError("[MapManager] No MainCamera found! Add tag 'MainCamera' to your camera.");
+            yield break;
         }
 
-        // Ensure the camera reaches the exact target position and rotation
-        //Camera.main.transform.position = target.position;
-        Camera.main.transform.position = targetPosition;
-        //transform.rotation = targetPosition.rotation;
+        Vector3 startPosition = cam.transform.position;
+        Vector3 targetPosition = target.position + new Vector3(0, 3f, -stopDistance);
+
+        float elapsed = 0f;
+        while (elapsed < zoomDuration)
+        {
+            cam.transform.position = Vector3.Lerp(startPosition, targetPosition, elapsed / zoomDuration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        cam.transform.position = targetPosition;
         isMoving = false;
+
+        Debug.Log($"[MapManager] Zoom finished → {target.name}");
     }
 }
+

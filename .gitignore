@@ -59,7 +59,7 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
-
+*.asset
 # Unity3D generated file on crash reports
 sysinfo.txt
 
@@ -97,3 +97,10 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+ProjectSettings/UnityConnectSettings.asset
+ProjectSettings/ProjectSettings.asset
+ProjectSettings/GraphicsSettings.asset
+ProjectSettings/EditorBuildSettings.asset
+Assets/Settings/UniversalRenderPipelineGlobalSettings.asset
+Assets/Settings/PC_RPAsset.asset
+Assets/Settings/Mobile_RPAsset.asset
