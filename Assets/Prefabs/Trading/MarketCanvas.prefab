@@ -647,12 +647,11 @@ MonoBehaviour:
   rowsParent: {fileID: 836929163363856549}
   rowPrefab: {fileID: 5579266682344962193, guid: b7e353ba694403f4faff7b75ae0b32f6, type: 3}
   headerTitleText: {fileID: 0}
-  playerGoldText: {fileID: 0}
   headerFormat: '{0} Market'
-  goldFormat: 'Gold: {0}'
-  defaultTown: {fileID: 11400000, guid: 25bb33eeca5eaea4f98f1233faf98956, type: 2}
   defaultRowHeight: 80
   logMissingRefs: 1
+  trading: {fileID: 0}
+  inventory: {fileID: 0}
 --- !u!1 &2793978150795186623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,7 +1489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8862745, g: 0.77254903, b: 0.5529412, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
