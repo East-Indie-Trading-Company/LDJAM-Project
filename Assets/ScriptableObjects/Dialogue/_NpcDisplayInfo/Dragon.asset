@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac806ca5c45cc9d40ba2dec25c6d6aef, type: 3}
-  m_Name: New Dialogue
+  m_Name: Dragon
   m_EditorClassIdentifier: Assembly-CSharp::NpcDisplayInfo
   npcName: Dragon
   npcIcon: {fileID: 21300000, guid: c6785b50c971cf240ac044651c55479e, type: 3}
