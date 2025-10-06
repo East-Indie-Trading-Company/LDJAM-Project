@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed558470323453347a9e3ab4d78cfbf7, type: 3}
   m_Name: ElliotData
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  displayInfo: {fileID: 0}
-  townStock: {fileID: 0}
+  displayInfo: {fileID: 11400000, guid: 4bcaa3290efb6574e8ef6e7923c24d5c, type: 2}
+  townStock: {fileID: 11400000, guid: 567707d4a9820584ca7281d014c524b2, type: 2}
   npcDialogueLines: []
   npcRumorDialogueLines: []
   npcGreetingDialogueLines: []

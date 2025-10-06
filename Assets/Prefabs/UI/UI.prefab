@@ -139,12 +139,12 @@ MonoBehaviour:
   scorchedButton: {fileID: 7372991561665823953}
   taravalButton: {fileID: 5546494963873024056}
   brightspireData: {fileID: 11400000, guid: 5129ca34aded30f42844aad7b22c7e06, type: 2}
-  trestelData: {fileID: 11400000, guid: 7230868df12fb92498818dd3fb3a23ba, type: 2}
-  dursimData: {fileID: 11400000, guid: 7230868df12fb92498818dd3fb3a23ba, type: 2}
+  trestelData: {fileID: 11400000, guid: db8220ea46877834cac0ee9fc7aea065, type: 2}
+  dursimData: {fileID: 11400000, guid: 5129ca34aded30f42844aad7b22c7e06, type: 2}
   styxData: {fileID: 11400000, guid: 7230868df12fb92498818dd3fb3a23ba, type: 2}
-  lochData: {fileID: 11400000, guid: 7230868df12fb92498818dd3fb3a23ba, type: 2}
-  scorchedData: {fileID: 11400000, guid: 7230868df12fb92498818dd3fb3a23ba, type: 2}
-  taravalData: {fileID: 11400000, guid: 7230868df12fb92498818dd3fb3a23ba, type: 2}
+  lochData: {fileID: 11400000, guid: 5129ca34aded30f42844aad7b22c7e06, type: 2}
+  scorchedData: {fileID: 11400000, guid: 5f90da245fc76264097ba4a8aa47783e, type: 2}
+  taravalData: {fileID: 11400000, guid: 5129ca34aded30f42844aad7b22c7e06, type: 2}
   mapButtonUI: {fileID: 8576994253259895624}
   mapBackButtonUI: {fileID: 5890486624830372022}
   townUI: {fileID: 8917371206788619568}
