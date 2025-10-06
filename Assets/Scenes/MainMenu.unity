@@ -2894,6 +2894,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2735760163450282067, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: dailyInflationRate
+      value: 1.001
+      objectReference: {fileID: 0}
     - target: {fileID: 4721831317631648393, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: permaUIManager
       value: 
@@ -10451,7 +10455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Arwen Sylveck - Engineering Team
+  m_text: Arwen Sylveck - Lead Engineering Team
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

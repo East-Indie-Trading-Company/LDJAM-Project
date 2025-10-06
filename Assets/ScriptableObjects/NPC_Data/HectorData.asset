@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed558470323453347a9e3ab4d78cfbf7, type: 3}
   m_Name: HectorData
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  displayInfo: {fileID: 0}
-  townStock: {fileID: 0}
+  displayInfo: {fileID: 11400000, guid: c3f093dade5bfab458ccb5de27b75b78, type: 2}
+  townStock: {fileID: 11400000, guid: e9331866022ec0e469877a2227173566, type: 2}
   npcDialogueLines:
   - {fileID: 11400000, guid: 6ed5c24dbe357094a9935f1dde49c2d8, type: 2}
   - {fileID: 11400000, guid: 649fc1b82990a9a4b9f2e81d05a48f9f, type: 2}

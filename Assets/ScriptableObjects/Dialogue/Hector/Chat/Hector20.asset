@@ -15,8 +15,11 @@ MonoBehaviour:
   npc: {fileID: 11400000, guid: c3f093dade5bfab458ccb5de27b75b78, type: 2}
   lines:
   - dialogueText: Blast it all! Another grade below the mark. Professor Brimblebrox
-      must hold a grudge against me. Or my family name, perhaps.
-    choice: {fileID: 0}
+      must hold a grudge against me. Or my family name, perhaps. I'll need to win
+      his favor with a bribe, it seems. Bring me some tools. He loves to animate
+      them.
+    choice: {fileID: 11400000, guid: 3c13ad927271ae940b3a35669ff3c897, type: 2}
   isOneOff: 1
-  flags: []
+  flags:
+  - 
   hasPlayed: 0
