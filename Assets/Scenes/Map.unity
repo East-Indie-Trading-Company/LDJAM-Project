@@ -451,17 +451,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &843828335 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5462447799597403745, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
-  m_PrefabInstance: {fileID: 3463856523926476760}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!4 &938018991 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7803739395827951138, guid: 049f7d7f5d2653448a0d3577a086c381, type: 3}
@@ -680,6 +669,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1508763770}
+    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 729226089}
     - target: {fileID: 4147148926642644616, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
       propertyPath: m_Name
       value: Mangager
@@ -743,33 +736,19 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4147148926642644616, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 622443016648762004}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
---- !u!1 &622443016648761995 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4147148926642644616, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+--- !u!114 &622443016648762004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
   m_PrefabInstance: {fileID: 622443016648761994}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &622443016648762004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 622443016648761995}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 729226089}
-  gameMenu: {fileID: 0}
-  zoomDuration: 1
-  zoomSpeed: 5
-  stopDistance: 3
 --- !u!1001 &1035196382187157848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1364,10 +1343,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 684114668}
-    - target: {fileID: 7641414778749115738, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TravelToTown5
-      objectReference: {fileID: 0}
     - target: {fileID: 7935371518627179848, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1432,27 +1407,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1823902868}
-    - target: {fileID: 8873195087734426385, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TravelToTown2
-      objectReference: {fileID: 0}
     - target: {fileID: 8961328600689505113, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1920582270}
-    - target: {fileID: 8961328600689505113, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TravelToTown1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8142918552122993849, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
-    - {fileID: 6411554944190991735, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
-    - {fileID: 3695673172370186967, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
-    - {fileID: 3181283390076742822, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
-    - {fileID: 8109898740789092721, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
-    - {fileID: 2291398147363345611, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
-    - {fileID: 2566126161984066706, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
-    - {fileID: 7509235545501795347, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
