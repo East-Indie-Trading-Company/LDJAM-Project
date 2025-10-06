@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
   npc: {fileID: 11400000, guid: 4bcaa3290efb6574e8ef6e7923c24d5c, type: 2}
   lines:
-  - dialogueText: I see you carrying a lot of reagents, wanderer. Would you consider
-      trading them for some liquor? Only the finest bottles.
+  - dialogueText: 'I see you carrying a lot of reagents, wanderer. Would you consider
+      trading them for some coin? We have too many wounded - they won''t survive
+      much longer without medicine. '
     choice: {fileID: 11400000, guid: 2056eb8998c037542965c938287735bc, type: 2}
   isOneOff: 1
   flags:
-  - 'HasThresholdReagents[30]'
+  - HasThresholdReagents30
   hasPlayed: 0

@@ -15,10 +15,24 @@ MonoBehaviour:
   optionA:
     buttonText: Sorry, I need them for something else.
     responseText: Hmm, how I hope folks were more generous around these lands...
-    flagToRaise: Rep - 10
+    flagToRaise: 
+    reputationChangeValue: 0.1
+    reputationEffect: 2
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   optionB:
-    buttonText: Finest bottles? You have a deal!
+    buttonText: Coin, you say? You have a deal!
     responseText: I thank you, wanderer. The wounded will be healed, and folks will
       be glad to hear of your kindness.
-    flagToRaise: Rep + 15
+    flagToRaise: 
+    reputationChangeValue: 0.15
+    reputationEffect: 1
+    item: {fileID: 11400000, guid: 55f62c7109d7f9947bcffc26491b5a80, type: 2}
+    itemChangeValue: 30
+    itemEffect: 2
+    goldChangeValue: 500
+    goldEffect: 1
   displayLine: 
