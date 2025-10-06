@@ -18,6 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f5614116e2445dd40958b37b5a05e2a3, type: 2}
   - {fileID: 11400000, guid: 27381f32a0ae7d54c8316bb04e23b970, type: 2}
   - {fileID: 11400000, guid: 1adb93416df65f041a3790bf29efa5b2, type: 2}
+  - {fileID: 11400000, guid: e63c9e0b4c8388342928887b49211271, type: 2}
   npcRumorDialogueLines:
   - {fileID: 11400000, guid: ce1dcc0f43f668248ad1229b9b8d3939, type: 2}
   - {fileID: 11400000, guid: 87e8f4c93f110da40abfc468baa6bbaa, type: 2}
