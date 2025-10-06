@@ -46,6 +46,8 @@ namespace Trading
         /// </summary>
         private void Start()
         {
+            if(!trading)   trading   = TradingManager.Instance;
+            if(!inventory) inventory = InventoryManager.Instance;
             // Rebuild is called here primarily to ensure manager references are grabbed early.
             Rebuild();
         }

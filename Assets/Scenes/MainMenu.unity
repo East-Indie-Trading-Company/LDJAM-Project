@@ -2894,6 +2894,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4721831317631648393, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: permaUIManager
+      value: 
+      objectReference: {fileID: 1027870882}
     - target: {fileID: 5094501463796226850, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: m_Name
       value: Mangager
@@ -5569,6 +5573,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027438939}
   m_CullTransparentMesh: 1
+--- !u!114 &1027870882 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7529034560254078143, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+  m_PrefabInstance: {fileID: 533496838}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8ec709242bd47b8bef89f4a59ff3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PermaUIManager
 --- !u!1 &1031042652
 GameObject:
   m_ObjectHideFlags: 0
