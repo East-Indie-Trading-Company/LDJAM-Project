@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 2794756099648554794}
   - component: {fileID: 4028097526598296789}
   - component: {fileID: 3991649523876030815}
+  - component: {fileID: 7132612648206584757}
   m_Layer: 0
   m_Name: Mangager
   m_TagString: Untagged
@@ -300,6 +301,20 @@ MonoBehaviour:
   zoomDuration: 1
   zoomSpeed: 5
   stopDistance: 3
+--- !u!114 &7132612648206584757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4147148926642644616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13886c4ffaeaa43eebe7d6b5ffcecde8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReputationManager
+  currentReputation: 0
+  reputationBounds: {x: -1, y: 1}
 --- !u!1 &7341247745594805594
 GameObject:
   m_ObjectHideFlags: 0
