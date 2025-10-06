@@ -202,6 +202,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1438962873113068920, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438962873113068920, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438962873113068920, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438962873113068920, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1466255981792049262, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -299
@@ -377,6 +393,22 @@ PrefabInstance:
     - target: {fileID: 7449169728028436351, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 196
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707670831648174150, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707670831648174150, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707670831648174150, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707670831648174150, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1708650651325961661, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
