@@ -9,20 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: d40696706e31641c5a919882d16a34d9
+  - enabled: 0
     path: Assets/Scenes/TestScenes/TestLocalMika.unity
     guid: 64468eb317fc7f94c85033b5c28c44be
   - enabled: 1
     path: Assets/Scenes/TestScenes/MapTest.unity
     guid: b2158c407f06e644498b0c812ec62d44
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: d40696706e31641c5a919882d16a34d9
-  - enabled: 1
     path: Assets/Scenes/Cutscenes/IntroCutscene.unity
     guid: a97f261f334ca4992b3f4c64a113c4dc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
-    guid: 83c194d939a89fc4996cbdf2fb4baa95
+    guid: 5748674e5e635d041835d7dfbe24f70b
   - enabled: 1
     path: Assets/Scenes/Map.unity
     guid: cbaa263b477f9364e953670cd167540d
