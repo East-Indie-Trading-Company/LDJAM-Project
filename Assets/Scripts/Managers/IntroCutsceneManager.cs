@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
-public class CutsceneManager : MonoBehaviour
+public class IntroCutsceneManager : MonoBehaviour
 {
     public void NewGame()
     {
