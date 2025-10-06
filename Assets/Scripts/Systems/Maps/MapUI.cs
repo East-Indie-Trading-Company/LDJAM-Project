@@ -1,11 +1,10 @@
-using UnityEngine;
-using System;
-using System.Collections.Generic;
-using TMPro;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+
 public class MapUI : MonoBehaviour
 {
-    [Header("UI References")]
+    [Header("Town Buttons")]
     [SerializeField] Button brightspireButton;
     [SerializeField] Button trestelButton;
     [SerializeField] Button dursimButton;
@@ -14,6 +13,7 @@ public class MapUI : MonoBehaviour
     [SerializeField] Button scorchedButton;
     [SerializeField] Button taravalButton;
 
+    [Header("NPC References")]
     [SerializeField] NPCData brightspireData;
     [SerializeField] NPCData trestelData;
     [SerializeField] NPCData dursimData;
@@ -22,79 +22,97 @@ public class MapUI : MonoBehaviour
     [SerializeField] NPCData scorchedData;
     [SerializeField] NPCData taravalData;
 
+    [Header("UI Panels")]
     [SerializeField] GameObject mapButtonUI;
     [SerializeField] GameObject mapBackButtonUI;
     [SerializeField] TownUI townUI;
 
-    Button backButton;
+    [Header("Camera Settings")]
+    [SerializeField] Transform[] townPositions;  // each town transform (0=Brightspire, etc.)
+    [SerializeField] Transform mapViewPosition;
+    [SerializeField] float zoomDuration = 1.0f;
+    [SerializeField] float stopDistance = 3f;
+
+    private bool isMoving = false;
+    private Button backButton;
+
     void Start()
     {
+        // Assign buttons
         backButton = mapBackButtonUI.GetComponent<Button>();
         mapButtonUI.SetActive(true);
         mapBackButtonUI.SetActive(false);
 
-        backButton.onClick.AddListener(onBackClick);
+        backButton.onClick.AddListener(OnBackClick);
 
-        brightspireButton.onClick.AddListener(brightspireOnClick);
-        trestelButton.onClick.AddListener(trestelOnClick);
-        dursimButton.onClick.AddListener(dursimOnClick);
-        styxButton.onClick.AddListener(styxOnClick);
-        lochButton.onClick.AddListener(lochOnClick);
-        scorchedButton.onClick.AddListener(scorchedOnClick);
-        taravalButton.onClick.AddListener(taravalOnClick);
+        brightspireButton.onClick.AddListener(() => OnTownClick(brightspireData, 0));
+        trestelButton.onClick.AddListener(() => OnTownClick(trestelData, 1));
+        dursimButton.onClick.AddListener(() => OnTownClick(dursimData, 2));
+        styxButton.onClick.AddListener(() => OnTownClick(styxData, 3));
+        lochButton.onClick.AddListener(() => OnTownClick(lochData, 4));
+        scorchedButton.onClick.AddListener(() => OnTownClick(scorchedData, 5));
+        taravalButton.onClick.AddListener(() => OnTownClick(taravalData, 6));
     }
 
-
-
-    void brightspireOnClick()
+    void OnTownClick(NPCData npcData, int index)
     {
-        updateUI(brightspireData);
-    }
-    void trestelOnClick()
-    {
-        updateUI(trestelData);
-    }
+        if (isMoving) return;
+        if (npcData == null)
+        {
+            Debug.LogWarning($"[MapUI] NPCData missing for town index {index}");
+            return;
+        }
 
-    void dursimOnClick()
-    {
-        updateUI(dursimData);
-    }
+        // --- Game logic: advance time ---
+        GameManager.Instance?.AdvanceDay();
 
-    void styxOnClick()
-    {
-        updateUI(styxData);
-    }
-
-    void lochOnClick()
-    {
-        updateUI(lochData);
-    }
-    void scorchedOnClick()
-    {
-        updateUI(scorchedData);
-    }
-
-    void taravalOnClick()
-    {
-        updateUI(taravalData);
-    }
-
-
-    void updateUI(NPCData npcData)
-    {
-        // Close the map ui
+        // --- UI logic ---
         mapButtonUI.SetActive(false);
         mapBackButtonUI.SetActive(true);
         townUI.SetTownUI(npcData);
 
+        // --- Camera zoom ---
+        if (index >= 0 && index < townPositions.Length)
+            StartCoroutine(ZoomCameraCoroutine(townPositions[index]));
     }
 
-    void onBackClick()
+    void OnBackClick()
     {
+        if (isMoving) return;
+
         mapButtonUI.SetActive(true);
         mapBackButtonUI.SetActive(false);
-        // Close Market UI
         townUI.RemoveTownUI();
+
+        // Move camera back to map view
+        StartCoroutine(ZoomCameraCoroutine(mapViewPosition));
     }
-    
+
+    private IEnumerator ZoomCameraCoroutine(Transform target)
+    {
+        isMoving = true;
+
+        Camera cam = Camera.main;
+        if (cam == null)
+        {
+            Debug.LogError("[MapUI] No MainCamera found!");
+            yield break;
+        }
+
+        Vector3 startPosition = cam.transform.position;
+        Vector3 targetPosition = target.position + new Vector3(0, 3f, -stopDistance);
+        float elapsed = 0f;
+
+        while (elapsed < zoomDuration)
+        {
+            cam.transform.position = Vector3.Lerp(startPosition, targetPosition, elapsed / zoomDuration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        cam.transform.position = targetPosition;
+        isMoving = false;
+
+        Debug.Log($"[MapUI] Zoom finished → {target.name}");
+    }
 }

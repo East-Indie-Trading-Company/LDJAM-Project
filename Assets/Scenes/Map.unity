@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TownData
   townName: Scorched
-  npcData: {fileID: 0}
+  npcData: {fileID: 11400000, guid: 7230868df12fb92498818dd3fb3a23ba, type: 2}
 --- !u!4 &504727920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 581535955593360603, guid: e06462e255936b34099174a0661b094d, type: 3}
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TownData
   townName: Taraval
-  npcData: {fileID: 0}
+  npcData: {fileID: 11400000, guid: 5129ca34aded30f42844aad7b22c7e06, type: 2}
 --- !u!1 &885010488 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8615992095572841403, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TownData
   townName: Loch
-  npcData: {fileID: 0}
+  npcData: {fileID: 11400000, guid: c77ea61c8c4b4c744b073b792cd96969, type: 2}
 --- !u!1 &926554163 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6747223589559318845, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TownData
   townName: Styx
-  npcData: {fileID: 0}
+  npcData: {fileID: 11400000, guid: db8220ea46877834cac0ee9fc7aea065, type: 2}
 --- !u!4 &938018991 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7803739395827951138, guid: 049f7d7f5d2653448a0d3577a086c381, type: 3}
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TownData
   townName: Dursin
-  npcData: {fileID: 0}
+  npcData: {fileID: 11400000, guid: 2b453c7dca3bbab48b85a1205d3c3a01, type: 2}
 --- !u!1 &1274640567 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2066436486547026690, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
@@ -665,7 +665,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TownData
   townName: Trestel
-  npcData: {fileID: 0}
+  npcData: {fileID: 11400000, guid: 5f90da245fc76264097ba4a8aa47783e, type: 2}
+--- !u!114 &1492695559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 47237853674664329, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+  m_PrefabInstance: {fileID: 3463856523926476760}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59866aed15e72024db75d86cf4a919ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCUI
 --- !u!4 &1508763770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2801600714335603771, guid: 59f5ef0fdd503834eb54cd0a2ddd922e, type: 3}
@@ -929,17 +940,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f2cf68153a46a4abbd8ca9b1122d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
---- !u!114 &622443016648762004 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-  m_PrefabInstance: {fileID: 622443016648761994}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapManager
 --- !u!1001 &1035196382187157848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1190,6 +1190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 2717935700234986285, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2806239250902899147, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1205,6 +1209,10 @@ PrefabInstance:
     - target: {fileID: 3025699626950410793, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025699626950410793, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17604.887
       objectReference: {fileID: 0}
     - target: {fileID: 3026082343307357508, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1233,7 +1241,7 @@ PrefabInstance:
     - target: {fileID: 3140726565345529944, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 622443016648762004}
+      objectReference: {fileID: 0}
     - target: {fileID: 3240008593383094464, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1394,6 +1402,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: npcUI
+      value: 
+      objectReference: {fileID: 1492695559}
+    - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: mapViewPosition
+      value: 
+      objectReference: {fileID: 1143172309}
+    - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: townPositions.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: 'townPositions.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1715466953}
+    - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: 'townPositions.Array.data[1]'
+      value: 
+      objectReference: {fileID: 721912504}
+    - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: 'townPositions.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2070322278}
+    - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: 'townPositions.Array.data[3]'
+      value: 
+      objectReference: {fileID: 7338306153461384615}
+    - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: 'townPositions.Array.data[4]'
+      value: 
+      objectReference: {fileID: 504727920}
+    - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: 'townPositions.Array.data[5]'
+      value: 
+      objectReference: {fileID: 938018991}
+    - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: 'townPositions.Array.data[6]'
+      value: 
+      objectReference: {fileID: 199255366}
     - target: {fileID: 4816788989109797582, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1401,7 +1449,7 @@ PrefabInstance:
     - target: {fileID: 5159837034698707540, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 622443016648762004}
+      objectReference: {fileID: 0}
     - target: {fileID: 5159837034698707540, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown3
@@ -1429,7 +1477,7 @@ PrefabInstance:
     - target: {fileID: 5546494963873024056, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 622443016648762004}
+      objectReference: {fileID: 0}
     - target: {fileID: 5546494963873024056, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown7
@@ -1541,7 +1589,7 @@ PrefabInstance:
     - target: {fileID: 7372991561665823953, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 622443016648762004}
+      objectReference: {fileID: 0}
     - target: {fileID: 7372991561665823953, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown6
@@ -1557,7 +1605,7 @@ PrefabInstance:
     - target: {fileID: 7641414778749115738, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 622443016648762004}
+      objectReference: {fileID: 0}
     - target: {fileID: 7641414778749115738, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown5
@@ -1565,7 +1613,7 @@ PrefabInstance:
     - target: {fileID: 7935371518627179848, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 622443016648762004}
+      objectReference: {fileID: 0}
     - target: {fileID: 7935371518627179848, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown4
@@ -1629,7 +1677,7 @@ PrefabInstance:
     - target: {fileID: 8873195087734426385, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 622443016648762004}
+      objectReference: {fileID: 0}
     - target: {fileID: 8873195087734426385, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown2
@@ -1637,12 +1685,13 @@ PrefabInstance:
     - target: {fileID: 8961328600689505113, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 622443016648762004}
+      objectReference: {fileID: 0}
     - target: {fileID: 8961328600689505113, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7256715846952413334, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

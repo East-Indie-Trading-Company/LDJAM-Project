@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  gameMenu: {fileID: 0}
+  towns: []
+  mapView: {fileID: 0}
+  gameManager: {fileID: 0}
   zoomDuration: 1
-  zoomSpeed: 5
   stopDistance: 0.1
 --- !u!1 &2270738724845341210
 GameObject:
@@ -93,10 +93,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  gameMenu: {fileID: 0}
+  towns: []
+  mapView: {fileID: 0}
+  gameManager: {fileID: 0}
   zoomDuration: 1
-  zoomSpeed: 5
   stopDistance: 0.1
 --- !u!1 &3791343914481852108
 GameObject:
@@ -142,10 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  gameMenu: {fileID: 0}
+  towns: []
+  mapView: {fileID: 0}
+  gameManager: {fileID: 0}
   zoomDuration: 1
-  zoomSpeed: 5
   stopDistance: 0.1
 --- !u!1 &4147148926642644616
 GameObject:
@@ -162,7 +162,6 @@ GameObject:
   - component: {fileID: 5705554780241304232}
   - component: {fileID: 2794756099648554794}
   - component: {fileID: 4028097526598296789}
-  - component: {fileID: 3991649523876030815}
   - component: {fileID: 7132612648206584757}
   m_Layer: 0
   m_Name: Mangager
@@ -205,6 +204,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f2cf68153a46a4abbd8ca9b1122d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  campaignMaxDays: 30
+  currentTown: {fileID: 0}
+  flagManager: {fileID: 0}
+  economyManager: {fileID: 0}
+  permaUIManager: {fileID: 0}
   onCurrencyChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -284,23 +288,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Trading.InventoryManager
   gold: 0
   items: []
---- !u!114 &3991649523876030815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4147148926642644616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  gameMenu: {fileID: 0}
-  zoomDuration: 1
-  zoomSpeed: 5
-  stopDistance: 3
 --- !u!114 &7132612648206584757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,10 +346,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  gameMenu: {fileID: 0}
+  towns: []
+  mapView: {fileID: 0}
+  gameManager: {fileID: 0}
   zoomDuration: 1
-  zoomSpeed: 5
   stopDistance: 0.1
 --- !u!1 &8045829602237996186
 GameObject:
@@ -408,10 +395,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  gameMenu: {fileID: 0}
+  towns: []
+  mapView: {fileID: 0}
+  gameManager: {fileID: 0}
   zoomDuration: 1
-  zoomSpeed: 5
   stopDistance: 0.1
 --- !u!1 &9110466462617352931
 GameObject:
@@ -457,10 +444,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  gameMenu: {fileID: 0}
+  towns: []
+  mapView: {fileID: 0}
+  gameManager: {fileID: 0}
   zoomDuration: 1
-  zoomSpeed: 5
   stopDistance: 0.1
 --- !u!1 &9135953692068030931
 GameObject:
@@ -506,8 +493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  gameMenu: {fileID: 0}
+  towns: []
+  mapView: {fileID: 0}
+  gameManager: {fileID: 0}
   zoomDuration: 1
-  zoomSpeed: 5
   stopDistance: 0.1
