@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db986408bf78344ab413ccba7786039, type: 3}
+  m_Name: Elliot_46_Choice
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
+  optionA:
+    buttonText: That doesn't seem like the dragon's fault.
+    responseText: Are you suggesting that it was our fault? I'd be careful with your
+      words.
+    flagToRaise: Rep - 30
+  optionB:
+    buttonText: I understand why the king wants to kill the dragon. Your village
+      has suffered enough.
+    responseText: I fear the king worries more about a demonstration of power than
+      the well-being of a ruined ally...
+    flagToRaise: Rep + 20
+  displayLine: 
