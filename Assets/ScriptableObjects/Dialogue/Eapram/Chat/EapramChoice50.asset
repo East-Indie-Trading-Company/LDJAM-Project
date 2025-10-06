@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db986408bf78344ab413ccba7786039, type: 3}
+  m_Name: EapramChoice50
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
+  optionA:
+    buttonText: Here, take it
+    responseText: The Mayor will sure appreciate it with the delicacy of a swine,
+      but you have my educated thanks
+    flagToRaise: 
+    reputationChangeValue: 0
+    reputationEffect: 0
+  optionB:
+    buttonText: Can't do that, I have plans for this
+    responseText: Surely not even someone such as you can ingest all that poison,
+      but do informe me otherwise, I wish to watch the show
+    flagToRaise: 
+    reputationChangeValue: 0.15
+    reputationEffect: 1
+  displayLine: Do you want to give Eapram 75 alcohol?

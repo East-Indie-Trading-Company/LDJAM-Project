@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db986408bf78344ab413ccba7786039, type: 3}
+  m_Name: EapramChoice44
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
+  optionA:
+    buttonText: You use that word a lot, it's like your staple
+    responseText: Is that so? I have not noticed, not at all. Not at all...
+    flagToRaise: 
+    reputationChangeValue: 0.25
+    reputationEffect: 1
+  optionB:
+    buttonText: Nevermore this, nevermore that, that's all you say
+    responseText: You jest, I believe. I will hear the words of the unneducated,
+      nevermore
+    flagToRaise: 
+    reputationChangeValue: 0.33
+    reputationEffect: 2
+  displayLine: What will you say to that?

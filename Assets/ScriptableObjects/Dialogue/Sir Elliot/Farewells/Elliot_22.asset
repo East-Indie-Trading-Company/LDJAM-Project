@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd1bb3f9a2130d840ba2b8ba51e9463d, type: 3}
+  m_Name: Elliot_22
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
+  npc: {fileID: 11400000, guid: 4bcaa3290efb6574e8ef6e7923c24d5c, type: 2}
+  lines:
+  - dialogueText: Hmm-hm.
+    choice: {fileID: 0}
+  isOneOff: 0
+  flags:
+  - Act2
+  hasPlayed: 0
