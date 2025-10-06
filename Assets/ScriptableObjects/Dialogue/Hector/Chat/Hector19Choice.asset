@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db986408bf78344ab413ccba7786039, type: 3}
+  m_Name: Hector19Choice
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
+  optionA:
+    buttonText: You seem passionate. Should be enough to see you through.
+    responseText: My parents don't believe I have the aptitude. I must prove their
+      notion baseless. If successful, I can raise our family's prestige to uncharted
+      heights.
+    flagToRaise: 
+  optionB:
+    buttonText: You're a decent trader. Why not follow that path instead?
+    responseText: You may enjoy trekking across the land hawking inventory to anyone
+      with a coin to spare, but my ambitions are much loftier. Any fool can man a
+      stand. Only an elite few can bend magic to their will.
+    flagToRaise: 
+  displayLine: Hector seems worried. You should say something.

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db986408bf78344ab413ccba7786039, type: 3}
+  m_Name: Hector15Choice
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
+  optionA:
+    buttonText: I only saw it from a distance.
+    responseText: Oh. How disappointing.
+    flagToRaise: 
+  optionB:
+    buttonText: She is magnificent! And not at all what you would expect.
+    responseText: I knew it! Once the king's men slay the creature, I can't wait
+      to study the carcass.
+    flagToRaise: 
+  displayLine: Hector is soliciting your eyewitness account of the dragon.
