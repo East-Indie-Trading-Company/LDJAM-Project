@@ -52,12 +52,12 @@ public class PermaUIManager: MonoBehaviour
 
     public void SetDayTrackerUI(int newDays)
     {
-        currencyUI.text = "Day " + newDays.ToString();
+        dayTrackerUI.text = "Day " + newDays.ToString();
     }
 
     public void SetDaysRemainingUI(int newDaysRemaining)
     {
-        currencyUI.text = newDaysRemaining.ToString() + " Days Remain";
+        daysRemainingUI.text = newDaysRemaining.ToString() + " Days Remain";
     }
 
     public void SetReputationUI(float newReputation)
