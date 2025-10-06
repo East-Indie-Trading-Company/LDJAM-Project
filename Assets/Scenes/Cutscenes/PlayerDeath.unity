@@ -119,81 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &164429232
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 164429233}
-  - component: {fileID: 164429235}
-  - component: {fileID: 164429234}
-  m_Layer: 5
-  m_Name: Panel (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &164429233
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164429232}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 708667362}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: -79}
-  m_SizeDelta: {x: 471.9504, y: 244.7323}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &164429234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164429232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cbbb2f25c55fb4c85821ecb9110964e2, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &164429235
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164429232}
-  m_CullTransparentMesh: 1
 --- !u!1 &346104628
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +214,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 708667362}
-  - {fileID: 1192722224}
+  - {fileID: 543504330}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -297,6 +222,61 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &543504329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 543504330}
+  - component: {fileID: 543504331}
+  m_Layer: 0
+  m_Name: FadeAnimator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &543504330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543504329}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 91.559265, y: 80.49567, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1032596143}
+  m_Father: {fileID: 346104632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &543504331
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543504329}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 46517f5c0566445aeb3eab4ce9ff3d0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &645084241
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 708667362}
   - component: {fileID: 708667364}
+  - component: {fileID: 708667363}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -405,10 +386,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1058496163}
-  - {fileID: 1843916690}
-  - {fileID: 164429233}
-  - {fileID: 899689075}
+  - {fileID: 1795813285}
   - {fileID: 1628456422}
   m_Father: {fileID: 346104632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -417,73 +395,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &708667364
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708667361}
-  m_CullTransparentMesh: 1
---- !u!1 &718589735
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 718589736}
-  - component: {fileID: 718589738}
-  - component: {fileID: 718589737}
-  m_Layer: 5
-  m_Name: FadePanel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &718589736
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718589735}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1192722224}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -79.10367, y: -92.64026}
-  m_SizeDelta: {x: 1001.2577, y: 676.4037}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &718589737
+--- !u!114 &708667363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718589735}
+  m_GameObject: {fileID: 708667361}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 0
+  m_Color: {r: 1, g: 0.3066038, b: 0.3066038, a: 1}
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 26cf423d610fbf24c953f266c02c4cf3, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -492,13 +425,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &718589738
+--- !u!222 &708667364
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718589735}
+  m_GameObject: {fileID: 708667361}
   m_CullTransparentMesh: 1
 --- !u!1 &781489299
 GameObject:
@@ -509,7 +442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 781489301}
-  - component: {fileID: 781489302}
+  - component: {fileID: 781489300}
   m_Layer: 0
   m_Name: CutsceneManager
   m_TagString: Untagged
@@ -517,6 +450,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &781489300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781489299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c77ba6dac494ff0b0479690823bf33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CutsceneManager
 --- !u!4 &781489301
 Transform:
   m_ObjectHideFlags: 0
@@ -532,80 +477,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &781489302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781489299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adf1b83dcc82d4dbcbe866292ac5a93a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OutroCutsceneManager
-  economyGoalHit: 0
-  reputationGoalHit: 1
-  sidedWithDragon: 0
-  dragonPic: {fileID: 1058496162}
-  kingdomPic: {fileID: 1843916689}
-  cutsceneText: {fileID: 899689076}
-  dragonEconomyReputationCopy: "Hero is the word that comes to mind when folks say
-    your name. You barely remember how you first arrived here: without a dime in
-    your pockets and marked for death. Such is the wealth and good reputation that
-    you manage to hoard for yourself. With your aid, the king\u2019s crusade was
-    a resounding success, eradicating once and for all the vile creature and its
-    egg. And you enjoyed an easy life, full of prosperity and surrounded by your
-    friends, without ever worrying about your financial stability.  "
-  dragonEconomyNoReputationCopy: "Reckless is the word that comes to mind when folks
-    say your name \u2013 when they don\u2019t spit right after it. With your aid,
-    Tussau concealed her egg in a gilded carapace and escaped the land before the
-    king could reach her. However, paranoia followed suit and spread faster than
-    the plague. You watched the kingdom tear itself apart from the top of your fortress
-    made of greed and solitude. No folks ever come to visit you, nor will the caravans
-    reach your gates. "
-  dragonNoEconomyReputationCopy: "Ally is the word that comes to mind when folks
-    say your name. Although things could have worked better in your favor, you chose
-    what you thought was right, and the kingdom certainly noticed that. With your
-    aid, the king\u2019s crusade was a resounding success, eradicating the vile creature
-    and keeping its egg as a trophy. After that, you lived in a modest village with
-    easy access to everything you could possibly need. For a price, of course - you
-    were not past having to work to guarantee your income. "
-  dragonNoEconomyNoReputationCopy: "Despair is the word that comes to mind when most
-    folks think of you. It makes them wonder what made you such a hateful creature
-    to side with the dragon and cast away their good faith. Tussau massacred the
-    king\u2019s army, and the kingdom fell into ruins; she left with you and her
-    egg shortly after the nearby towns erected their blockades. Yet Tussau is merciful,
-    and despite your incredible failure, there is always another chance, in another
-    kingdom, where you shall be used for work once more.  "
-  noDragonEconomyReputationCopy: 'Intrepid is the word that comes to mind when folks
-    say your name. You barely remember how you first arrived here: marked for death
-    by a deceiving red dragon. Such is the good reputation that you have nurtured
-    here. With your aid, the dragon accumulated enough wealth to protect its egg,
-    and quickly departed, yet not before bestowing upon you a magical spell: you
-    enjoyed a plentiful life, full of friends and wealth wherever you went, and without
-    ever worrying about your financial stability again. '
-  noDragonEconomyNoReputationCopy: "Ruthless is the word that comes to mind when
-    folks say your name \u2013 if they think of you at all. With your aid, the king\u2019s
-    crusade was a resounding success, eradicating the vile creature and keeping its
-    egg as a trophy. But when nobody knew what to do with you, they thought exile
-    was a plausible solution - decent, even. You were exiled to live on the outskirts
-    of Coronia, in a fortress made of your own greed and solitude. No folks ever
-    come to visit you, nor can the caravans reach your gates. "
-  noDragonNoEconomyReputationCopy: 'Peculiar is the word that comes to mind when
-    folks say your name. Although things could have worked better in your favor,
-    you chose what you thought was right, and the dragon certainly noticed that.
-    With your aid, Tussau concealed her egg in a gilded carapace and escaped the
-    land before the king could reach her. And with your newly formed friendships,
-    you lived in a modest village with easy access to everything you could possibly
-    need. For a price, of course - you were not past having to work. '
-  noDragonNoEconomyNoReputationCopy: "Vermin is the word that comes to mind when
-    most folks think of you. Tussau massacred the king\u2019s army, and the kingdom
-    fell into ruins. She left with her egg shortly after the nearby towns erected
-    their blockages; panic had spread throughout the land, and nobody wanted to take
-    you in. And who would be such a fool to trust you after all that\u2019s happened?
-    You spend the rest of your days serving the crossroad tax collectors: the highwaymen
-    - people more cruel and vile than any dragon can be. "
 --- !u!1 &899689074
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,17 +502,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899689074}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 708667362}
+  m_Father: {fileID: 1795813285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13.1798, y: -74.8711}
-  m_SizeDelta: {x: 426.4986, y: 197.6907}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.6099243, y: 0}
+  m_SizeDelta: {x: -17.971924, y: -62.1622}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899689076
 MonoBehaviour:
@@ -663,15 +534,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Intrepid is the word that comes to mind when folks say your name. You
-    barely remember how you first arrived here: marked for death by a deceiving red
-    dragon. Such is the good reputation that you have nurtured here. With your aid,
-    the dragon accumulated enough wealth to protect its egg, and quickly departed,
-    yet not before bestowing upon you a magical spell: you enjoyed a plentiful life,
-    full of friends and wealth wherever you went, and without ever worrying about
-    your financial stability again.
-
-'
+  m_text: And thus concludes your venture.The dragon has collected its due. You Died.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -698,10 +561,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 38
+  m_fontSizeBase: 37
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -736,7 +599,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 1.4827881}
+  m_margin: {x: 9.346985, y: 0, z: 11.424133, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -750,7 +613,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899689074}
   m_CullTransparentMesh: 1
---- !u!1 &1058496162
+--- !u!1 &1032596142
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -758,57 +621,57 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1058496163}
-  - component: {fileID: 1058496165}
-  - component: {fileID: 1058496164}
+  - component: {fileID: 1032596143}
+  - component: {fileID: 1032596145}
+  - component: {fileID: 1032596144}
   m_Layer: 5
-  m_Name: DragonBackground
+  m_Name: FadePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1058496163
+--- !u!224 &1032596143
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058496162}
+  m_GameObject: {fileID: 1032596142}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 708667362}
+  m_Father: {fileID: 543504330}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: -0}
-  m_SizeDelta: {x: 1005.5583, y: 586.6677}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -86, y: -95}
+  m_SizeDelta: {x: 991, y: 724.4991}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1058496164
+--- !u!114 &1032596144
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058496162}
+  m_GameObject: {fileID: 1032596142}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c6f22e25cca7f83428b055bda3f6ec6e, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -817,69 +680,14 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1058496165
+--- !u!222 &1032596145
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058496162}
+  m_GameObject: {fileID: 1032596142}
   m_CullTransparentMesh: 1
---- !u!1 &1192722223
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1192722224}
-  - component: {fileID: 1192722225}
-  m_Layer: 0
-  m_Name: FadeAnimator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1192722224
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192722223}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 91.559265, y: 80.49567, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 718589736}
-  m_Father: {fileID: 346104632}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1192722225
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192722223}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 46517f5c0566445aeb3eab4ce9ff3d0a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1365437946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,9 +859,9 @@ RectTransform:
   - {fileID: 2060421311}
   m_Father: {fileID: 708667362}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: -237}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 3, y: 35}
   m_SizeDelta: {x: 217.86292, y: 44.4657}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1628456423
@@ -1100,8 +908,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 781489302}
-        m_TargetAssemblyTypeName: OutroCutsceneManager, Assembly-CSharp
+      - m_Target: {fileID: 781489300}
+        m_TargetAssemblyTypeName: IntroCutsceneManager, Assembly-CSharp
         m_MethodName: BackToMainMenu
         m_Mode: 1
         m_Arguments:
@@ -1150,7 +958,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628456421}
   m_CullTransparentMesh: 1
---- !u!1 &1843916689
+--- !u!1 &1795813284
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1158,42 +966,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1843916690}
-  - component: {fileID: 1843916692}
-  - component: {fileID: 1843916691}
+  - component: {fileID: 1795813285}
+  - component: {fileID: 1795813287}
+  - component: {fileID: 1795813286}
   m_Layer: 5
-  m_Name: KingdomBackground
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1843916690
+--- !u!224 &1795813285
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843916689}
+  m_GameObject: {fileID: 1795813284}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 899689075}
   m_Father: {fileID: 708667362}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.000011, y: 0.0000076293945}
-  m_SizeDelta: {x: 1005.5583, y: 586.6677}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 6.6798096, y: -97}
+  m_SizeDelta: {x: -307.3606, y: -320.2835}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1843916691
+--- !u!114 &1795813286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843916689}
+  m_GameObject: {fileID: 1795813284}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -1207,7 +1016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1dfeebeefb88d324a8ae97e594958bcf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cbbb2f25c55fb4c85821ecb9110964e2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1217,13 +1026,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1843916692
+--- !u!222 &1795813287
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843916689}
+  m_GameObject: {fileID: 1795813284}
   m_CullTransparentMesh: 1
 --- !u!1 &1860380389
 GameObject:
