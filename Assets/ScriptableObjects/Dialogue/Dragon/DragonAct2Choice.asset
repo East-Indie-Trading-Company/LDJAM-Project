@@ -18,8 +18,22 @@ MonoBehaviour:
     responseText: "Wise choice, two-legged. Your\u2026intelligence is growing on
       me.  "
     flagToRaise: 
+    reputationChangeValue: 0
+    reputationEffect: 0
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 5000
+    goldEffect: 2
   optionB:
     buttonText: "This is my coin. I\u2019ll fight you for it. "
     responseText: I am a dragon of my word. Perish then, mortal.
     flagToRaise: DragonDeath
-  displayLine: 
+    reputationChangeValue: 0
+    reputationEffect: 0
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
+  displayLine: Give the dragon 5,000 gold?

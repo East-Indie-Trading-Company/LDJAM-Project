@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1bb3f9a2130d840ba2b8ba51e9463d, type: 3}
   m_Name: DragonAct1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
-  npc: {fileID: 0}
+  npc: {fileID: 11400000, guid: d01e23c8509e54ec699693620cf33b84, type: 2}
   lines:
   - dialogueText: You seem surprised. Would you honestly think I would trust you
       to come back with my hoard? What do you take me for, an imbecile? Now, will
