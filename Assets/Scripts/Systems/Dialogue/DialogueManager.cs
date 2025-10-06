@@ -191,36 +191,135 @@ public class DialogueManager : MonoBehaviour
 
     void ChoiceA()
     {
+        bool itemChangeValid = true;
+        bool goldChangeValid = true;
         if (isTyping) return;
         //Debug.Log($"You picked choice A. Response will be: {currentLine.choice.optionA.responseText}");
-        waitingForChoice = false;
+        
         DisableChoicePanel();
-        // TODO:: Update inventory/rep/
-
-        // Raise flag
-        raiseFlag = currentLine.choice.optionA.flagToRaise;
-        if (raiseFlag != null)
+        
+        // Inventory choice 
+        switch (currentLine.choice.optionA.itemEffect)
         {
-            FlagManager.Instance.SetFlag(raiseFlag, true);
+            case Effect.NONE:
+                break;
+            case Effect.ADD:
+                Trading.InventoryManager.Instance.AddItem(currentLine.choice.optionA.item, currentLine.choice.optionA.itemChangeValue);
+                break;
+            case Effect.REMOVE:
+                itemChangeValid = Trading.InventoryManager.Instance.RemoveItem(currentLine.choice.optionA.item, currentLine.choice.optionA.itemChangeValue);
+                break;
         }
-        StartCoroutine(StartTyping(currentLine.choice.optionA.responseText));
+
+        // Gold choice 
+        switch (currentLine.choice.optionA.goldEffect)
+        {
+            case Effect.NONE:
+                break;
+            case Effect.ADD:
+                Trading.InventoryManager.Instance.AddGold(currentLine.choice.optionA.goldChangeValue);
+                break;
+            case Effect.REMOVE:
+                goldChangeValid = Trading.InventoryManager.Instance.RemoveGold(currentLine.choice.optionA.goldChangeValue);
+                break;
+        }
+
+        if (itemChangeValid && goldChangeValid)
+        {
+
+            waitingForChoice = false;
+
+            // Rep choice 
+            switch (currentLine.choice.optionB.reputationEffect)
+            {
+                case Effect.NONE:
+                    break;
+                case Effect.ADD:
+                    ReputationManager.Instance.AddReputation(currentLine.choice.optionA.reputationChangeValue);
+                    break;
+                case Effect.REMOVE:
+                    ReputationManager.Instance.SubtractReputation(currentLine.choice.optionA.reputationChangeValue);
+                    break;
+            }
+            // Raise flag
+            raiseFlag = currentLine.choice.optionA.flagToRaise;
+            if (raiseFlag != null)
+            {
+                FlagManager.Instance.SetFlag(raiseFlag, true);
+            }
+            StartCoroutine(StartTyping(currentLine.choice.optionA.responseText));
+        }
+        else
+        {
+            choiceText.text = "You don't have enough to choose that option";
+        }
     }
     void ChoiceB()
     {
+        bool itemChangeValid = true;
+        bool goldChangeValid = true;
         if (isTyping) return;
         //Debug.Log($"You picked choice B. Response will be: {currentLine.choice.optionB.responseText}");
-        waitingForChoice = false;
         DisableChoicePanel();
-        // TODO:: Update inventory/rep/
 
-        // Raise flag
-        raiseFlag = currentLine.choice.optionB.flagToRaise;
-        if (raiseFlag != null)
+        // Inventory choice 
+        switch (currentLine.choice.optionB.itemEffect)
         {
-            Debug.Log($"[DialogueManager] Raise flag: {raiseFlag}");
-            FlagManager.Instance.SetFlag(raiseFlag, true);
+            case Effect.NONE:
+                break;
+            case Effect.ADD:
+                Trading.InventoryManager.Instance.AddItem(currentLine.choice.optionB.item, currentLine.choice.optionB.itemChangeValue);
+                break;
+            case Effect.REMOVE:
+                itemChangeValid = Trading.InventoryManager.Instance.RemoveItem(currentLine.choice.optionB.item, currentLine.choice.optionB.itemChangeValue);
+                break;
         }
-        StartCoroutine(StartTyping(currentLine.choice.optionB.responseText));
+
+        // Gold choice 
+        switch (currentLine.choice.optionB.goldEffect)
+        {
+            case Effect.NONE:
+                break;
+            case Effect.ADD:
+                Trading.InventoryManager.Instance.AddGold(currentLine.choice.optionB.goldChangeValue);
+                break;
+            case Effect.REMOVE:
+                goldChangeValid = Trading.InventoryManager.Instance.RemoveGold(currentLine.choice.optionB.goldChangeValue);
+                break;
+        }
+        
+
+        if (itemChangeValid && goldChangeValid)
+        {
+
+            waitingForChoice = false;
+            // Rep choice 
+            switch (currentLine.choice.optionB.reputationEffect)
+            {
+                case Effect.NONE:
+                    break;
+                case Effect.ADD:
+                    ReputationManager.Instance.AddReputation(currentLine.choice.optionB.reputationChangeValue);
+                    break;
+                case Effect.REMOVE:
+                    ReputationManager.Instance.SubtractReputation(currentLine.choice.optionB.reputationChangeValue);
+                    break;
+            }
+
+            // Raise flag
+            raiseFlag = currentLine.choice.optionB.flagToRaise;
+            if (raiseFlag != null)
+            {
+                Debug.Log($"[DialogueManager] Raise flag: {raiseFlag}");
+                FlagManager.Instance.SetFlag(raiseFlag, true);
+            }
+            StartCoroutine(StartTyping(currentLine.choice.optionB.responseText));
+        }
+        else
+        {
+            choiceText.text = "You don't have enough to choose that option";
+        }
+        
     }
 
     void EndDialogue()

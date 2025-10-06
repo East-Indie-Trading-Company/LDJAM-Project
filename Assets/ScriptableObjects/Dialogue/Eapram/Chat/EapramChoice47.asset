@@ -10,16 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5db986408bf78344ab413ccba7786039, type: 3}
-  m_Name: EapramChoice2
+  m_Name: EapramChoice47
   m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
   optionA:
     buttonText: I'll keep it in mind
     responseText: The wheels of bureaucracy must grind... Inform me when if this
       is ever concluded
     flagToRaise: 
+    reputationChangeValue: 0
+    reputationEffect: 0
   optionB:
     buttonText: ' Yes, that does sound tedious, sucks for you'
     responseText: Your words are uncouth yet they carry an unavoidable truth to it,
       what a sad day it is
     flagToRaise: 
+    reputationChangeValue: 0.1
+    reputationEffect: 2
   displayLine: Will you help?
