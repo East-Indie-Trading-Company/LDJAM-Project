@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed558470323453347a9e3ab4d78cfbf7, type: 3}
+  m_Name: HectorData
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  displayInfo: {fileID: 0}
+  townStock: {fileID: 0}
+  npcDialogueLines:
+  - {fileID: 11400000, guid: 6ed5c24dbe357094a9935f1dde49c2d8, type: 2}
+  - {fileID: 11400000, guid: 649fc1b82990a9a4b9f2e81d05a48f9f, type: 2}
+  - {fileID: 11400000, guid: 811a13652f12ad9449302dd1ad71fa7f, type: 2}
+  - {fileID: 11400000, guid: 888328a0d0ab4224f86228a072746820, type: 2}
+  - {fileID: 11400000, guid: 72b8c724fd79940458cb6e74ad1d7d65, type: 2}
+  npcRumorDialogueLines:
+  - {fileID: 11400000, guid: 79ff3877877339643b997dec45e0cc09, type: 2}
+  - {fileID: 11400000, guid: ec2610ebc5407e44d8e6ab4ad1b5b401, type: 2}
+  - {fileID: 11400000, guid: 2016f31ffaad1144e93351775594d91b, type: 2}
+  - {fileID: 11400000, guid: 6a680f0693ae3b746b4eac3590146706, type: 2}
+  - {fileID: 11400000, guid: a9cdda2b281520a41b3c2c7ebb306372, type: 2}
+  - {fileID: 11400000, guid: 55481d864123bac4fbce524cefde3eed, type: 2}
+  npcGreetingDialogueLines:
+  - {fileID: 11400000, guid: 41d084e3b5c14be418b23e453c1e8b4a, type: 2}
+  - {fileID: 11400000, guid: c096fd0ae83d5c14983069640ce9ca8e, type: 2}
+  - {fileID: 11400000, guid: 9ce45e71774f2ee4fbe436126b5a6a45, type: 2}
+  - {fileID: 11400000, guid: ab86bbcef9abea241bf64b574aa197df, type: 2}
+  - {fileID: 11400000, guid: f28818e8d09616f4eb414511ee03b559, type: 2}
