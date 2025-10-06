@@ -71,16 +71,18 @@ public class DialogueManager : MonoBehaviour
         DisableChoicePanel();
         if (conversation.npc != null)
         {
-            if (conversation.npc.townName != null)
+            if (conversation.npc.townName != "The Dragon is Here to Collect")
             {
                 isDragon = false;
-                townNameText.text = conversation.npc.townName;
-                townIcon.sprite = conversation.npc.townIcon;
+                
             }
             else
             {
+                Debug.Log("[Dialogue Manager] Talking to dragon!");
                 isDragon = true;
             }
+            townNameText.text = conversation.npc.townName;
+            townIcon.sprite = conversation.npc.townIcon;
             npcNameText.text = conversation.npc.npcName;
             npcPortrait.sprite = conversation.npc.npcIcon;
             
@@ -330,6 +332,10 @@ public class DialogueManager : MonoBehaviour
         if (!isDragon)
         {
             marketCanvas.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("[Dialogue Manager] Maybe update the UI here?");
         }
         dialogueCanvas.SetActive(false);
         currentConversation = null;

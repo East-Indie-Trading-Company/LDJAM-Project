@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1bb3f9a2130d840ba2b8ba51e9463d, type: 3}
   m_Name: DragonAct3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
-  npc: {fileID: 0}
+  npc: {fileID: 11400000, guid: d01e23c8509e54ec699693620cf33b84, type: 2}
   lines:
   - dialogueText: "Your obligation to me nears its end, mortal. I daresay that you\u2019ve
       grown on me. Let us check your wares. Let me garnish your coins once more,
       and an ally you will have in me for life, however short yours may be. "
-    choice: {fileID: 0}
+    choice: {fileID: 11400000, guid: abc75c399372f4bfbb49eb86403a80a4, type: 2}
   isOneOff: 0
   flags: []
   hasPlayed: 0

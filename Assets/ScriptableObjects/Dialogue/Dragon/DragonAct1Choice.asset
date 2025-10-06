@@ -17,10 +17,23 @@ MonoBehaviour:
     responseText: "Wise choice, two-legged. I shall take my share. Perhaps you aren\u2019t
       as mindless as other mortals."
     flagToRaise: 
+    reputationChangeValue: 0
+    reputationEffect: 0
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 1000
+    goldEffect: 2
   optionB:
     buttonText: "I earned these resources. I\u2019m not handing them over. "
-    responseText: "You dare refuse me? It\u2019s always the same with you two-leggeds,
-      so unreliable. I could extinguish you here, but I\u2019ll give you one more
-      chance. Just. One. More. Chance. "
+    responseText: You dare refuse me?  You've exhausted my patience, two-legged one.
+      Now, you face your end.
     flagToRaise: DragonDeath
-  displayLine: 
+    reputationChangeValue: 0
+    reputationEffect: 0
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
+  displayLine: Give the dragon 1,000 gold?
