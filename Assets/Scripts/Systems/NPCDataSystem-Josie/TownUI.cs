@@ -6,14 +6,13 @@ public class TownUI : MonoBehaviour
     [SerializeField] NPCUI npcUI;
     [SerializeField] Trading.TradingUI tradingUI;
     NPCData npcData = null;
-    public NPCData testData;
 
 
     // THIS NEEDS TO BE CALLED WHEN A PLAYER CLICKS A TOWN
     public void SetTownUI(NPCData newData)
     {
         npcData = newData;
-        Debug.Log($"[TownUI] Update town ui to {newData.displayInfo.townName}");
+        //Debug.Log($"[TownUI] Update town ui to {newData.displayInfo.townName}");
         if (npcData != null)
         {
             npcUI.DisplayNPCUI(npcData);
@@ -22,7 +21,7 @@ public class TownUI : MonoBehaviour
         {
             Debug.LogWarning($"[TownUI] NPCData not assigned!");
         }
-        
+
         if (npcData.townStock != null)
         {
             tradingUI.SetTown(npcData.townStock);
@@ -32,12 +31,6 @@ public class TownUI : MonoBehaviour
             Debug.LogWarning($"[TownUI] TownStock not assigned!");
         }
 
-    }
-
-    [ContextMenu("Run UI Test")]
-    public void TestSetUI()
-    {
-        SetTownUI(testData);
     }
     
 }

@@ -31,8 +31,8 @@ public class NPCData : ScriptableObject
     {
         DialogueConversation convo =  PullDialogue(npcGreetingDialogueLines);
 
-        Debug.Log($"[NPCData] Convo is null: {convo == null}");
-        Debug.Log($"[NPCData] Convo.lines is null: {convo.lines == null}");
+        //Debug.Log($"[NPCData] Convo is null: {convo == null}");
+        //Debug.Log($"[NPCData] Convo.lines is null: {convo.lines == null}");
         if (convo.lines.Count > 0)
         {
             textComponent.text = convo.lines[0].dialogueText;
@@ -46,7 +46,7 @@ public class NPCData : ScriptableObject
 
     DialogueConversation PullDialogue(DialogueConversation[] conversations)
     {
-        Debug.Log($"[NPCData] Num of convos in this group: {conversations.Length}");
+        //Debug.Log($"[NPCData] Num of convos in this group: {conversations.Length}");
         DialogueConversation convoToWrite = null;
         // TODO:: List/array of convos that don't need flags here
         List<DialogueConversation> convosWithNoFlags = new List<DialogueConversation>();
@@ -81,12 +81,12 @@ public class NPCData : ScriptableObject
 
         if (convoToWrite == null) 
         {
-            Debug.Log($"[NPCData] Num of convos with no flags: {convosWithNoFlags.Count}");
-            // TODO:: Randomly choose from a list that doesn't require flags
+            //Debug.Log($"[NPCData] Num of convos with no flags: {convosWithNoFlags.Count}");
+            // Randomly choose from a list that doesn't require flags
             if (convosWithNoFlags.Count > 0)
             {
                 int randomIndex = UnityEngine.Random.Range(0, convosWithNoFlags.Count-1);
-                Debug.Log($"[NPCData] Random Index: {randomIndex}");
+                //Debug.Log($"[NPCData] Random Index: {randomIndex}");
                 convoToWrite = convosWithNoFlags[randomIndex];
             }
             else

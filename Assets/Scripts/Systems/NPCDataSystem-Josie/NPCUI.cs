@@ -37,7 +37,7 @@ public class NPCUI : MonoBehaviour
     {
         marketCanvas.SetActive(true);
         npcData = newData;
-        Debug.Log($"[NPCUI] Have data for {npcData.displayInfo.npcName}");
+        //Debug.Log($"[NPCUI] Have data for {npcData.displayInfo.npcName}");
         if (npcData == null)
         {
             Debug.LogWarning("[DialogueTrigger] npcData is NULL!");
