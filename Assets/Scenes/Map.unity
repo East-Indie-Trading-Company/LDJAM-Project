@@ -669,6 +669,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1508763770}
+    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 729226089}
     - target: {fileID: 4147148926642644616, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
       propertyPath: m_Name
       value: Mangager
@@ -735,14 +739,25 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4147148926642644616, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 622443016648762004}
+      addedObject: {fileID: 622443016648762012}
   m_SourcePrefab: {fileID: 100100000, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
 --- !u!1 &622443016648761995 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4147148926642644616, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
   m_PrefabInstance: {fileID: 622443016648761994}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &622443016648762004
+--- !u!114 &622443016648762004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+  m_PrefabInstance: {fileID: 622443016648761994}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622443016648761995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapManager
+--- !u!114 &622443016648762012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -751,14 +766,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 622443016648761995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 13886c4ffaeaa43eebe7d6b5ffcecde8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 729226089}
-  gameMenu: {fileID: 0}
-  zoomDuration: 1
-  zoomSpeed: 5
-  stopDistance: 3
+  m_EditorClassIdentifier: Assembly-CSharp::ReputationManager
+  currentReputation: 0
+  reputationBounds: {x: -1, y: 1}
 --- !u!1001 &1035196382187157848
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -195,8 +195,21 @@ public class DialogueManager : MonoBehaviour
         //Debug.Log($"You picked choice A. Response will be: {currentLine.choice.optionA.responseText}");
         waitingForChoice = false;
         DisableChoicePanel();
-        // TODO:: Update inventory/rep/
+        
+        // TODO:: Update inventory
 
+        // Rep choice 
+        switch (currentLine.choice.optionB.reputationEffect)
+        {
+            case Effect.NONE:
+                break;
+            case Effect.ADD:
+                ReputationManager.Instance.AddReputation(currentLine.choice.optionA.reputationChangeValue);
+                break;
+            case Effect.REMOVE:
+                ReputationManager.Instance.SubtractReputation(currentLine.choice.optionA.reputationChangeValue);
+                break;
+        }
         // Raise flag
         raiseFlag = currentLine.choice.optionA.flagToRaise;
         if (raiseFlag != null)
@@ -211,8 +224,21 @@ public class DialogueManager : MonoBehaviour
         //Debug.Log($"You picked choice B. Response will be: {currentLine.choice.optionB.responseText}");
         waitingForChoice = false;
         DisableChoicePanel();
-        // TODO:: Update inventory/rep/
+        
+        // TODO:: Update inventory
 
+        // Rep choice 
+        switch (currentLine.choice.optionB.reputationEffect)
+        {
+            case Effect.NONE:
+                break;
+            case Effect.ADD:
+                ReputationManager.Instance.AddReputation(currentLine.choice.optionB.reputationChangeValue);
+                break;
+            case Effect.REMOVE:
+                ReputationManager.Instance.SubtractReputation(currentLine.choice.optionB.reputationChangeValue);
+                break;
+        }
         // Raise flag
         raiseFlag = currentLine.choice.optionB.flagToRaise;
         if (raiseFlag != null)

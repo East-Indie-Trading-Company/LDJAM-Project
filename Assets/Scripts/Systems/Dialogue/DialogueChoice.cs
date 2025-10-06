@@ -19,6 +19,10 @@ public class DialogueOption
 
     public string flagToRaise;
 
+    [Header("This is a float from -1 to 1")]
+    public float reputationChangeValue = 0;
+    [Header("Pick whether this number adds or subtracts")]
+    public Effect reputationEffect;
     // TODO:: Inventory effect
 
     // TODO:: Reputation effect
