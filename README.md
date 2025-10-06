@@ -7,6 +7,7 @@ Unity 6.2 game project for Ludum Dare Jam.
 - **Unity Version**: 6.2  
 - Clone repo  
 - Open with Unity Hub  
+- Playtest  
 
 ---
 
