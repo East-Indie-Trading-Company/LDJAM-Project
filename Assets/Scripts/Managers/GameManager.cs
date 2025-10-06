@@ -75,11 +75,38 @@ public class GameManager : MonoBehaviour
 
         flagManager?.TriggerDayAdvanced(CurrentDay);
         economyManager?.AdvanceDay();
+        CheckMilestones();
 
         UpdatePermaUIHUD();
 
         Debug.Log($"[GameManager] Day advanced to {CurrentDay}");
     }
+    private void CheckMilestones()
+    {
+        if (flagManager == null || InventoryManager.Instance == null)
+            return;
+
+        int playerGold = InventoryManager.Instance.Gold;
+
+        // Act 1 — Day ≥ 25 and Gold ≥ 30,000
+        if (CurrentDay >= 25 && playerGold >= 30000 && !flagManager.GetFlag("Act1"))
+        {
+            flagManager.TriggerMilestone("Act1", "Milestone 1", 30000);
+        }
+
+        // Act 2 — Day ≥ 75 and Gold ≥ 445,000
+        if (CurrentDay >= 75 && playerGold >= 445000 && !flagManager.GetFlag("Act2"))
+        {
+            flagManager.TriggerMilestone("Act2", "Milestone 2", 445000);
+        }
+
+        // Act 3 — Day ≥ 125 and Gold ≥ 150,000,000
+        if (CurrentDay >= 125 && playerGold >= 150000000 && !flagManager.GetFlag("Act3"))
+        {
+            flagManager.TriggerMilestone("Act3", "Milestone 3", 150000000);
+        }
+    }
+
 
     public void AdvanceDays(int amount)
     {

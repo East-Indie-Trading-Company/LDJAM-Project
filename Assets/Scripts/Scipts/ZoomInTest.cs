@@ -20,8 +20,7 @@ public class ZoomInTest : MonoBehaviour
     private bool isZoomed = false;
     private Transform target;
 
-    // 👇 NEW: Store the TownData reference
-    private TownData currentTown;
+    
 
     void Start()
     {
@@ -83,7 +82,7 @@ public class ZoomInTest : MonoBehaviour
     {
         isZoomed = false;
         target = null;
-        currentTown = null;
+        
         if (rightPanel != null)
             rightPanel.SetActive(false);
     }

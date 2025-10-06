@@ -618,6 +618,11 @@ Transform:
   - {fileID: 729226089}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1071094879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4147148926642644616, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+  m_PrefabInstance: {fileID: 622443016648761994}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1111025104 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7000573662763054808, guid: 42a0ace60c2fe38419bbb3a514411e40, type: 3}
@@ -901,7 +906,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5705554780241304232, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
   m_PrefabInstance: {fileID: 622443016648761994}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1071094879}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e64907b3efb39b47a9fcf175ba58ec0, type: 3}
@@ -912,7 +917,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 485576864514489193, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
   m_PrefabInstance: {fileID: 622443016648761994}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1071094879}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 759dc63437406db49bbe66cf60b40026, type: 3}
@@ -923,7 +928,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3776033888451564530, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
   m_PrefabInstance: {fileID: 622443016648761994}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1071094879}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03f2cf68153a46a4abbd8ca9b1122d7f, type: 3}
@@ -934,7 +939,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
   m_PrefabInstance: {fileID: 622443016648761994}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1071094879}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
@@ -1417,10 +1422,10 @@ PrefabInstance:
     - target: {fileID: 5546494963873024056, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 622443016648762004}
+      objectReference: {fileID: 1071094879}
     - target: {fileID: 5546494963873024056, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TravelToTown7
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5801040900137727505, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_SizeDelta.x
