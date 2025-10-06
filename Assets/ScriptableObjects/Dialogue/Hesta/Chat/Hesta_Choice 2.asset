@@ -15,10 +15,24 @@ MonoBehaviour:
   optionA:
     buttonText: What do the waters say about me?
     responseText: They say you are a bridge between worlds.
-    flagToRaise: +rep
+    flagToRaise: 
+    reputationChangeValue: 0.2
+    reputationEffect: 1
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   optionB:
     buttonText: So you're a charlatan.
     responseText: You have a quiet eye, child. You can only seee the small things.
       The river rewards those who look closer than their own noses.
-    flagToRaise: -rep
+    flagToRaise: 
+    reputationChangeValue: 0.2
+    reputationEffect: 2
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   displayLine: What do you say to Hesta?

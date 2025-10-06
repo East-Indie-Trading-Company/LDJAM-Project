@@ -20,6 +20,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1024d24e5b8e6c94b9ab36fea74a4e06, type: 2}
   - {fileID: 11400000, guid: 878a6d463db23b544b9f8c079d0e84de, type: 2}
   - {fileID: 11400000, guid: e89596dbf75498548af46fb89ebc3f0f, type: 2}
+  - {fileID: 11400000, guid: 45bda9640a80b114392bedbba61d4d78, type: 2}
+  - {fileID: 11400000, guid: b8cd644ab5899b144b9368e3fc7bf1ca, type: 2}
+  - {fileID: 11400000, guid: 6b5aa126838493c43827feccf0c5bade, type: 2}
   npcRumorDialogueLines:
   - {fileID: 11400000, guid: c8a72fbdbeb9c0040b82c0b4b0f8cd8b, type: 2}
   - {fileID: 11400000, guid: a29f16ac8d476fc4980e8ba21135ddfc, type: 2}
