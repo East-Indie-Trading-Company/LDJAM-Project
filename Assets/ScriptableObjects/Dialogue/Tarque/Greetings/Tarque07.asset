@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
   npc: {fileID: 11400000, guid: 7e7885b28c958f94bb94511c3ca14f42, type: 2}
   lines:
-  - dialogueText: Hear that? Coin spilling free from a leather pouch, hushed words,
-      two hands clasping each other... another deal struck. I wonder... who swindled
-      who?
+  - dialogueText: Business is always a pleasure.
     choice: {fileID: 0}
-  isOneOff: 1
+  isOneOff: 0
   flags: []
   hasPlayed: 0

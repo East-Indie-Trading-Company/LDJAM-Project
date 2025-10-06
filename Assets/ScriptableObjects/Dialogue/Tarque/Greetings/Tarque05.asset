@@ -18,5 +18,6 @@ MonoBehaviour:
       my friend.'
     choice: {fileID: 0}
   isOneOff: 0
-  flags: []
+  flags:
+  - HighRep
   hasPlayed: 0
