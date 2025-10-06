@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Wren
   m_EditorClassIdentifier: Assembly-CSharp::NpcDisplayInfo
   npcName: Wren
-  npcIcon: {fileID: 21300000, guid: 51ff22c914f9e4243b54f1bfb4be43df, type: 3}
+  npcIcon: {fileID: 0}
   townName: Dursim
-  townIcon: {fileID: 21300000, guid: e471b9dc5dd07864e920e5c5df2753de, type: 3}
+  townIcon: {fileID: 0}

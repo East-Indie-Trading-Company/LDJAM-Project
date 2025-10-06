@@ -15,4 +15,4 @@ MonoBehaviour:
   npcName: Hesta
   npcIcon: {fileID: 21300000, guid: fa0cd8a9e032a6c478be0d6e7b1e2ce4, type: 3}
   townName: Trestel
-  townIcon: {fileID: 21300000, guid: 3acb03c3581ccd248abdb0a80b16d800, type: 3}
+  townIcon: {fileID: 21300000, guid: bc2b4d25769301148a7eccac1eb8fc4c, type: 3}

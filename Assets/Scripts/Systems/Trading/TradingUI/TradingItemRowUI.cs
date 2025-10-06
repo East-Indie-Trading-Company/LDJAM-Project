@@ -72,10 +72,10 @@ namespace Trading
             int playerQty = inventory.GetQuantity(item);
 
             if (infoLine1 != null)
-                infoLine1.text = $"Town Stock [{townStock}] • Buy [{buyPrice}g]";
+                infoLine1.text = $"Town Stock [{townStock}] • Buy [{buyPrice}]";
 
             if (infoLine2 != null)
-                infoLine2.text = $"You Have [{playerQty}] • Sell [{sellPrice}g]";
+                infoLine2.text = $"You Have [{playerQty}] • Sell [{sellPrice}]";
 
             if (quantityInput != null && string.IsNullOrWhiteSpace(quantityInput.text))
                 quantityInput.text = "1";
