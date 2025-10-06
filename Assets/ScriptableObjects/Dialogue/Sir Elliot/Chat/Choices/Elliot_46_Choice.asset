@@ -16,11 +16,25 @@ MonoBehaviour:
     buttonText: That doesn't seem like the dragon's fault.
     responseText: Are you suggesting that it was our fault? I'd be careful with your
       words.
-    flagToRaise: Rep - 30
+    flagToRaise: 
+    reputationChangeValue: 0.3
+    reputationEffect: 2
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   optionB:
     buttonText: I understand why the king wants to kill the dragon. Your village
       has suffered enough.
     responseText: I fear the king worries more about a demonstration of power than
       the well-being of a ruined ally...
-    flagToRaise: Rep + 20
+    flagToRaise: 
+    reputationChangeValue: 0.2
+    reputationEffect: 1
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   displayLine: 

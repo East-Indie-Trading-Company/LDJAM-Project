@@ -15,9 +15,23 @@ MonoBehaviour:
   optionA:
     buttonText: And a tavern keeper was the best leader they could find?
     responseText: Better to trust a tavern owner than a chatty wanderer.
-    flagToRaise: Rep - 15
+    flagToRaise: 
+    reputationChangeValue: 0.15
+    reputationEffect: 2
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   optionB:
     buttonText: You must be inspiring if they listen to you.
     responseText: Mayhaps I was as a knight. Yes, mayhaps that lingers still.
-    flagToRaise: Rep + 20
+    flagToRaise: 
+    reputationChangeValue: 0.2
+    reputationEffect: 1
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   displayLine: 

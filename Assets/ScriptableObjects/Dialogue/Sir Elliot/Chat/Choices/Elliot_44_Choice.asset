@@ -15,9 +15,23 @@ MonoBehaviour:
   optionA:
     buttonText: I saw nothing on the road.
     responseText: So our scouts speak the truth...
-    flagToRaise: Rep +10
+    flagToRaise: 
+    reputationChangeValue: 0.1
+    reputationEffect: 1
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   optionB:
     buttonText: Only a big dragon. I think it's after me.
     responseText: Then I must urge you to lead it elsewhere...
-    flagToRaise: Rep - 35
+    flagToRaise: 
+    reputationChangeValue: 0.35
+    reputationEffect: 2
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   displayLine: 

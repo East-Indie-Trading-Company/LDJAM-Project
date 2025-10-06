@@ -14,11 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
   optionA:
     buttonText: Maybe I can help. Let me purchase a plot of land, then use the coin
-      to rebuild the village (donate money).
+      to rebuild the village (donate 300 coins).
     responseText: That is a most generous offer. You truly are one of a kind, wanderer.
-    flagToRaise: Rep + 40
+    flagToRaise: 
+    reputationChangeValue: 0.4
+    reputationEffect: 1
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 300
+    goldEffect: 2
   optionB:
     buttonText: I hope your pleas reach the king.
     responseText: So do I. So do I...
-    flagToRaise: Rep - 10
+    flagToRaise: 
+    reputationChangeValue: 0.1
+    reputationEffect: 2
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   displayLine: 
