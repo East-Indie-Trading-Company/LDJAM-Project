@@ -2894,6 +2894,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2735760163450282067, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: dailyInflationRate
+      value: 1.001
+      objectReference: {fileID: 0}
     - target: {fileID: 4721831317631648393, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: permaUIManager
       value: 

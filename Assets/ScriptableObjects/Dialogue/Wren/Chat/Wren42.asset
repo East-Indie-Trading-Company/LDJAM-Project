@@ -13,13 +13,25 @@ MonoBehaviour:
   m_Name: Wren42
   m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
   optionA:
-    buttonText: ' Here. I''ll admit I''m quite interested in what these items will
-      be used for. '
-    responseText: 'Bless you. Justus''s dreams of becoming a traveling minstrel are
-      nearing closer thanks to you. '
+    buttonText: 
+    responseText: 
     flagToRaise: 
+    reputationChangeValue: 0
+    reputationEffect: 0
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   optionB:
-    buttonText: 'Sorry, but these relics are far too valuable for me to part with.  '
-    responseText: Value runs far deeper than money. You'd take care to remember that.
+    buttonText: 
+    responseText: 
     flagToRaise: 
+    reputationChangeValue: 0
+    reputationEffect: 0
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   displayLine: 
