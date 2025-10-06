@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemSO
   itemName: Grains
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 674a5ad235663a04384539c46f8243fb, type: 3}
   baseValue: 1
   category: 2
   tags: []

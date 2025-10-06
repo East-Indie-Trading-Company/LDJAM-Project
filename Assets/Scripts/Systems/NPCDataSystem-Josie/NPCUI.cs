@@ -32,10 +32,18 @@ public class NPCUI : MonoBehaviour
         marketCanvas.SetActive(false);
         npcData.Rumor();
     }
+    public void CloseUI()
+    {
+        marketCanvas.SetActive(false);
+    }
     // Set the npc ui to the values held in the npcData object
     public void DisplayNPCUI(NPCData newData)
     {
+        Debug.Log("[DialogueTrigger] Opening the market canvas!");
+        Debug.Log($"[DialogueTrigger] Opening the market canvas {marketCanvas}");
+        marketCanvas.SetActive(true);
         npcData = newData;
+        //Debug.Log($"[NPCUI] Have data for {npcData.displayInfo.npcName}");
         if (npcData == null)
         {
             Debug.LogWarning("[DialogueTrigger] npcData is NULL!");

@@ -15,11 +15,25 @@ MonoBehaviour:
   optionA:
     buttonText: I'm afraid I have none to spare, unless you wish to purchase it.
     responseText: Ah, a true merchant at heart.  I should have known.
-    flagToRaise: Rep+2
+    flagToRaise: 
+    reputationChangeValue: 0.2
+    reputationEffect: 1
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 1
+    goldChangeValue: 0
+    goldEffect: 0
   optionB:
     buttonText: Here you go. No Charge. Consider it a token of our friendship.
     responseText: I never trust anyone who says "no charge".  They have already taken
       another form of payment.  But I thank you nonetheless.
-    flagToRaise: AddItemRelic
+    flagToRaise: 
+    reputationChangeValue: 0.1
+    reputationEffect: 2
+    item: {fileID: 11400000, guid: f7bd0f0cd9aef224c9d14b2e2d4ca542, type: 2}
+    itemChangeValue: 1
+    itemEffect: 1
+    goldChangeValue: 0
+    goldEffect: 0
   displayLine: Have you happened to come across any fine spirits?  All this grave
     dust makes me thirsty.

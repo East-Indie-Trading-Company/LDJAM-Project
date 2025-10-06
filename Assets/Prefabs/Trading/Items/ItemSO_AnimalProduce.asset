@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemSO
   itemName: Animal Produce
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 1f512b194517e184cb27225933287e25, type: 3}
   baseValue: 1
   category: 2
   tags: []

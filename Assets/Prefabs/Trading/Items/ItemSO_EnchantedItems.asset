@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemSO
   itemName: Enchanted Items
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: e620dfae11773114f87e559e66594342, type: 3}
   baseValue: 1
   category: 2
   tags: []

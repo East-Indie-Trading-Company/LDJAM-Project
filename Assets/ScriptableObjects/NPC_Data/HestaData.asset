@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed558470323453347a9e3ab4d78cfbf7, type: 3}
   m_Name: HestaData
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  displayInfo: {fileID: 0}
-  townStock: {fileID: 0}
+  displayInfo: {fileID: 11400000, guid: 45dc0525bf2554d48937d8937b86df60, type: 2}
+  townStock: {fileID: 11400000, guid: 3b08e9792096e8f46a7a6a5644300c84, type: 2}
   npcDialogueLines:
   - {fileID: 11400000, guid: 7d2ef90b1cff9b94b90d7b086ca2ea13, type: 2}
   - {fileID: 11400000, guid: 0ee36503fd764334684bfaa15794d98d, type: 2}

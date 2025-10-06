@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EapramData
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   displayInfo: {fileID: 11400000, guid: d1d50ab825af1254598ba5711804067c, type: 2}
-  townStock: {fileID: 0}
+  townStock: {fileID: 11400000, guid: 51cfb4e376e930344b47f5202c6b9631, type: 2}
   npcDialogueLines:
   - {fileID: 11400000, guid: 75e3ccc382fdf104589df6ccfb38330f, type: 2}
   - {fileID: 11400000, guid: c531a55043fa560448067718600e55c6, type: 2}

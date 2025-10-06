@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemSO
   itemName: Reagents
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: cc01494136b88614aa16e0af9d772ffb, type: 3}
   baseValue: 1
   category: 2
   tags: []

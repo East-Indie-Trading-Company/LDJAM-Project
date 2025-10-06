@@ -30,16 +30,24 @@ public class NPCData : ScriptableObject
     public void Greeting(TextMeshProUGUI textComponent)
     {
         DialogueConversation convo =  PullDialogue(npcGreetingDialogueLines);
-        Debug.Log($"[NPCData] Has convo? {convo == null}");
-        Debug.Log($"[NPCData] {convo.lines[0].dialogueText}");
-        textComponent.text = convo.lines[0].dialogueText;
+
+        if (convo.lines.Count > 0)
+        {
+            textComponent.text = convo.lines[0].dialogueText;
+        }
+        else
+        {
+            Debug.Log($"[NPCData] NO LINES!");
+        }
     }
 
 
     DialogueConversation PullDialogue(DialogueConversation[] conversations)
     {
+        //Debug.Log($"[NPCData] Num of convos in this group: {conversations.Length}");
         DialogueConversation convoToWrite = null;
         // TODO:: List/array of convos that don't need flags here
+        List<DialogueConversation> convosWithNoFlags = new List<DialogueConversation>();
         Array.ForEach(conversations, convo =>
         {
             if (!convo.hasPlayed) // If the line is repeatable or has not played yet.
@@ -62,15 +70,28 @@ public class NPCData : ScriptableObject
                 }
                 else
                 {
-                    // TODO:: Create list that doesn't require flags
+                    // Add to list that doesn't require flags
+                    convosWithNoFlags.Add(convo);
                 }
             }
 
         });
 
-        if (convoToWrite == null)
+        if (convoToWrite == null) 
         {
-            // TODO:: Randomly choose from a list that doesn't require flags
+            //Debug.Log($"[NPCData] Num of convos with no flags: {convosWithNoFlags.Count}");
+            // Randomly choose from a list that doesn't require flags
+            if (convosWithNoFlags.Count > 0)
+            {
+                int randomIndex = UnityEngine.Random.Range(0, convosWithNoFlags.Count-1);
+                //Debug.Log($"[NPCData] Random Index: {randomIndex}");
+                convoToWrite = convosWithNoFlags[randomIndex];
+            }
+            else
+            {
+                Debug.LogWarning("[NPCData] NO VIABLE CONVERSATIONS"); ///////////   IF NO CONVERSATIONS ARE VIABLE, THIS WILL CAUSE PROBLEMS
+            }
+            
         }
 
         return convoToWrite;
