@@ -12,8 +12,8 @@ public class TownUI : MonoBehaviour
     // THIS NEEDS TO BE CALLED WHEN A PLAYER CLICKS A TOWN
     public void SetTownUI(NPCData newData)
     {
-        Debug.Log($"[TownUI] Update town ui to {newData.displayInfo.townName}");
         npcData = newData;
+        Debug.Log($"[TownUI] Update town ui to {newData.displayInfo.townName}");
         if (npcData != null)
         {
             npcUI.DisplayNPCUI(npcData);
@@ -22,6 +22,7 @@ public class TownUI : MonoBehaviour
         {
             Debug.LogWarning($"[TownUI] NPCData not assigned!");
         }
+        
         if (npcData.townStock != null)
         {
             tradingUI.SetTown(npcData.townStock);
