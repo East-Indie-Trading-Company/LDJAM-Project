@@ -288,7 +288,6 @@ GameObject:
   - component: {fileID: 4997180724075047826}
   - component: {fileID: 9190859121713669920}
   - component: {fileID: 278512504001028855}
-  - component: {fileID: 1045120987443739927}
   m_Layer: 5
   m_Name: Town 1 Button
   m_TagString: Untagged
@@ -398,7 +397,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1045120987443739927}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MapManager, Assembly-CSharp
         m_MethodName: TravelToTown1
         m_Mode: 1
@@ -410,22 +409,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1045120987443739927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 346255309833221747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  zoomDuration: 1
-  zoomSpeed: 5
-  stopDistance: 0.1
 --- !u!1 &579735116011454106
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +421,6 @@ GameObject:
   - component: {fileID: 4061441720599380038}
   - component: {fileID: 1312710249767554448}
   - component: {fileID: 3709112934622566806}
-  - component: {fileID: 6637399176575223100}
   m_Layer: 5
   m_Name: Town 7 Button
   m_TagString: Untagged
@@ -548,7 +530,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6637399176575223100}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MapManager, Assembly-CSharp
         m_MethodName: TravelToTown7
         m_Mode: 1
@@ -560,22 +542,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6637399176575223100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579735116011454106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  zoomDuration: 1
-  zoomSpeed: 5
-  stopDistance: 3
 --- !u!1 &581622335852266005
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +554,6 @@ GameObject:
   - component: {fileID: 5095888789446009330}
   - component: {fileID: 6021499881073032314}
   - component: {fileID: 1552531338552921332}
-  - component: {fileID: 1084334692108742879}
   m_Layer: 5
   m_Name: Town 5 Button
   m_TagString: Untagged
@@ -698,7 +663,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1084334692108742879}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MapManager, Assembly-CSharp
         m_MethodName: TravelToTown5
         m_Mode: 1
@@ -710,22 +675,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1084334692108742879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 581622335852266005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  zoomDuration: 1
-  zoomSpeed: 5
-  stopDistance: 3
 --- !u!1 &614718891285177062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,7 +1078,6 @@ GameObject:
   - component: {fileID: 1237972998910643774}
   - component: {fileID: 8402734293361825380}
   - component: {fileID: 1860639229622769023}
-  - component: {fileID: 6939166583273915749}
   m_Layer: 5
   m_Name: Town 6 Button
   m_TagString: Untagged
@@ -1239,7 +1187,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6939166583273915749}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MapManager, Assembly-CSharp
         m_MethodName: TravelToTown6
         m_Mode: 1
@@ -1251,22 +1199,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6939166583273915749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865737535384730450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  zoomDuration: 1
-  zoomSpeed: 5
-  stopDistance: 3
 --- !u!1 &1102542221344444190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1521,7 +1453,6 @@ GameObject:
   - component: {fileID: 9133112049378276977}
   - component: {fileID: 6087266569995621331}
   - component: {fileID: 1270132870796508390}
-  - component: {fileID: 6027576777890004232}
   m_Layer: 5
   m_Name: Town 4 Button
   m_TagString: Untagged
@@ -1631,7 +1562,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6027576777890004232}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MapManager, Assembly-CSharp
         m_MethodName: TravelToTown4
         m_Mode: 1
@@ -1643,22 +1574,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6027576777890004232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2459674979869436051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  zoomDuration: 1
-  zoomSpeed: 5
-  stopDistance: 3
 --- !u!1 &2876687383995596756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,7 +1586,6 @@ GameObject:
   - component: {fileID: 3552963197791021526}
   - component: {fileID: 6448056597814447232}
   - component: {fileID: 4042857210236503034}
-  - component: {fileID: 5533193778632455033}
   m_Layer: 5
   m_Name: Town 3 Button
   m_TagString: Untagged
@@ -1781,7 +1695,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5533193778632455033}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MapManager, Assembly-CSharp
         m_MethodName: TravelToTown3
         m_Mode: 1
@@ -1793,22 +1707,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5533193778632455033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2876687383995596756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  zoomDuration: 1
-  zoomSpeed: 5
-  stopDistance: 3
 --- !u!1 &3332460485578402072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,9 +1853,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
+  towns: []
+  mapView: {fileID: 0}
+  gameManager: {fileID: 0}
   zoomDuration: 1
-  zoomSpeed: 5
   stopDistance: 3
 --- !u!1 &5542978167011696753
 GameObject:
@@ -2245,7 +2144,6 @@ GameObject:
   - component: {fileID: 2144586261965737473}
   - component: {fileID: 3224785733620020991}
   - component: {fileID: 334280861132249791}
-  - component: {fileID: 2844614736295648473}
   m_Layer: 5
   m_Name: Town 2 Button
   m_TagString: Untagged
@@ -2355,7 +2253,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2844614736295648473}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MapManager, Assembly-CSharp
         m_MethodName: TravelToTown2
         m_Mode: 1
@@ -2367,22 +2265,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2844614736295648473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7146372919953957548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapManager
-  target: {fileID: 0}
-  zoomDuration: 1
-  zoomSpeed: 5
-  stopDistance: 3
 --- !u!1 &7444678300888910607
 GameObject:
   m_ObjectHideFlags: 0
