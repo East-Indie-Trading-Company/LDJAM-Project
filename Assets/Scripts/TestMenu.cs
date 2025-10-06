@@ -6,7 +6,7 @@ public class TestMenu : MonoBehaviour
     // Call this from your Play button
     public void PlayLevel1()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("TestSamplelMika");
     }
 
     public void PlayLevel2()
