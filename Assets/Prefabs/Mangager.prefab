@@ -206,8 +206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   campaignMaxDays: 30
   currentTown: {fileID: 0}
-  flagManager: {fileID: 0}
-  economyManager: {fileID: 0}
+  flagManager: {fileID: 485576864514489193}
+  economyManager: {fileID: 5705554780241304232}
   permaUIManager: {fileID: 0}
   onCurrencyChanged:
     m_PersistentCalls:
