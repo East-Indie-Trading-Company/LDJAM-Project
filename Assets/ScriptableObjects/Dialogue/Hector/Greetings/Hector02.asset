@@ -17,7 +17,7 @@ MonoBehaviour:
   - dialogueText: Ah, the lowlander has returned. Understandable, the city of light
       attracts the best and brightest minds... as well as a cavalcade of moths.
     choice: {fileID: 0}
-  isOneOff: 1
+  isOneOff: 0
   flags:
   - LowRep
   hasPlayed: 0

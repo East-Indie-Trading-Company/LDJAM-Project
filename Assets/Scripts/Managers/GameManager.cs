@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private int campaignMaxDays = 10;   // total days per cycle
+    [SerializeField] private int campaignMaxDays = 30;   // total days per cycle
     private int daysRemaining;
 
     public static GameManager Instance { get; private set; }
@@ -68,15 +68,15 @@ public class GameManager : MonoBehaviour
 
         switch (CurrentDay)
         {
-            case 10:
+            case 30:
                 flagManager.TriggerMilestone("Act1", "Milestone 1", 30000);
                 break;
 
-            case 20:
+            case 60:
                 flagManager.TriggerMilestone("Act2", "Milestone 2", 445000);
                 break;
 
-            case 30:
+            case 90:
                 flagManager.TriggerMilestone("Act3", "Milestone 3", 150000000);
                 break;
         }

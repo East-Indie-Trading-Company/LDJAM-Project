@@ -17,7 +17,7 @@ MonoBehaviour:
   - dialogueText: Trade with the lower towns is a necessary evil. Rest assured, my
       senior mages are tirelessly working on a solution.
     choice: {fileID: 0}
-  isOneOff: 1
+  isOneOff: 0
   flags:
   - LowRep
   hasPlayed: 0

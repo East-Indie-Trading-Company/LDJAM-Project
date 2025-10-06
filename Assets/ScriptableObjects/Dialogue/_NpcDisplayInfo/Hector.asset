@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Hector
   m_EditorClassIdentifier: Assembly-CSharp::NpcDisplayInfo
   npcName: Hector
-  npcIcon: {fileID: 21300000, guid: 0706fb70b88f3584c9564fbbe2a59bd7, type: 3}
+  npcIcon: {fileID: 21300000, guid: 5427ee53a3b105d49a10564a7b1348e9, type: 3}
   townName: Taraval
   townIcon: {fileID: 21300000, guid: 53c9b8a3bf573014f80ccc6cd8e1cd38, type: 3}

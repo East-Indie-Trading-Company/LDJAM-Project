@@ -17,7 +17,7 @@ MonoBehaviour:
   - dialogueText: Crystals, mirrors, and light. Clever activation with magic can
       create an impenetrable defensive structure. More than enough to handle a dragon.
     choice: {fileID: 0}
-  isOneOff: 1
+  isOneOff: 0
   flags:
   - 
   hasPlayed: 0

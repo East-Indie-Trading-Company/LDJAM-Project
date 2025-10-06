@@ -25,7 +25,7 @@ MonoBehaviour:
     goldEffect: 2
   optionB:
     buttonText: "You? An ally? I don\u2019t trust you. The kingdom has treated me
-      better than thee, they are my allies."
+      better than thee."
     responseText: 'Using the kingdom against me? Curse you, two-legged. Curse you
       and this kingdom. '
     flagToRaise: EndGameKingdom
