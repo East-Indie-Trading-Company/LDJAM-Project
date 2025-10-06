@@ -22,5 +22,5 @@ MonoBehaviour:
     responseText: "You dare refuse me? It\u2019s always the same with you two-leggeds,
       so unreliable. I could extinguish you here, but I\u2019ll give you one more
       chance. Just. One. More. Chance. "
-    flagToRaise: 
+    flagToRaise: DragonDeath
   displayLine: 

@@ -15,11 +15,11 @@ MonoBehaviour:
   optionA:
     buttonText: An ally? That appeals to me, dragon. Take the coin.
     responseText: 'An ally indeed, mortal. '
-    flagToRaise: 
+    flagToRaise: EndGameDragon
   optionB:
     buttonText: "You? An ally? I don\u2019t trust you. The kingdom has treated me
       better than thee, they are my allies."
     responseText: 'Using the kingdom against me? Curse you, two-legged. Curse you
       and this kingdom. '
-    flagToRaise: 
+    flagToRaise: EndGameKingdom
   displayLine: 
