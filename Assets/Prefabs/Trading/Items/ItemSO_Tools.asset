@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemSO
   itemName: Tools
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 58de8294972d52c409101bae1069fbe6, type: 3}
   baseValue: 1
   category: 2
   tags: []
