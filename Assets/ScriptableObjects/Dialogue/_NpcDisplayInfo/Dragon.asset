@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NpcDisplayInfo
   npcName: Tussau the Collector
   npcIcon: {fileID: 21300000, guid: 396b3dc7e47be6349b9b45b4a104fdbf, type: 3}
-  townName: 
-  townIcon: {fileID: 0}
+  townName: The Dragon is Here to Collect
+  townIcon: {fileID: 21300000, guid: f2f571299c3a74c78b74101fae436b1d, type: 3}

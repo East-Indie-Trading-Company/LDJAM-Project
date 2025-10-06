@@ -19,6 +19,7 @@ public class DragonTaxCollectorManager : DayAdvanceListener
     {
         PermaUIManager.Instance?.SetDayTrackerUI(newDay);
 
+
         if (newDay >= firstCollectionDay && (newDay - firstCollectionDay) % taxInterval == 0)
         {
             lastTriggeredDay = newDay;

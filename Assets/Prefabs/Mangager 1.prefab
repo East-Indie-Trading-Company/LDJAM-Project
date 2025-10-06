@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6715284717419336914}
   - component: {fileID: 3026085979926232503}
   - component: {fileID: 7529034560254078143}
+  - component: {fileID: 89368133734724919}
   m_Layer: 0
   m_Name: Mangager 1
   m_TagString: Untagged
@@ -169,6 +170,23 @@ MonoBehaviour:
   reputationBar: {fileID: 8040116159037085207}
   reputationSlider: {fileID: 88595373141948181}
   permaUICanvas: {fileID: 6790693314756987065}
+--- !u!114 &89368133734724919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5094501463796226850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa52e11f903e4747b200552dd550106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragonNarrativeTrigger
+  taxCollector: {fileID: 8600266343631513412}
+  timeline: {fileID: 0}
+  act1Convo: {fileID: 11400000, guid: 69d21c32bad354856ace030c7337baf8, type: 2}
+  act2Convo: {fileID: 11400000, guid: 054710d91b3264e779d9d1f2dd913908, type: 2}
+  act3Convo: {fileID: 11400000, guid: c80854c214f0f4a4697f2bf54ce6ff0d, type: 2}
 --- !u!1001 &1090277966522689278
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -16,10 +16,24 @@ MonoBehaviour:
     buttonText: An ally? That appeals to me, dragon. Take the coin.
     responseText: 'An ally indeed, mortal. '
     flagToRaise: EndGameDragon
+    reputationChangeValue: 0
+    reputationEffect: 0
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 15
+    goldEffect: 2
   optionB:
     buttonText: "You? An ally? I don\u2019t trust you. The kingdom has treated me
       better than thee, they are my allies."
     responseText: 'Using the kingdom against me? Curse you, two-legged. Curse you
       and this kingdom. '
     flagToRaise: EndGameKingdom
-  displayLine: 
+    reputationChangeValue: 0
+    reputationEffect: 0
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
+  displayLine: Give the dragon 15,000 gold?

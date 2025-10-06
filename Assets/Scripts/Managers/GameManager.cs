@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private int campaignMaxDays = 30;   // total days per cycle
+    [SerializeField] private int campaignMaxDays = 10;   // total days per cycle
     private int daysRemaining;
 
     public static GameManager Instance { get; private set; }
@@ -60,7 +60,27 @@ public class GameManager : MonoBehaviour
     }
 
     // --- TIME MANAGEMENT ---
+    private void CheckMilestones()
+    {
+        if (flagManager == null) return;
 
+        
+
+        switch (CurrentDay)
+        {
+            case 10:
+                flagManager.TriggerMilestone("Act1", "Milestone 1", 30000);
+                break;
+
+            case 20:
+                flagManager.TriggerMilestone("Act2", "Milestone 2", 445000);
+                break;
+
+            case 30:
+                flagManager.TriggerMilestone("Act3", "Milestone 3", 150000000);
+                break;
+        }
+    }
     public void AdvanceDay()
     {
         CurrentDay++;
@@ -70,16 +90,18 @@ public class GameManager : MonoBehaviour
         if (daysRemaining <= 0)
         {
             daysRemaining = campaignMaxDays;
-            CurrentDay = 1; // Optional: reset day count too
             Debug.Log("[GameManager] Cycle reset! Starting a new period.");
         }
+
+        CheckMilestones(); // I think the flag needs to be set before the trigger is called
 
         flagManager?.TriggerDayAdvanced(CurrentDay);
         economyManager?.AdvanceDay();
 
+        
         UpdatePermaUIHUD();
 
-        Debug.Log($"[GameManager] Day advanced to {CurrentDay}");
+       // Debug.Log($"[GameManager] Day advanced to {CurrentDay}");
     }
 
     public void AdvanceDays(int amount)
