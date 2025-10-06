@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac806ca5c45cc9d40ba2dec25c6d6aef, type: 3}
-  m_Name: Dragon
+  m_Name: Hesta
   m_EditorClassIdentifier: Assembly-CSharp::NpcDisplayInfo
-  npcName: Tussau the Collector
-  npcIcon: {fileID: 21300000, guid: c6785b50c971cf240ac044651c55479e, type: 3}
-  townName: 
+  npcName: Hesta
+  npcIcon: {fileID: 21300000, guid: 9f83be5c8ceb9344f86a18688e04ea88, type: 3}
+  townName: Trestel
   townIcon: {fileID: 0}

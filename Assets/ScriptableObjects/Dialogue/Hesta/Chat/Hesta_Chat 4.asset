@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1bb3f9a2130d840ba2b8ba51e9463d, type: 3}
   m_Name: Hesta_Chat 4
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
-  npc: {fileID: 0}
+  npc: {fileID: 11400000, guid: 45dc0525bf2554d48937d8937b86df60, type: 2}
   lines:
   - dialogueText: I sense you have questions.
     choice: {fileID: 11400000, guid: 6c6f3ae8ac6093d40b0598e707ff9092, type: 2}
