@@ -18,5 +18,5 @@ MonoBehaviour:
     choice: {fileID: 11400000, guid: f443a385254bd2a47b2bb9ad0adcabeb, type: 2}
   isOneOff: 1
   flags:
-  - Act2
+  - Act1
   hasPlayed: 0

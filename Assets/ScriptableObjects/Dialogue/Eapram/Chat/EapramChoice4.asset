@@ -10,20 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5db986408bf78344ab413ccba7786039, type: 3}
-  m_Name: EapramChoice52
+  m_Name: EapramChoice4
   m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
   optionA:
     buttonText: You can have it, friend
     responseText: I am certain I have not engaged in a contract that indicated that
       is the nature of this connection, but I am... thankful of you
     flagToRaise: 
-    reputationChangeValue: 0.15
-    reputationEffect: 1
   optionB:
     buttonText: Why would I give it to you?
     responseText: Certainly, the futility of engaging in meaningless trade is something
       that does not escape my grasp
     flagToRaise: 
-    reputationChangeValue: 0.1
-    reputationEffect: 2
   displayLine: Will you give Eapram 30 enchanted items?

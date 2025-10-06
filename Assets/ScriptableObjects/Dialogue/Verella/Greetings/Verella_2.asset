@@ -19,6 +19,6 @@ MonoBehaviour:
     choice: {fileID: 0}
   isOneOff: 1
   flags:
-  - Act2
+  - Act1
   - LowRep
   hasPlayed: 0

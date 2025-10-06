@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1bb3f9a2130d840ba2b8ba51e9463d, type: 3}
   m_Name: Hesta_Rumors 7
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
-  npc: {fileID: 11400000, guid: 45dc0525bf2554d48937d8937b86df60, type: 2}
+  npc: {fileID: 0}
   lines:
   - dialogueText: The people of Trestle are hardy folk. We carved our houses into
       the cliff and hung ropes across the ravine. It's a rough life, but you find
