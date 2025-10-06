@@ -16,7 +16,7 @@ MonoBehaviour:
   lines:
   - dialogueText: Have you really seen the dragon?! Can you tell me about it? For
       research purposes, naturally.
-    choice: {fileID: 0}
+    choice: {fileID: 11400000, guid: e79e53be4fc7b7a4da5cd2c51fbe8128, type: 2}
   isOneOff: 1
   flags:
   - Act3

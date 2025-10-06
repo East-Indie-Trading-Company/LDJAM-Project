@@ -16,9 +16,23 @@ MonoBehaviour:
     buttonText: I only saw it from a distance.
     responseText: Oh. How disappointing.
     flagToRaise: 
+    reputationChangeValue: 0.1
+    reputationEffect: 2
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   optionB:
     buttonText: She is magnificent! And not at all what you would expect.
     responseText: I knew it! Once the king's men slay the creature, I can't wait
       to study the carcass.
     flagToRaise: 
+    reputationChangeValue: 0.2
+    reputationEffect: 1
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   displayLine: Hector is soliciting your eyewitness account of the dragon.
