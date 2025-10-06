@@ -459,9 +459,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 994012944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 187e1ba8ff4497c46b28c600ee1c25eb, type: 3}
+  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapManager1
+  m_EditorClassIdentifier: Assembly-CSharp::MapManager
   towns:
   - {fileID: 1158064366}
   - {fileID: 1447563682}
@@ -471,10 +471,29 @@ MonoBehaviour:
   - {fileID: 1529660092}
   - {fileID: 1885830356}
   mapView: {fileID: 666787218}
-  gameManager: {fileID: 994012946}
+  gameManager: {fileID: 994012953}
   zoomDuration: 1
   stopDistance: 3
-  isMoving: 0
+--- !u!114 &994012953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994012944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f2cf68153a46a4abbd8ca9b1122d7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  campaignMaxDays: 30
+  currentTown: {fileID: 0}
+  flagManager: {fileID: 994012948}
+  economyManager: {fileID: 994012947}
+  permaUIManager: {fileID: 408567712}
+  onCurrencyChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1114257131
 PrefabInstance:
   m_ObjectHideFlags: 0
