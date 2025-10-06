@@ -602,6 +602,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2225277193646915999, guid: 83e0c7bf86d8cda4c870047559912e36, type: 3}
+      propertyPath: m_Color.a
+      value: 0.39215687
+      objectReference: {fileID: 0}
     - target: {fileID: 2697250015319180952, guid: 83e0c7bf86d8cda4c870047559912e36, type: 3}
       propertyPath: m_Type
       value: 0
@@ -804,7 +808,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 1ac883eebc6ff1c479f5f96b88374f44, type: 3}
     - target: {fileID: 8564292658069357766, guid: 83e0c7bf86d8cda4c870047559912e36, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8754244157291959163, guid: 83e0c7bf86d8cda4c870047559912e36, type: 3}
       propertyPath: m_AnchorMax.y
@@ -932,10 +936,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8487006712634065535, guid: 2cd30b84af5744943bd165ea5a44c955, type: 3}
-      propertyPath: m_Name
-      value: Environment
-      objectReference: {fileID: 0}
     - target: {fileID: 1559407671559051662, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
       propertyPath: m_LocalPosition.z
       value: 268
@@ -944,6 +944,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 0b3f495443b275a4397ae0357007b1a5, type: 3}
+    - target: {fileID: 8487006712634065535, guid: 2cd30b84af5744943bd165ea5a44c955, type: 3}
+      propertyPath: m_Name
+      value: Environment
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
