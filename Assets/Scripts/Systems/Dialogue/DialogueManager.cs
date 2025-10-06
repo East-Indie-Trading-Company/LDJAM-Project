@@ -339,7 +339,7 @@ public class DialogueManager : MonoBehaviour
             // Check for game over
             if (FlagManager.Instance.GetFlag("DragonDeath"))
             {
-                
+                SceneManager.LoadScene("PlayerDeath");
             }
 
             // Check for end game dragon
