@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemSO
   itemName: Trade Goods
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 5e0d1fbbaafaf2e49b78260853f36a49, type: 3}
   baseValue: 1
   category: 2
   tags: []

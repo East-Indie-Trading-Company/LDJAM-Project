@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Trading.ItemSO
   itemName: Alcohol
   description: A tasty drink
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 2a307188ee05089439372058ee3a13fd, type: 3}
   baseValue: 1
   category: 2
   tags: []
