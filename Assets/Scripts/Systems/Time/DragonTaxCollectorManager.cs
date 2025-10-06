@@ -35,8 +35,10 @@ public class DragonTaxCollectorManager : DayAdvanceListener
     public int GetNextCollectionDay(int currentDay)
     {
         if (currentDay < firstCollectionDay)
+        {
             PermaUIManager.Instance?.SetDayTrackerUI(firstCollectionDay);
             return firstCollectionDay;
+        }
 
         int cycles = (currentDay - firstCollectionDay) / taxInterval + 1;
         PermaUIManager.Instance?.SetDayTrackerUI(firstCollectionDay);
