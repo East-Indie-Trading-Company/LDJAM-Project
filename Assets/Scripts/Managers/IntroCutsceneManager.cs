@@ -6,7 +6,7 @@ public class IntroCutsceneManager : MonoBehaviour
 {
     public void NewGame()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("Map");
     }
 
     public void BackToMainMenu()
