@@ -11,9 +11,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TestScenes/TestLocalMika.unity
     guid: 64468eb317fc7f94c85033b5c28c44be
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScenes/MapTest.unity
     guid: b2158c407f06e644498b0c812ec62d44
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: d40696706e31641c5a919882d16a34d9
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/IntroCutscene.unity
+    guid: a97f261f334ca4992b3f4c64a113c4dc
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 83c194d939a89fc4996cbdf2fb4baa95
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
