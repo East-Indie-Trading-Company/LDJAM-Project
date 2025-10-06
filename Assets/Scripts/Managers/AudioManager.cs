@@ -17,7 +17,31 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip bgAudioClipThree;
 
     [Header("Trade SFX")]
+    [SerializeField] private AudioClip alcoholAudioClip;
+    [SerializeField] private AudioClip buildingMaterialsAudioClip;
+    [SerializeField] private AudioClip cancelAudioClip;
+    [SerializeField] private AudioClip closeMenuAudioClip;
+    [SerializeField] private AudioClip confirmAudioClip;
+    [SerializeField] private AudioClip decreaseReputationAudioClip;
+    [SerializeField] private AudioClip decreaseAmountAudioClip;
+    [SerializeField] private AudioClip increaseReputationAudioClip;
+    [SerializeField] private AudioClip increaseAmountAudioClip;
+    [SerializeField] private AudioClip openMenuAudioClip;
+    [SerializeField] private AudioClip receiveCoinsAudioClip;
+    [SerializeField] private AudioClip tradeGoodsAudioClip;
+    [SerializeField] private AudioClip useCoinsAudioClip;
+    [SerializeField] private AudioClip weaponsAudioClip;
     [SerializeField] private AudioClip buyItemAudioClip;
+
+    [Header("Town Ambience SFX")]
+    [SerializeField] private AudioClip styxStonesAudioClip;
+    [SerializeField] private AudioClip brightSpireAudioClip;
+    [SerializeField] private AudioClip dursimAudioClip;
+    [SerializeField] private AudioClip lockHavenAudioClip;
+    [SerializeField] private AudioClip scorchedVillageAudioClip;
+    [SerializeField] private AudioClip trestelAudioClip;
+    [SerializeField] private AudioClip mapScreenAudioClip;
+    [SerializeField] private AudioClip taravalAudioClip;
 
     [Header("Vocal SFX")]
     [SerializeField] private AudioClip[] dragonVocalSoundEffects;
