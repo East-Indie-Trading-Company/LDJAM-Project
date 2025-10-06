@@ -16,7 +16,7 @@ MonoBehaviour:
   lines:
   - dialogueText: Been wonderin' somethin'... when ye sit down at a tavern, what
       manner of drink calls to ye?
-    choice: {fileID: 0}
+    choice: {fileID: 11400000, guid: 4ff587f65bdb557428051bc2e3f84d93, type: 2}
   isOneOff: 1
   flags: []
   hasPlayed: 0

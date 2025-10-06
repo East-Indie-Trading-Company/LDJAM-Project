@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TarqueData
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   displayInfo: {fileID: 11400000, guid: 7e7885b28c958f94bb94511c3ca14f42, type: 2}
-  townStock: {fileID: 0}
+  townStock: {fileID: 11400000, guid: bc196b9ac03178847969709cd775a697, type: 2}
   npcDialogueLines:
   - {fileID: 11400000, guid: c5c86d5128f0e1b4e9165a4d021d918c, type: 2}
   npcRumorDialogueLines:

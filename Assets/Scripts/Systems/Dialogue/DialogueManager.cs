@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem; 
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -71,16 +72,18 @@ public class DialogueManager : MonoBehaviour
         DisableChoicePanel();
         if (conversation.npc != null)
         {
-            if (conversation.npc.townName != null)
+            if (conversation.npc.townName != "The Dragon is Here to Collect")
             {
                 isDragon = false;
-                townNameText.text = conversation.npc.townName;
-                townIcon.sprite = conversation.npc.townIcon;
+                
             }
             else
             {
+                Debug.Log("[Dialogue Manager] Talking to dragon!");
                 isDragon = true;
             }
+            townNameText.text = conversation.npc.townName;
+            townIcon.sprite = conversation.npc.townIcon;
             npcNameText.text = conversation.npc.npcName;
             npcPortrait.sprite = conversation.npc.npcIcon;
             
@@ -330,6 +333,65 @@ public class DialogueManager : MonoBehaviour
         if (!isDragon)
         {
             marketCanvas.SetActive(true);
+        }
+        else
+        {
+            // Check for game over
+            if (FlagManager.Instance.GetFlag("DragonDeath"))
+            {
+                SceneManager.LoadScene("PlayerDeath");
+            }
+
+            // Check for end game dragon
+            if (FlagManager.Instance.GetFlag("EndGameDragon"))
+            {
+                PlayerPrefs.GetInt("sidedWithDragon", 1);
+                if (Trading.InventoryManager.Instance.Gold >= 20000)
+                {
+                    PlayerPrefs.SetInt("economyGoalHit", 1);
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("economyGoalHit", 0);
+                }
+
+                if (ReputationManager.Instance.GetReputation() > 0)
+                {
+                    PlayerPrefs.SetInt("reputationGoalHit", 1);
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("reputationGoalHit", 0);
+                }
+                //Call ending
+                SceneManager.LoadScene("EndingCutscene");
+            }
+
+
+            // Check for end game kingdom
+            if (FlagManager.Instance.GetFlag("EndGameKingdom"))
+            {
+                PlayerPrefs.SetInt("sidedWithDragon", 0);
+                if (Trading.InventoryManager.Instance.Gold >= 20000)
+                {
+                    PlayerPrefs.SetInt("economyGoalHit", 1);
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("economyGoalHit", 0);
+                }
+
+                if (ReputationManager.Instance.GetReputation() > 0)
+                {
+                    PlayerPrefs.SetInt("reputationGoalHit", 1);
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("reputationGoalHit", 0);
+                }
+                //Call ending
+                SceneManager.LoadScene("EndingCutscene");
+            }
         }
         dialogueCanvas.SetActive(false);
         currentConversation = null;

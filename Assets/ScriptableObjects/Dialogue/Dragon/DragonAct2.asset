@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1bb3f9a2130d840ba2b8ba51e9463d, type: 3}
   m_Name: DragonAct2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
-  npc: {fileID: 0}
+  npc: {fileID: 11400000, guid: d01e23c8509e54ec699693620cf33b84, type: 2}
   lines:
   - dialogueText: 'My riches, mortal. How are you faring? You now know my kin depends
       on it. I can smell the wealth pouring from you. Give it here. '
-    choice: {fileID: 0}
+    choice: {fileID: 11400000, guid: 47b98b114c9794c369c37a8fa2a4b5fd, type: 2}
   isOneOff: 0
   flags: []
   hasPlayed: 0
