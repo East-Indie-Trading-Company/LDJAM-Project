@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public FlagManager flagManager;
     public EconomyManager economyManager;
     public PermaUIManager permaUIManager;
+    public InventoryManager inventoryManager;
 
     [Header("Events")]
     public UnityEvent<int> onCurrencyChanged;
@@ -93,7 +94,7 @@ public class GameManager : MonoBehaviour
 
     public void OnCurrencyChanged(int newCurrencyAmount)
     {
-        permaUIManager?.SetCurrencyUI(newCurrencyAmount);
+        permaUIManager.SetCurrencyUI(InventoryManager.Instance.Gold);
     }
 
     // --- WORLD LOGIC ---

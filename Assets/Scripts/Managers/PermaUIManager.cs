@@ -25,6 +25,7 @@ public class PermaUIManager: MonoBehaviour
 
     public void SetCurrencyUI( int newCurrency )
     {
+        Debug.Log($"[PermaUI] Currency Updated to: {newCurrency}");
         currencyUI.text = newCurrency.ToString();
     }
 

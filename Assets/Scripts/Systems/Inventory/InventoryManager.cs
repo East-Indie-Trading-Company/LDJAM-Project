@@ -53,6 +53,7 @@ namespace Trading
         {
             gold = Mathf.Max(0, gold + Mathf.Max(0, amount));
             GameManager.Instance?.onCurrencyChanged.Invoke(gold);
+            PermaUIManager.Instance?.SetCurrencyUI(gold);
         }
 
         /// <summary>
@@ -62,8 +63,13 @@ namespace Trading
         {
             amount = Mathf.Max(0, amount);
             GameManager.Instance?.onCurrencyChanged.Invoke(gold);
-            if (gold < amount) return false;
-            gold -= amount; return true;
+            if (gold < amount){
+                PermaUIManager.Instance?.SetCurrencyUI(gold);
+                return false;
+            }
+            gold -= amount;
+            PermaUIManager.Instance?.SetCurrencyUI(gold);
+            return true;
         }
 
         /// <summary>

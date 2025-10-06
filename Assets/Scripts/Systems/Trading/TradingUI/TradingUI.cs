@@ -6,8 +6,7 @@ using TMPro;
 namespace Trading
 {
     /// <summary>
-    /// Market UI builder for a specific town. Populates rows, updates a header with the town name
-    ///  Town is set via SetTown(...) or defaultTown; never inferred.
+    /// Market UI for a specific town. Call SetTown(...) to trigger a full rebuild.
     /// </summary>
     public class TradingUI : MonoBehaviour
     {
@@ -15,14 +14,11 @@ namespace Trading
         [SerializeField] private RectTransform rowsParent;
         [SerializeField] private GameObject rowPrefab;
 
-        [Header("Header")]
+        [Header("Header (optional)")]
         [SerializeField] private TMP_Text headerTitleText;
         [SerializeField] private string headerFormat = "{0} Market";
 
-        [Header("Defaults")]
-        [SerializeField] private TownStock defaultTown;
-
-        [Header("Row Config")]
+        [Header("Row Sizing")]
         [SerializeField] private float defaultRowHeight = 80f;
 
         [Header("Diagnostics")]
@@ -31,43 +27,28 @@ namespace Trading
         private TownStock town;
         private readonly List<TradingItemRowUI> liveRows = new();
 
-        private TradingManager trading;
-        private InventoryManager inventory;
+        [SerializeField] private TradingManager trading;
+        [SerializeField] private InventoryManager inventory;
+
 
         /// <summary>
-        /// Resolves managers and UI references without choosing a town.
+        /// Debugs the current instance and finds auto-references.
         /// </summary>
         private void Awake()
         {
-            if (!trading)   trading   = TradingManager.Instance;
-            if (!inventory) inventory = InventoryManager.Instance;
-
+            Debug.Log($"[TradingUI] Initializing instance: {gameObject.name}");
             TryAutoFindRowsParent();
             TryAutoFindHeader();
         }
 
         /// <summary>
-        /// Binds default town if none has been provided and builds UI.
+        /// Clears and initializes the UI on load.
         /// </summary>
         private void Start()
         {
-            if (town == null && defaultTown != null)
-            {
-                town = defaultTown;
-                Debug.Log($"[TradingUI] Town set from defaultTown: {town.townName}");
-            }
-            else if (town == null && logMissingRefs)
-            {
-                Debug.LogWarning("[TradingUI] No town provided. Assign defaultTown or call SetTown(...).");
-            }
-
+            // Rebuild is called here primarily to ensure manager references are grabbed early.
             Rebuild();
         }
-
-        /// <summary>
-        /// Exposes the current town.
-        /// </summary>
-        public TownStock CurrentTown => town;
 
         /// <summary>
         /// Sets the active town explicitly and rebuilds if changed.
@@ -79,66 +60,73 @@ namespace Trading
                 if (logMissingRefs) Debug.LogWarning("[TradingUI] SetTown(null) ignored.");
                 return;
             }
-            if (newTown == town) return;
+            
+            Debug.Log($"[TradingUI] Attempting to set town to: {newTown.townName}");
+
+            if (ReferenceEquals(newTown, town))
+            { 
+                RefreshAll(); 
+                return; 
+            }
 
             town = newTown;
-            Debug.Log($"[TradingUI] Town set via SetTown: {town.townName}");
+            Debug.Log($"[TradingUI] Town successfully switched to: {town.townName}");
+            
+            TryAutoFindRowsParent();
+            TryAutoFindHeader();
+            UpdateHeaderUI();
             Rebuild();
         }
 
         /// <summary>
-        /// Redraws all rows and updates header.
+        /// Re-pulls prices/quantities on the existing rows (no re-instantiation).
         /// </summary>
         public void RefreshAll()
         {
-            for (int i = 0; i < liveRows.Count; i++)
-                if (liveRows[i] != null) liveRows[i].Refresh();
+            if (!EnsureManagers()) return;
 
+            for (int i = 0; i < liveRows.Count; i++)
+            {
+                if (liveRows[i] != null) liveRows[i].Refresh();
+            }
             UpdateHeaderUI();
         }
 
         /// <summary>
-        /// Clears and rebuilds rows for the current town and updates header.
+        /// Clears and rebuilds rows from the current town’s stock.
         /// </summary>
         public void Rebuild()
         {
-            if (trading == null)   trading   = TradingManager.Instance;
-            if (inventory == null) inventory = InventoryManager.Instance;
-
-            if (!rowsParent) TryAutoFindRowsParent();
+            if (!EnsureManagers() || !EnsurePrefab() || !rowsParent)
+            {
+                ClearChildren(rowsParent);
+                liveRows.Clear();
+                UpdateHeaderUI();
+                return;
+            }
 
             ClearChildren(rowsParent);
             liveRows.Clear();
-
             UpdateHeaderUI();
 
-            if (town == null) return;
-            if (town.market == null || town.market.Count == 0) return;
+            if (town == null || town.market == null || town.market.Count == 0) return;
 
             foreach (var entry in town.market)
             {
-                if (entry == null || entry.item == null) continue;
-                if (entry.itemEconomy == null) continue;
+                if (entry == null || entry.item == null || entry.itemEconomy == null) continue;
 
-                GameObject go;
-                TradingItemRowUI row;
+                GameObject rowGO = Instantiate(rowPrefab, rowsParent);
+                TradingItemRowUI row = rowGO.GetComponent<TradingItemRowUI>();
+                
+                if (row == null)
+                {
+                    Debug.LogError($"[TradingUI] Instantiated prefab '{rowPrefab.name}' is missing TradingItemRowUI component! Check the prefab itself.");
+                    Object.Destroy(rowGO);
+                    continue;
+                }
 
-                if (rowPrefab)
-                {
-                    go = Instantiate(rowPrefab, rowsParent);
-                    var le = go.GetComponent<LayoutElement>() ?? go.AddComponent<LayoutElement>();
-                    if (le.preferredHeight <= 0f)
-                    {
-                        le.preferredHeight = defaultRowHeight;
-                        le.minHeight = defaultRowHeight;
-                    }
-                    row = go.GetComponent<TradingItemRowUI>() ?? go.AddComponent<TradingItemRowUI>();
-                }
-                else
-                {
-                    go = CreateFallbackRow(rowsParent, entry.item);
-                    row = go.GetComponent<TradingItemRowUI>();
-                }
+                var le  = rowGO.GetComponent<LayoutElement>() ?? rowGO.gameObject.AddComponent<LayoutElement>();
+                if (le.preferredHeight <= 0f) { le.preferredHeight = defaultRowHeight; le.minHeight = defaultRowHeight; }
 
                 row.init(panel: this, trading: trading, inventory: inventory, town: town, item: entry.item);
                 liveRows.Add(row);
@@ -146,38 +134,73 @@ namespace Trading
         }
 
         /// <summary>
-        /// Transaction callback that re-syncs UI elements.
+        /// Ensures managers are available via serialized field, singleton, or scene lookup.
         /// </summary>
-        public void OnTransactionCompleted()
+        private bool EnsureManagers()
         {
-            RefreshAll();
+            if (trading == null)
+            {
+                trading = TradingManager.Instance;
+                if (trading == null) trading = FindFirstObjectByType<TradingManager>();
+            }
+            
+            if (inventory == null)
+            {
+                inventory = InventoryManager.Instance;
+                if (inventory == null) inventory = FindFirstObjectByType<InventoryManager>();
+            }
+            
+            if (trading == null || inventory == null)
+            {
+                if (logMissingRefs) Debug.LogError("[TradingUI] CRITICAL: TradingManager or InventoryManager not found.");
+                return false;
+            }
+            return true;
         }
 
         /// <summary>
-        /// Updates the header label based on the current town.
+        /// Checks if the rowPrefab reference is valid.
+        /// </summary>
+        private bool EnsurePrefab()
+        {
+            if (rowPrefab) return true;
+
+            if (logMissingRefs) Debug.LogError($"[TradingUI] CRITICAL: rowPrefab is NULL on instance '{gameObject.name}'. Assign the TradingRow prefab to the component.");
+            return false;
+        }
+
+
+        /// <summary>
+        /// Updates the header label based on the current town, preventing duplication.
         /// </summary>
         private void UpdateHeaderUI()
         {
-            if (!headerTitleText)
-            {
-                if (logMissingRefs) Debug.LogWarning("[TradingUI] Header text reference is missing.");
-                return;
-            }
+            if (!headerTitleText) return; 
+
             var name = town ? town.townName : "Market";
-            headerTitleText.text = string.Format(headerFormat, name);
+            
+            if (town != null)
+            {
+                headerTitleText.text = string.Format(headerFormat, name);
+            }
+            else
+            {
+                headerTitleText.text = name;
+            }
         }
 
         /// <summary>
-        /// Finds a ScrollRect content for rows if not assigned.
+        /// Finds a ScrollRect content for rows if not assigned via known hierarchy paths.
         /// </summary>
         private void TryAutoFindRowsParent()
         {
             if (rowsParent) return;
 
-            Transform content = transform.Find("RightColumn/MarketScrollView/Viewport/Content")
-                               ?? transform.Find("LeftColumn/MarketScrollView/Viewport/Content")
-                               ?? transform.Find("MarketScrollView/Viewport/Content")
-                               ?? transform.Find("Viewport/Content");
+            Transform content =
+                transform.Find("RightColumn/MarketScrollView/Viewport/Content") ??
+                transform.Find("LeftColumn/MarketScrollView/Viewport/Content") ??
+                transform.Find("MarketScrollView/Viewport/Content") ??
+                transform.Find("Viewport/Content");
 
             if (!content)
             {
@@ -186,27 +209,23 @@ namespace Trading
             }
 
             rowsParent = content ? content.GetComponent<RectTransform>() : null;
-
-            if (!rowsParent && logMissingRefs)
-                Debug.LogWarning("[TradingUI] Could not locate rows parent. Assign it in the inspector.");
+            if (!rowsParent && logMissingRefs) Debug.LogWarning("[TradingUI] Could not locate rows parent. Assign it in the inspector.");
         }
 
         /// <summary>
-        /// Binds header labels; searches LeftColumn/Header/Title first, then other common paths.
+        /// Binds header labels via known hierarchy paths.
         /// </summary>
         private void TryAutoFindHeader()
         {
-            if (!headerTitleText)
-            {
-                var t =
-                    transform.Find("LeftColumn/Header/Title") ??
-                    transform.Find("RightColumn/Header/Title") ??
-                    transform.Find("Header/Title");
-                headerTitleText = t ? t.GetComponent<TMP_Text>() : null;
-            }
+            if (headerTitleText) return;
 
-            if (!headerTitleText && logMissingRefs)
-                Debug.LogWarning("[TradingUI] Could not locate header title text. Drag it into the inspector.");
+            var t =
+                transform.Find("RightColumn/Header/Title") ??
+                transform.Find("LeftColumn/Header/Title") ??
+                transform.Find("Header/Title");
+
+            headerTitleText = t ? t.GetComponent<TMP_Text>() : null;
+            if (!headerTitleText && logMissingRefs) Debug.LogWarning("[TradingUI] Could not locate header title text. Drag it into the inspector.");
         }
 
         /// <summary>
@@ -217,68 +236,6 @@ namespace Trading
             if (!rt) return;
             for (int i = rt.childCount - 1; i >= 0; i--)
                 Object.Destroy(rt.GetChild(i).gameObject);
-        }
-
-        /// <summary>
-        /// Creates a minimal fallback row with TradingItemRowUI.
-        /// </summary>
-        private GameObject CreateFallbackRow(RectTransform parent, ItemSO item)
-        {
-            var row = new GameObject("Row_Fallback", typeof(RectTransform));
-            row.transform.SetParent(parent, false);
-
-            var leRow = row.AddComponent<LayoutElement>();
-            leRow.preferredHeight = defaultRowHeight;
-            leRow.minHeight = defaultRowHeight;
-
-            var hl = row.AddComponent<HorizontalLayoutGroup>();
-            hl.spacing = 12;
-            hl.childAlignment = TextAnchor.MiddleLeft;
-
-            var iconRT = new GameObject("Icon", typeof(RectTransform)).GetComponent<RectTransform>();
-            iconRT.SetParent(row.transform, false);
-            iconRT.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 48);
-            iconRT.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,   48);
-            var iconImg = iconRT.gameObject.AddComponent<Image>();
-            iconImg.sprite = item ? item.icon : null;
-            var leIcon = iconRT.gameObject.AddComponent<LayoutElement>();
-            leIcon.preferredWidth = 48;
-
-            var nameGO = new GameObject("Name", typeof(RectTransform));
-            nameGO.transform.SetParent(row.transform, false);
-            var nameTMP = nameGO.AddComponent<TextMeshProUGUI>();
-            nameTMP.text = item ? item.itemName : "(Item)";
-            nameTMP.fontSize = 28;
-            nameTMP.color = Color.white;
-            var leName = nameGO.AddComponent<LayoutElement>();
-            leName.flexibleWidth = 1;
-
-            var infoGO = new GameObject("Info", typeof(RectTransform));
-            infoGO.transform.SetParent(row.transform, false);
-            var infoTMP = infoGO.AddComponent<TextMeshProUGUI>();
-            infoTMP.text = "Sell [X] at [Price]";
-            infoTMP.fontSize = 24;
-            infoTMP.color = new Color(1, 1, 1, 0.85f);
-
-            var btnGO = new GameObject("Btn_Buy", typeof(RectTransform), typeof(Image), typeof(Button));
-            btnGO.transform.SetParent(row.transform, false);
-            var img = btnGO.GetComponent<Image>();
-            img.color = new Color(1, 1, 1, 0.15f);
-            var labelGO = new GameObject("Label", typeof(RectTransform));
-            labelGO.transform.SetParent(btnGO.transform, false);
-            var label = labelGO.AddComponent<TextMeshProUGUI>();
-            label.text = "Buy";
-            label.fontSize = 24;
-            label.color = Color.white;
-            label.alignment = TextAlignmentOptions.Center;
-            var rt = btnGO.GetComponent<RectTransform>();
-            rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 100);
-            rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,   40);
-            var leBtn = btnGO.AddComponent<LayoutElement>();
-            leBtn.preferredWidth = 100;
-
-            row.AddComponent<TradingItemRowUI>();
-            return row;
         }
     }
 }
