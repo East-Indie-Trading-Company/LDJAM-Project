@@ -31,6 +31,21 @@ public class ReputationManager: MonoBehaviour
     public void SetReputation( float newReputation )
     {
         newReputation = Mathf.Clamp(newReputation, reputationBounds.x, reputationBounds.y);
+        if (newReputation < 0)
+        {
+            FlagManager.Instance.SetFlag("HighRep", false);
+            FlagManager.Instance.SetFlag("LowRep", true);
+        }
+        else if (newReputation > 0)
+        {
+            FlagManager.Instance.SetFlag("HighRep", true);
+            FlagManager.Instance.SetFlag("LowRep", false);
+        }
+        else
+        {
+            FlagManager.Instance.SetFlag("HighRep", false);
+            FlagManager.Instance.SetFlag("LowRep", false);
+        }
         currentReputation = newReputation;
     }
 

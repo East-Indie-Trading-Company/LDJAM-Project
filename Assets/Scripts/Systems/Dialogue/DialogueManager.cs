@@ -32,6 +32,8 @@ public class DialogueManager : MonoBehaviour
     string currentTextToDisplay;
     bool isTyping = false;
     bool waitingForChoice = false;
+    bool isDragon = false;
+    string raiseFlag;
 
     void Awake()
     {
@@ -66,14 +68,34 @@ public class DialogueManager : MonoBehaviour
         // Set the UI
         dialogueCanvas.SetActive(true);
         DisableChoicePanel();
-        townNameText.text = conversation.npc.townName;
-        npcNameText.text = conversation.npc.npcName;
-        npcPortrait.sprite = conversation.npc.npcIcon;
+        if (conversation.npc != null)
+        {
+            if (conversation.npc.townName != null)
+            {
+                isDragon = false;
+                townNameText.text = conversation.npc.townName;
+            }
+            else
+            {
+                isDragon = true;
+            }
+            npcNameText.text = conversation.npc.npcName;
+            npcPortrait.sprite = conversation.npc.npcIcon;
+        }
+        else
+        {
+            Debug.LogWarning("[Dialogue Manager] NPC info not assigned!");
+        }
+        
 
-        if (conversation.lines[0] != null)
+        if (conversation.lines.Count > 0)
         {
             currentConversation = conversation;
-            // TODO:: Check if it is a one off and if true, set hasPlayed to true
+            // Check if it is a one off and if true, set hasPlayed to true
+            if (conversation.isOneOff)
+            {
+                conversation.hasPlayed = true;
+            }
             currentLineIndex = 0;
             ShowDialogue();
 
@@ -169,27 +191,144 @@ public class DialogueManager : MonoBehaviour
 
     void ChoiceA()
     {
+        bool itemChangeValid = true;
+        bool goldChangeValid = true;
         if (isTyping) return;
         //Debug.Log($"You picked choice A. Response will be: {currentLine.choice.optionA.responseText}");
-        waitingForChoice = false;
+        
         DisableChoicePanel();
-        // TODO:: Update inventory/rep/flags
-        StartCoroutine(StartTyping(currentLine.choice.optionA.responseText));
+        
+        // Inventory choice 
+        switch (currentLine.choice.optionA.itemEffect)
+        {
+            case Effect.NONE:
+                break;
+            case Effect.ADD:
+                Trading.InventoryManager.Instance.AddItem(currentLine.choice.optionA.item, currentLine.choice.optionA.itemChangeValue);
+                break;
+            case Effect.REMOVE:
+                itemChangeValid = Trading.InventoryManager.Instance.RemoveItem(currentLine.choice.optionA.item, currentLine.choice.optionA.itemChangeValue);
+                break;
+        }
+
+        // Gold choice 
+        switch (currentLine.choice.optionA.goldEffect)
+        {
+            case Effect.NONE:
+                break;
+            case Effect.ADD:
+                Trading.InventoryManager.Instance.AddGold(currentLine.choice.optionA.goldChangeValue);
+                break;
+            case Effect.REMOVE:
+                goldChangeValid = Trading.InventoryManager.Instance.RemoveGold(currentLine.choice.optionA.goldChangeValue);
+                break;
+        }
+
+        if (itemChangeValid && goldChangeValid)
+        {
+
+            waitingForChoice = false;
+
+            // Rep choice 
+            switch (currentLine.choice.optionB.reputationEffect)
+            {
+                case Effect.NONE:
+                    break;
+                case Effect.ADD:
+                    ReputationManager.Instance.AddReputation(currentLine.choice.optionA.reputationChangeValue);
+                    break;
+                case Effect.REMOVE:
+                    ReputationManager.Instance.SubtractReputation(currentLine.choice.optionA.reputationChangeValue);
+                    break;
+            }
+            // Raise flag
+            raiseFlag = currentLine.choice.optionA.flagToRaise;
+            if (raiseFlag != null)
+            {
+                FlagManager.Instance.SetFlag(raiseFlag, true);
+            }
+            StartCoroutine(StartTyping(currentLine.choice.optionA.responseText));
+        }
+        else
+        {
+            choiceText.text = "You don't have enough to choose that option";
+        }
     }
     void ChoiceB()
     {
+        bool itemChangeValid = true;
+        bool goldChangeValid = true;
         if (isTyping) return;
         //Debug.Log($"You picked choice B. Response will be: {currentLine.choice.optionB.responseText}");
-        waitingForChoice = false;
         DisableChoicePanel();
-        // TODO:: Update inventory/rep/flags
-        StartCoroutine(StartTyping(currentLine.choice.optionB.responseText));
+
+        // Inventory choice 
+        switch (currentLine.choice.optionB.itemEffect)
+        {
+            case Effect.NONE:
+                break;
+            case Effect.ADD:
+                Trading.InventoryManager.Instance.AddItem(currentLine.choice.optionB.item, currentLine.choice.optionB.itemChangeValue);
+                break;
+            case Effect.REMOVE:
+                itemChangeValid = Trading.InventoryManager.Instance.RemoveItem(currentLine.choice.optionB.item, currentLine.choice.optionB.itemChangeValue);
+                break;
+        }
+
+        // Gold choice 
+        switch (currentLine.choice.optionB.goldEffect)
+        {
+            case Effect.NONE:
+                break;
+            case Effect.ADD:
+                Trading.InventoryManager.Instance.AddGold(currentLine.choice.optionB.goldChangeValue);
+                break;
+            case Effect.REMOVE:
+                goldChangeValid = Trading.InventoryManager.Instance.RemoveGold(currentLine.choice.optionB.goldChangeValue);
+                break;
+        }
+        
+
+        if (itemChangeValid && goldChangeValid)
+        {
+
+            waitingForChoice = false;
+            // Rep choice 
+            switch (currentLine.choice.optionB.reputationEffect)
+            {
+                case Effect.NONE:
+                    break;
+                case Effect.ADD:
+                    ReputationManager.Instance.AddReputation(currentLine.choice.optionB.reputationChangeValue);
+                    break;
+                case Effect.REMOVE:
+                    ReputationManager.Instance.SubtractReputation(currentLine.choice.optionB.reputationChangeValue);
+                    break;
+            }
+
+            // Raise flag
+            raiseFlag = currentLine.choice.optionB.flagToRaise;
+            if (raiseFlag != null)
+            {
+                Debug.Log($"[DialogueManager] Raise flag: {raiseFlag}");
+                FlagManager.Instance.SetFlag(raiseFlag, true);
+            }
+            StartCoroutine(StartTyping(currentLine.choice.optionB.responseText));
+        }
+        else
+        {
+            choiceText.text = "You don't have enough to choose that option";
+        }
+        
     }
 
     void EndDialogue()
     {
+        if (!isDragon)
+        {
+            marketCanvas.SetActive(true);
+        }
         dialogueCanvas.SetActive(false);
-        marketCanvas.SetActive(true);
         currentConversation = null;
     }
 
