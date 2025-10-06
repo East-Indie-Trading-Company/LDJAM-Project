@@ -32,6 +32,8 @@ public class DialogueManager : MonoBehaviour
     string currentTextToDisplay;
     bool isTyping = false;
     bool waitingForChoice = false;
+    bool isDragon = false;
+    string raiseFlag;
 
     void Awake()
     {
@@ -66,14 +68,34 @@ public class DialogueManager : MonoBehaviour
         // Set the UI
         dialogueCanvas.SetActive(true);
         DisableChoicePanel();
-        townNameText.text = conversation.npc.townName;
-        npcNameText.text = conversation.npc.npcName;
-        npcPortrait.sprite = conversation.npc.npcIcon;
+        if (conversation.npc != null)
+        {
+            if (conversation.npc.townName != null)
+            {
+                isDragon = false;
+                townNameText.text = conversation.npc.townName;
+            }
+            else
+            {
+                isDragon = true;
+            }
+            npcNameText.text = conversation.npc.npcName;
+            npcPortrait.sprite = conversation.npc.npcIcon;
+        }
+        else
+        {
+            Debug.LogWarning("[Dialogue Manager] NPC info not assigned!");
+        }
+        
 
-        if (conversation.lines[0] != null)
+        if (conversation.lines.Count > 0)
         {
             currentConversation = conversation;
-            // TODO:: Check if it is a one off and if true, set hasPlayed to true
+            // Check if it is a one off and if true, set hasPlayed to true
+            if (conversation.isOneOff)
+            {
+                conversation.hasPlayed = true;
+            }
             currentLineIndex = 0;
             ShowDialogue();
 
@@ -173,7 +195,14 @@ public class DialogueManager : MonoBehaviour
         //Debug.Log($"You picked choice A. Response will be: {currentLine.choice.optionA.responseText}");
         waitingForChoice = false;
         DisableChoicePanel();
-        // TODO:: Update inventory/rep/flags
+        // TODO:: Update inventory/rep/
+
+        // Raise flag
+        raiseFlag = currentLine.choice.optionA.flagToRaise;
+        if (raiseFlag != null)
+        {
+            FlagManager.Instance.SetFlag(raiseFlag, true);
+        }
         StartCoroutine(StartTyping(currentLine.choice.optionA.responseText));
     }
     void ChoiceB()
@@ -182,14 +211,25 @@ public class DialogueManager : MonoBehaviour
         //Debug.Log($"You picked choice B. Response will be: {currentLine.choice.optionB.responseText}");
         waitingForChoice = false;
         DisableChoicePanel();
-        // TODO:: Update inventory/rep/flags
+        // TODO:: Update inventory/rep/
+
+        // Raise flag
+        raiseFlag = currentLine.choice.optionB.flagToRaise;
+        if (raiseFlag != null)
+        {
+            Debug.Log($"[DialogueManager] Raise flag: {raiseFlag}");
+            FlagManager.Instance.SetFlag(raiseFlag, true);
+        }
         StartCoroutine(StartTyping(currentLine.choice.optionB.responseText));
     }
 
     void EndDialogue()
     {
+        if (!isDragon)
+        {
+            marketCanvas.SetActive(true);
+        }
         dialogueCanvas.SetActive(false);
-        marketCanvas.SetActive(true);
         currentConversation = null;
     }
 
