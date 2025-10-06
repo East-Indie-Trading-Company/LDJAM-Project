@@ -25,8 +25,11 @@ public class OutroCutsceneManager : MonoBehaviour
     public void Start()
     {
         //load player vars
+        economyGoalHit = PlayerPrefs.GetInt("economyGoalHit") == 1 ? true : false;
+        reputationGoalHit = PlayerPrefs.GetInt("reputationGoalHit") == 1 ? true : false;
+        sidedWithDragon = PlayerPrefs.GetInt("sidedWithDragon") == 1 ? true : false;
 
-        if(sidedWithDragon)
+        if (sidedWithDragon)
         {
             dragonPic.SetActive(true);
             kingdomPic.SetActive(false);
