@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Elliot
   m_EditorClassIdentifier: Assembly-CSharp::NpcDisplayInfo
   npcName: Sir Elliot
-  npcIcon: {fileID: 21300000, guid: 327014469cdfdd34f88f5b700439460b, type: 3}
+  npcIcon: {fileID: 21300000, guid: 8745ce11feeacb74ebadcf8d2c0b335a, type: 3}
   townName: Scorched Village
   townIcon: {fileID: 21300000, guid: 0a95da2886ab3534e8ba0be8bed2f24b, type: 3}

@@ -17,6 +17,5 @@ MonoBehaviour:
   - dialogueText: Fancy a strong liquor? Or mayhaps a sharp blade? Pick your poison.
     choice: {fileID: 0}
   isOneOff: 0
-  flags:
-  - Act2
+  flags: []
   hasPlayed: 0

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
   npc: {fileID: 11400000, guid: d01e23c8509e54ec699693620cf33b84, type: 2}
   lines:
-  - dialogueText: 'My riches, mortal. How are you faring? You now know my kin depends
-      on it. I can smell the wealth pouring from you. Give it here. '
+  - dialogueText: My riches, mortal. How are you faring? I can smell the wealth pouring
+      from you. Give it here.
     choice: {fileID: 11400000, guid: 47b98b114c9794c369c37a8fa2a4b5fd, type: 2}
   isOneOff: 0
   flags: []

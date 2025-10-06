@@ -18,6 +18,6 @@ MonoBehaviour:
       into Taraval nowadays. With a dragon prowling the skies no less! Crystal light
       preserve us. I pray you've at least brought some interesting specimens to trade.
     choice: {fileID: 0}
-  isOneOff: 1
+  isOneOff: 0
   flags: []
   hasPlayed: 0

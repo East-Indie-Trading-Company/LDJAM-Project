@@ -139,11 +139,11 @@ MonoBehaviour:
   taravalButton: {fileID: 4239956104422058481}
   brightspireData: {fileID: 11400000, guid: 5129ca34aded30f42844aad7b22c7e06, type: 2}
   trestelData: {fileID: 11400000, guid: db8220ea46877834cac0ee9fc7aea065, type: 2}
-  dursimData: {fileID: 11400000, guid: 5129ca34aded30f42844aad7b22c7e06, type: 2}
+  dursimData: {fileID: 11400000, guid: 662fe4d9d8c5e4424b78bc3c437f0351, type: 2}
   styxData: {fileID: 11400000, guid: 7230868df12fb92498818dd3fb3a23ba, type: 2}
-  lochData: {fileID: 11400000, guid: 5129ca34aded30f42844aad7b22c7e06, type: 2}
+  lochData: {fileID: 11400000, guid: c77ea61c8c4b4c744b073b792cd96969, type: 2}
   scorchedData: {fileID: 11400000, guid: 5f90da245fc76264097ba4a8aa47783e, type: 2}
-  taravalData: {fileID: 11400000, guid: 5129ca34aded30f42844aad7b22c7e06, type: 2}
+  taravalData: {fileID: 11400000, guid: 2b453c7dca3bbab48b85a1205d3c3a01, type: 2}
   mapButtonUI: {fileID: 83836113280111233}
   mapBackButtonUI: {fileID: 2851187809652463999}
   townUI: {fileID: 8506164205622567461}

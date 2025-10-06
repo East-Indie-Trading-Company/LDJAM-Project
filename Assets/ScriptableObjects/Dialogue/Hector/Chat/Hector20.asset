@@ -19,7 +19,7 @@ MonoBehaviour:
       his favor with a bribe, it seems. Bring me some tools. He loves to animate
       them.
     choice: {fileID: 11400000, guid: 3c13ad927271ae940b3a35669ff3c897, type: 2}
-  isOneOff: 1
+  isOneOff: 0
   flags:
   - 
   hasPlayed: 0

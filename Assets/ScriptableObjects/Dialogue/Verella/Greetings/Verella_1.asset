@@ -17,7 +17,6 @@ MonoBehaviour:
   - dialogueText: Welcome to Styx & Stones.  Careful where you step... "Step on a
       crack, break a king's back".
     choice: {fileID: 0}
-  isOneOff: 1
-  flags:
-  - Act2
+  isOneOff: 0
+  flags: []
   hasPlayed: 0
