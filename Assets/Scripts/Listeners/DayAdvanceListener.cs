@@ -2,18 +2,11 @@ using UnityEngine;
 
 public abstract class DayAdvanceListener : MonoBehaviour
 {
-    protected virtual void Start()
+    protected virtual void OnEnable()
     {
         if (FlagManager.Instance != null)
-        {
             FlagManager.Instance.OnDayAdvancedEvent += HandleDayAdvanced;
-        }
     }
-    // protected virtual void OnEnable()
-    // {
-    //     if (FlagManager.Instance != null)
-    //         FlagManager.Instance.OnDayAdvancedEvent += HandleDayAdvanced;
-    // }
 
     protected virtual void OnDisable()
     {

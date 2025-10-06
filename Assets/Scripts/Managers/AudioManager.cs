@@ -90,13 +90,6 @@ public class AudioManager : MonoBehaviour
             audioSource.playOnAwake = false;
         }
 
-        if (sfxSource == null)
-        {
-            sfxSource = gameObject.AddComponent<AudioSource>();
-            sfxSource.loop = false;
-            sfxSource.playOnAwake = false;
-        }
-
         audioSource.volume = defaultVolume;
         if (currentClip != null)
         {
