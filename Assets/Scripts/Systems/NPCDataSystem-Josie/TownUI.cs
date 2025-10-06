@@ -12,7 +12,7 @@ public class TownUI : MonoBehaviour
     public void SetTownUI(NPCData newData)
     {
         npcData = newData;
-        //Debug.Log($"[TownUI] Update town ui to {newData.displayInfo.townName}");
+        Debug.Log($"[TownUI] Update town ui to {newData.displayInfo.townName}");
         if (npcData != null)
         {
             npcUI.DisplayNPCUI(npcData);

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PermaUIManager: MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PermaUIManager: MonoBehaviour
     [SerializeField] private TextMeshProUGUI daysRemainingUI;
     [SerializeField] private Image reputationBar;
     [SerializeField] private Image reputationSlider;
+    [SerializeField] private GameObject permaUICanvas;
 
     private void Awake()
     {
@@ -23,7 +25,26 @@ public class PermaUIManager: MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void SetCurrencyUI( int newCurrency )
+    void OnEnable()
+    {
+        Debug.Log("OnEnable called");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    void OnDisable()
+    {
+        Debug.Log("OnDisable");
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("Scene Loaded: " + scene.name);
+        if (scene.name == "Map")
+        {
+            permaUICanvas.SetActive(true);
+        }
+    }
+
+    public void SetCurrencyUI(int newCurrency)
     {
         Debug.Log($"[PermaUI] Currency Updated to: {newCurrency}");
         currencyUI.text = newCurrency.ToString();

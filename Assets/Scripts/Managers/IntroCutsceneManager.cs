@@ -4,6 +4,7 @@ using TMPro;
 
 public class IntroCutsceneManager : MonoBehaviour
 {
+    //[SerializeField] private GameObject permaUICanvas;
     public void NewGame()
     {
         SceneManager.LoadScene("Map");
