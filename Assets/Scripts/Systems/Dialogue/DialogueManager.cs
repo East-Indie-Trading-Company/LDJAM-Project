@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem; 
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -335,7 +336,62 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("[Dialogue Manager] Maybe update the UI here?");
+            // Check for game over
+            if (FlagManager.Instance.GetFlag("DragonDeath"))
+            {
+                SceneManager.LoadScene("PlayerDeath");
+            }
+
+            // Check for end game dragon
+            if (FlagManager.Instance.GetFlag("EndGameDragon"))
+            {
+                PlayerPrefs.GetInt("sidedWithDragon", 1);
+                if (Trading.InventoryManager.Instance.Gold >= 20000)
+                {
+                    PlayerPrefs.SetInt("economyGoalHit", 1);
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("economyGoalHit", 0);
+                }
+
+                if (ReputationManager.Instance.GetReputation() > 0)
+                {
+                    PlayerPrefs.SetInt("reputationGoalHit", 1);
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("reputationGoalHit", 0);
+                }
+                //Call ending
+                SceneManager.LoadScene("EndingCutscene");
+            }
+
+
+            // Check for end game kingdom
+            if (FlagManager.Instance.GetFlag("EndGameKingdom"))
+            {
+                PlayerPrefs.SetInt("sidedWithDragon", 0);
+                if (Trading.InventoryManager.Instance.Gold >= 20000)
+                {
+                    PlayerPrefs.SetInt("economyGoalHit", 1);
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("economyGoalHit", 0);
+                }
+
+                if (ReputationManager.Instance.GetReputation() > 0)
+                {
+                    PlayerPrefs.SetInt("reputationGoalHit", 1);
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("reputationGoalHit", 0);
+                }
+                //Call ending
+                SceneManager.LoadScene("EndingCutscene");
+            }
         }
         dialogueCanvas.SetActive(false);
         currentConversation = null;

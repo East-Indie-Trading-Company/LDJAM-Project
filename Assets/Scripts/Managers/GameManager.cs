@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("[GameManager] Cycle reset! Starting a new period.");
         }
 
-        CheckMilestones(); // I think the flag needs to be set before the trigger is called
+        CheckMilestones(); // This needs to be called before flag manager
 
         flagManager?.TriggerDayAdvanced(CurrentDay);
         economyManager?.AdvanceDay();
