@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI npcNameText;
     [SerializeField] Image npcPortrait;
     [SerializeField] TextMeshProUGUI townNameText;
+    [SerializeField] Image townIcon;
     [SerializeField] TextMeshProUGUI npcText;
     [SerializeField] TextMeshProUGUI choiceText;
     [SerializeField] Button buttonA;
@@ -74,6 +75,7 @@ public class DialogueManager : MonoBehaviour
             {
                 isDragon = false;
                 townNameText.text = conversation.npc.townName;
+                townIcon.sprite = conversation.npc.townIcon;
             }
             else
             {
@@ -81,6 +83,7 @@ public class DialogueManager : MonoBehaviour
             }
             npcNameText.text = conversation.npc.npcName;
             npcPortrait.sprite = conversation.npc.npcIcon;
+            
         }
         else
         {

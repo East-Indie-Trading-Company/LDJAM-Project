@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Eapram
   m_EditorClassIdentifier: Assembly-CSharp::NpcDisplayInfo
   npcName: Eapram
-  npcIcon: {fileID: 21300000, guid: ac5123d6643a1c84db1c1ab9394ceb46, type: 3}
+  npcIcon: {fileID: 21300000, guid: 6dde6cf165ff30843af413f0b630168e, type: 3}
   townName: Brightspire
-  townIcon: {fileID: 0}
+  townIcon: {fileID: 21300000, guid: 1ac883eebc6ff1c479f5f96b88374f44, type: 3}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Verella
   m_EditorClassIdentifier: Assembly-CSharp::NpcDisplayInfo
   npcName: Verella Gravefeather
-  npcIcon: {fileID: 21300000, guid: ae35add356b505c4da7ae75edfc59158, type: 3}
+  npcIcon: {fileID: 21300000, guid: 61be1a5b59e074f499abea5c157806c9, type: 3}
   townName: Styx & Stones
-  townIcon: {fileID: 0}
+  townIcon: {fileID: 21300000, guid: d5db18bbfb48e8346883051e33397639, type: 3}
