@@ -32,5 +32,10 @@ public class TownUI : MonoBehaviour
         }
 
     }
+
+    public void RemoveTownUI()
+    {
+        npcUI.CloseUI();
+    }
     
 }

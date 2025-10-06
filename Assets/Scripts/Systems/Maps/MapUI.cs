@@ -91,8 +91,10 @@ public class MapUI : MonoBehaviour
 
     void onBackClick()
     {
-        mapButtonUI.SetActive(false);
-        mapBackButtonUI.SetActive(true);
+        mapButtonUI.SetActive(true);
+        mapBackButtonUI.SetActive(false);
+        // Close Market UI
+        townUI.RemoveTownUI();
     }
     
 }

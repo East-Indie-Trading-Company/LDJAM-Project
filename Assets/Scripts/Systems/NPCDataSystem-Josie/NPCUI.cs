@@ -32,6 +32,10 @@ public class NPCUI : MonoBehaviour
         marketCanvas.SetActive(false);
         npcData.Rumor();
     }
+    public void CloseUI()
+    {
+        marketCanvas.SetActive(false);
+    }
     // Set the npc ui to the values held in the npcData object
     public void DisplayNPCUI(NPCData newData)
     {

@@ -18,14 +18,20 @@ public class MapManager : MonoBehaviour
 
     public void Start()
     {
-        gameMenu.gameObject.SetActive(false);
+        if (gameMenu != null)
+        {
+            gameMenu.gameObject.SetActive(false);
+        }
     }
 
     public void TravelMenuAppears()
     {
         if (!isVisible)
         {
-            gameMenu.gameObject.SetActive(true);
+            if (gameMenu != null)
+            {
+                gameMenu.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -33,7 +39,10 @@ public class MapManager : MonoBehaviour
     {
         if (!isVisible)
         {
-            gameMenu.gameObject.SetActive(true);
+            if (gameMenu != null)
+            {
+                gameMenu.gameObject.SetActive(true);
+            }
         }
     }
 
