@@ -119,10 +119,10 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &199255366 stripped
+--- !u!4 &173565034 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7121282678094634249, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
-  m_PrefabInstance: {fileID: 712089970034427616}
+  m_CorrespondingSourceObject: {fileID: 6389798543852406172, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
+  m_PrefabInstance: {fileID: 1035196382187157848}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &327648869
 GameObject:
@@ -251,6 +251,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!224 &356396293 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3025699626950410793, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+  m_PrefabInstance: {fileID: 3463856523926476760}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &441544809 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8323715288064142076, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
@@ -270,10 +275,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TownData
   townName: Scorched
   npcData: {fileID: 11400000, guid: 7230868df12fb92498818dd3fb3a23ba, type: 2}
---- !u!4 &504727920 stripped
+--- !u!4 &544651980 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3430150989737710304, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
-  m_PrefabInstance: {fileID: 712089970034427616}
+  m_CorrespondingSourceObject: {fileID: 6048111865665743085, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
+  m_PrefabInstance: {fileID: 1035196382187157848}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &720663958 stripped
 MonoBehaviour:
@@ -286,11 +291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!4 &721912504 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 60458106442477682, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
-  m_PrefabInstance: {fileID: 712089970034427616}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &744376515
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +428,11 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!4 &801109338 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3401893669290315459, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
+  m_PrefabInstance: {fileID: 1035196382187157848}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &833915313 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8614210999953108788, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
@@ -466,6 +471,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TownData
   townName: Loch
   npcData: {fileID: 11400000, guid: c77ea61c8c4b4c744b073b792cd96969, type: 2}
+--- !u!4 &905540329 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6709672052150597555, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
+  m_PrefabInstance: {fileID: 1035196382187157848}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &926554163 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6747223589559318845, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
@@ -485,11 +495,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TownData
   townName: Styx
   npcData: {fileID: 11400000, guid: db8220ea46877834cac0ee9fc7aea065, type: 2}
---- !u!4 &938018991 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7706091459401792372, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
-  m_PrefabInstance: {fileID: 712089970034427616}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &959146174
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +574,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1044495147 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2283797541858316160, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
+  m_PrefabInstance: {fileID: 1035196382187157848}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1143172309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3896172080411412010, guid: 81c3e1d93f0bd0b4395f257638f33d01, type: 3}
@@ -593,6 +603,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TownData
   townName: Dursin
   npcData: {fileID: 11400000, guid: 2b453c7dca3bbab48b85a1205d3c3a01, type: 2}
+--- !u!4 &1205597349 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6077929255834454146, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
+  m_PrefabInstance: {fileID: 1035196382187157848}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1274640567 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2066436486547026690, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
@@ -612,6 +627,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TownData
   townName: Trestel
   npcData: {fileID: 11400000, guid: 5f90da245fc76264097ba4a8aa47783e, type: 2}
+--- !u!114 &1422865638 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4028097526598296789, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+  m_PrefabInstance: {fileID: 712089970034427616}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6800983c8a2bf3c498d83270c3a3612a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Trading.InventoryManager
+--- !u!114 &1422865639 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2794756099648554794, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+  m_PrefabInstance: {fileID: 712089970034427616}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be12c7d66b8a1c47920a5d0737fce5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Trading.TradingManager
 --- !u!1001 &1453556979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -717,10 +754,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59866aed15e72024db75d86cf4a919ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCUI
---- !u!4 &1715466953 stripped
+--- !u!4 &1574882763 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8734964864800667127, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
-  m_PrefabInstance: {fileID: 712089970034427616}
+  m_CorrespondingSourceObject: {fileID: 7559032852026898896, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
+  m_PrefabInstance: {fileID: 1035196382187157848}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1811043623
 PrefabInstance:
@@ -779,11 +816,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81c3e1d93f0bd0b4395f257638f33d01, type: 3}
---- !u!4 &2070322278 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7029610144158104384, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
-  m_PrefabInstance: {fileID: 712089970034427616}
+--- !u!114 &622443016648761995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e64907b3efb39b47a9fcf175ba58ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Trading.EconomyManager
+  towns: []
+  dailyInflationRate: 0.001
+  inflationIndex: 1
+--- !u!114 &622443016648761996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759dc63437406db49bbe66cf60b40026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlagManager
+--- !u!114 &622443016648761997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f2cf68153a46a4abbd8ca9b1122d7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  campaignMaxDays: 30
+  currentTown: {fileID: 0}
+  flagManager: {fileID: 0}
+  economyManager: {fileID: 0}
+  permaUIManager: {fileID: 0}
+  inventoryManager: {fileID: 0}
+  onCurrencyChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &712089970034427616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -792,102 +872,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1925336023606326824, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 275309285}
-    - target: {fileID: 2824199732242450789, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 232052027}
-    - target: {fileID: 2932032479980332630, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1508763770}
-    - target: {fileID: 3776033888451564530, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: flagManager
-      value: 
-      objectReference: {fileID: 622443016648761996}
-    - target: {fileID: 3776033888451564530, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: economyManager
-      value: 
-      objectReference: {fileID: 622443016648761995}
-    - target: {fileID: 3776033888451564530, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: permaUIManager
-      value: 
-      objectReference: {fileID: 3463856523926476761}
-    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 729226089}
-    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: mapView
-      value: 
-      objectReference: {fileID: 1143172309}
-    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 622443016648761997}
-    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: towns.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: 'towns.Array.data[0]'
-      value: 
-      objectReference: {fileID: 1715466953}
-    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: 'towns.Array.data[1]'
-      value: 
-      objectReference: {fileID: 721912504}
-    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: 'towns.Array.data[2]'
-      value: 
-      objectReference: {fileID: 2070322278}
-    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: 'towns.Array.data[3]'
-      value: 
-      objectReference: {fileID: 7338306153461384615}
-    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: 'towns.Array.data[4]'
-      value: 
-      objectReference: {fileID: 504727920}
-    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: 'towns.Array.data[5]'
-      value: 
-      objectReference: {fileID: 938018991}
-    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: 'towns.Array.data[6]'
-      value: 
-      objectReference: {fileID: 199255366}
-    - target: {fileID: 4147148926642644616, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: m_Name
-      value: Mangager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5018513063175697470, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1768880319}
-    - target: {fileID: 5435447691666958538, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 76807098}
-    - target: {fileID: 5705554780241304232, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: dailyInflationRate
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6462454107294418737, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1111025104}
-    - target: {fileID: 8358480848387217686, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1847560570}
-    - target: {fileID: 8789162875054837078, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 512.66345
-      objectReference: {fileID: 0}
     - target: {fileID: 2025224060926127528, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
       propertyPath: m_LocalPosition.y
       value: 581.04755
@@ -924,6 +908,106 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1925336023606326824, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2824199732242450789, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932032479980332630, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776033888451564530, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: flagManager
+      value: 
+      objectReference: {fileID: 622443016648761996}
+    - target: {fileID: 3776033888451564530, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: economyManager
+      value: 
+      objectReference: {fileID: 622443016648761995}
+    - target: {fileID: 3776033888451564530, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: permaUIManager
+      value: 
+      objectReference: {fileID: 3463856523926476761}
+    - target: {fileID: 3776033888451564530, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1422865638}
+    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: mapView
+      value: 
+      objectReference: {fileID: 1143172309}
+    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 622443016648761997}
+    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: towns.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: 'towns.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: 'towns.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: 'towns.Array.data[2]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: 'towns.Array.data[3]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: 'towns.Array.data[4]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: 'towns.Array.data[5]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: 'towns.Array.data[6]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147148926642644616, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: m_Name
+      value: Mangager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018513063175697470, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435447691666958538, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705554780241304232, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: dailyInflationRate
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462454107294418737, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8358480848387217686, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8789162875054837078, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 512.66345
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9135953692068030931, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
@@ -936,79 +1020,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
---- !u!114 &622443016648761995 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5705554780241304232, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-  m_PrefabInstance: {fileID: 622443016648761994}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e64907b3efb39b47a9fcf175ba58ec0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trading.EconomyManager
---- !u!114 &622443016648761996 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 485576864514489193, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-  m_PrefabInstance: {fileID: 622443016648761994}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 759dc63437406db49bbe66cf60b40026, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FlagManager
---- !u!114 &622443016648761997 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3776033888451564530, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-  m_PrefabInstance: {fileID: 622443016648761994}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03f2cf68153a46a4abbd8ca9b1122d7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManager
---- !u!114 &622443016648762004 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-  m_PrefabInstance: {fileID: 622443016648761994}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071094879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapManager
---- !u!114 &622443016648762006 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4028097526598296789, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-  m_PrefabInstance: {fileID: 622443016648761994}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071094879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6800983c8a2bf3c498d83270c3a3612a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trading.InventoryManager
---- !u!114 &622443016648762007 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2794756099648554794, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
-  m_PrefabInstance: {fileID: 622443016648761994}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071094879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be12c7d66b8a1c47920a5d0737fce5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trading.TradingManager
 --- !u!1001 &1035196382187157848
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1015466841}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8487006712634065535, guid: 2cd30b84af5744943bd165ea5a44c955, type: 3}
       propertyPath: m_Name
@@ -1019,11 +1037,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
---- !u!4 &712089970034427617 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2283797541858316160, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
-  m_PrefabInstance: {fileID: 712089970034427616}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3463856523926476760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1075,11 +1088,11 @@ PrefabInstance:
     - target: {fileID: 1355348760376949921, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: trading
       value: 
-      objectReference: {fileID: 622443016648762007}
+      objectReference: {fileID: 0}
     - target: {fileID: 1355348760376949921, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: inventory
       value: 
-      objectReference: {fileID: 622443016648762006}
+      objectReference: {fileID: 0}
     - target: {fileID: 1355348760376949921, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: rowPrefab
       value: 
@@ -1133,9 +1146,29 @@ PrefabInstance:
       value: -187.5
       objectReference: {fileID: 0}
     - target: {fileID: 2155524817562693622, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: trading
+      value: 
+      objectReference: {fileID: 1422865639}
+    - target: {fileID: 2155524817562693622, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1422865638}
+    - target: {fileID: 2155524817562693622, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: rowPrefab
+      value: 
+      objectReference: {fileID: 5579266682344962193, guid: b7e353ba694403f4faff7b75ae0b32f6, type: 3}
+    - target: {fileID: 2155524817562693622, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: rowsParent
+      value: 
+      objectReference: {fileID: 356396293}
+    - target: {fileID: 2155524817562693622, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: defaultTown
       value: 
       objectReference: {fileID: 11400000, guid: 25bb33eeca5eaea4f98f1233faf98956, type: 2}
+    - target: {fileID: 2155524817562693622, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: headerTitleText
+      value: 
+      objectReference: {fileID: 720663958}
     - target: {fileID: 2216044617489672177, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_fontSize
       value: 16
@@ -1407,31 +1440,31 @@ PrefabInstance:
     - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: 'townPositions.Array.data[0]'
       value: 
-      objectReference: {fileID: 1715466953}
+      objectReference: {fileID: 1044495147}
     - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: 'townPositions.Array.data[1]'
       value: 
-      objectReference: {fileID: 721912504}
+      objectReference: {fileID: 1205597349}
     - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: 'townPositions.Array.data[2]'
       value: 
-      objectReference: {fileID: 2070322278}
+      objectReference: {fileID: 905540329}
     - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: 'townPositions.Array.data[3]'
       value: 
-      objectReference: {fileID: 7338306153461384615}
+      objectReference: {fileID: 173565034}
     - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: 'townPositions.Array.data[4]'
       value: 
-      objectReference: {fileID: 504727920}
+      objectReference: {fileID: 801109338}
     - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: 'townPositions.Array.data[5]'
       value: 
-      objectReference: {fileID: 938018991}
+      objectReference: {fileID: 1574882763}
     - target: {fileID: 3865898345222404747, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: 'townPositions.Array.data[6]'
       value: 
-      objectReference: {fileID: 199255366}
+      objectReference: {fileID: 544651980}
     - target: {fileID: 4816788989109797582, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1723,11 +1756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b8ec709242bd47b8bef89f4a59ff3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PermaUIManager
---- !u!4 &7338306153461384615 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2341374052270834781, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
-  m_PrefabInstance: {fileID: 712089970034427616}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1739,3 +1767,4 @@ SceneRoots:
   - {fileID: 712089970034427616}
   - {fileID: 1811043623}
   - {fileID: 1453556979}
+  - {fileID: 1035196382187157848}
