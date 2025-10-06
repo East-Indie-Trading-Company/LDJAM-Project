@@ -542,6 +542,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7978901571230695512, guid: 83e0c7bf86d8cda4c870047559912e36, type: 3}
+      propertyPath: typingSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978901571230695512, guid: 83e0c7bf86d8cda4c870047559912e36, type: 3}
+      propertyPath: autoContinueSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8291595058203084118, guid: 83e0c7bf86d8cda4c870047559912e36, type: 3}
       propertyPath: m_Name
       value: UI
@@ -621,6 +629,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1559407671559051662, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 268
+      objectReference: {fileID: 0}
     - target: {fileID: 8487006712634065535, guid: 2cd30b84af5744943bd165ea5a44c955, type: 3}
       propertyPath: m_Name
       value: Environment
