@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5db986408bf78344ab413ccba7786039, type: 3}
-  m_Name: Hesta_Choice
+  m_Name: Hesta_Choice 4
   m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
   optionA:
-    buttonText: I could use a break.
-    responseText: Even the swiftest of rivers eventually slow. *Hands you a cup of
-      something hot and fragrant*
+    buttonText: I'll bring you what I can find.
+    responseText: Thank you traveler. May the river guide you!
     flagToRaise: 
-    reputationChangeValue: 0.5
+    reputationChangeValue: 0.2
     reputationEffect: 1
     item: {fileID: 0}
     itemChangeValue: 0
@@ -25,9 +24,8 @@ MonoBehaviour:
     goldChangeValue: 0
     goldEffect: 0
   optionB:
-    buttonText: I have no need for whatever *you're* drinking.
-    responseText: Hahaha! Mayhaps that's for the best. Lowlanders fare poorly in
-      our gorge.
+    buttonText: We'll see... I have other things to worry about.
+    responseText: Only together can we stand strong.
     flagToRaise: 
     reputationChangeValue: 0.2
     reputationEffect: 2
@@ -36,4 +34,4 @@ MonoBehaviour:
     itemEffect: 0
     goldChangeValue: 0
     goldEffect: 0
-  displayLine: Do you share a drink with Hesta?
+  displayLine: What do you say to Hesta?

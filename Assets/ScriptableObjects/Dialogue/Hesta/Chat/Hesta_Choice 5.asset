@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5db986408bf78344ab413ccba7786039, type: 3}
-  m_Name: Hesta_Choice
+  m_Name: Hesta_Choice 5
   m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
   optionA:
-    buttonText: I could use a break.
-    responseText: Even the swiftest of rivers eventually slow. *Hands you a cup of
-      something hot and fragrant*
+    buttonText: Yes. I've brought you weapons to fight. As you asked.
+    responseText: '*Hesta inspects the gift* Hah! Now this is a proper tribute. You
+      understand the currents of give-and-take, you do. Trestle will remember this. '
     flagToRaise: 
     reputationChangeValue: 0.5
     reputationEffect: 1
-    item: {fileID: 0}
-    itemChangeValue: 0
-    itemEffect: 0
+    item: {fileID: 11400000, guid: 478bbe8d177b2ef4cb11b64d9783b8b6, type: 2}
+    itemChangeValue: 200
+    itemEffect: 2
     goldChangeValue: 0
     goldEffect: 0
   optionB:
-    buttonText: I have no need for whatever *you're* drinking.
-    responseText: Hahaha! Mayhaps that's for the best. Lowlanders fare poorly in
-      our gorge.
+    buttonText: I think I'll hang on to this. I'm sure I can make better use of them
+      than you.
+    responseText: 'Bah! I knew lowlanders couldn''t be trusted! '
     flagToRaise: 
     reputationChangeValue: 0.2
     reputationEffect: 2
@@ -36,4 +36,4 @@ MonoBehaviour:
     itemEffect: 0
     goldChangeValue: 0
     goldEffect: 0
-  displayLine: Do you share a drink with Hesta?
+  displayLine: What do you say to Hesta?

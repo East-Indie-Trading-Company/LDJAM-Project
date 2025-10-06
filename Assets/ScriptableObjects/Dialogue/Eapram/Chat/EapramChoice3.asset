@@ -17,9 +17,23 @@ MonoBehaviour:
     responseText: The Mayor will sure appreciate it with the delicacy of a swine,
       but you have my educated thanks
     flagToRaise: 
+    reputationChangeValue: 1
+    reputationEffect: 1
+    item: {fileID: 11400000, guid: cd6db6897c119934d8cfefc7a6db8ba2, type: 2}
+    itemChangeValue: 75
+    itemEffect: 2
+    goldChangeValue: 0
+    goldEffect: 0
   optionB:
     buttonText: Can't do that, I have plans for this
     responseText: Surely not even someone such as you can ingest all that poison,
       but do informe me otherwise, I wish to watch the show
     flagToRaise: 
+    reputationChangeValue: 0.2
+    reputationEffect: 2
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   displayLine: Do you want to give Eapram 75 alcohol?

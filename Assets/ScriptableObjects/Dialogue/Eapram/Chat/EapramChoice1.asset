@@ -16,9 +16,23 @@ MonoBehaviour:
     buttonText: You use that word a lot, it's like your staple
     responseText: Is that so? I have not noticed, not at all. Not at all...
     flagToRaise: 
+    reputationChangeValue: 0.25
+    reputationEffect: 1
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   optionB:
     buttonText: Nevermore this, nevermore that, that's all you say
     responseText: You jest, I believe. I will hear the words of the unneducated,
       nevermore
     flagToRaise: 
+    reputationChangeValue: 0.25
+    reputationEffect: 2
+    item: {fileID: 0}
+    itemChangeValue: 0
+    itemEffect: 0
+    goldChangeValue: 0
+    goldEffect: 0
   displayLine: What will you say to that?
