@@ -290,6 +290,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 581535955593360603, guid: e06462e255936b34099174a0661b094d, type: 3}
   m_PrefabInstance: {fileID: 6142438199149609828}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &720663958 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2661618414560454262, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+  m_PrefabInstance: {fileID: 3463856523926476760}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!4 &721912504 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8245711753536091339, guid: 59f5ef0fdd503834eb54cd0a2ddd922e, type: 3}
@@ -847,6 +858,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 76807098}
+    - target: {fileID: 5705554780241304232, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+      propertyPath: dailyInflationRate
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6462454107294418737, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
       propertyPath: target
       value: 
@@ -940,6 +955,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f2cf68153a46a4abbd8ca9b1122d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+--- !u!114 &622443016648762004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3991649523876030815, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+  m_PrefabInstance: {fileID: 622443016648761994}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071094879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapManager
+--- !u!114 &622443016648762006 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4028097526598296789, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+  m_PrefabInstance: {fileID: 622443016648761994}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071094879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6800983c8a2bf3c498d83270c3a3612a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Trading.InventoryManager
+--- !u!114 &622443016648762007 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2794756099648554794, guid: 5dce962e683ba5f40b908598841a3fa5, type: 3}
+  m_PrefabInstance: {fileID: 622443016648761994}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071094879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be12c7d66b8a1c47920a5d0737fce5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Trading.TradingManager
 --- !u!1001 &1035196382187157848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1086,6 +1134,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -280
       objectReference: {fileID: 0}
+    - target: {fileID: 1041226260581609431, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1070085441385961983, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1102,6 +1154,22 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1355348760376949921, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: trading
+      value: 
+      objectReference: {fileID: 622443016648762007}
+    - target: {fileID: 1355348760376949921, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 622443016648762006}
+    - target: {fileID: 1355348760376949921, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: rowPrefab
+      value: 
+      objectReference: {fileID: 5579266682344962193, guid: b7e353ba694403f4faff7b75ae0b32f6, type: 3}
+    - target: {fileID: 1355348760376949921, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: headerTitleText
+      value: 
+      objectReference: {fileID: 720663958}
     - target: {fileID: 1412658244505356596, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_fontSize
       value: 16
@@ -1146,6 +1214,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -187.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2155524817562693622, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: defaultTown
+      value: 
+      objectReference: {fileID: 11400000, guid: 25bb33eeca5eaea4f98f1233faf98956, type: 2}
     - target: {fileID: 2216044617489672177, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_fontSize
       value: 16
@@ -1209,10 +1281,6 @@ PrefabInstance:
     - target: {fileID: 3025699626950410793, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_SizeDelta.y
       value: -780
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025699626950410793, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -17604.887
       objectReference: {fileID: 0}
     - target: {fileID: 3026082343307357508, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1610,6 +1678,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown5
       objectReference: {fileID: 0}
+    - target: {fileID: 7800317558194254945, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7935371518627179848, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1625,6 +1697,10 @@ PrefabInstance:
     - target: {fileID: 8018079990042048265, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128281581988224688, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8250052557870621517, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_AnchorMax.y
