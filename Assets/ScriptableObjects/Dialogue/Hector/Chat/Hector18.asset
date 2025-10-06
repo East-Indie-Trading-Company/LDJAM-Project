@@ -17,7 +17,7 @@ MonoBehaviour:
   - dialogueText: Documenting experiments, reading more tomes than I can carry, spell
       casting practice... becoming a mage is harder than I thought. Shame I can't
       ask the help for assistance.
-    choice: {fileID: 0}
+    choice: {fileID: 11400000, guid: 5d70c9b34ee8bf94f8ddd43d5b4b1be0, type: 2}
   isOneOff: 1
   flags: []
   hasPlayed: 0

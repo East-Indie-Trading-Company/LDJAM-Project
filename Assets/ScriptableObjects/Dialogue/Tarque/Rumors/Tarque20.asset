@@ -17,6 +17,6 @@ MonoBehaviour:
   - dialogueText: Good thing steel doesn't burn as easy as thatch. I'll pay ye good
       coin for some of Sir Elliot's steel. Call it charity work.
     choice: {fileID: 0}
-  isOneOff: 0
+  isOneOff: 1
   flags: []
   hasPlayed: 0

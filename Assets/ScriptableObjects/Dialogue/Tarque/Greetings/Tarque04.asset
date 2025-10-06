@@ -18,5 +18,6 @@ MonoBehaviour:
       me what catches yer eye.
     choice: {fileID: 0}
   isOneOff: 0
-  flags: []
+  flags:
+  - LowRep
   hasPlayed: 0
