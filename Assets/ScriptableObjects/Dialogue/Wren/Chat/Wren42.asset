@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Wren42
   m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
   optionA:
-    buttonText: 
-    responseText: 
+    buttonText: ' Here. I''ll admit I''m quite interested in what these items will
+      be used for. '
+    responseText: 'Bless you. Justus''s dreams of becoming a traveling minstrel are
+      nearing closer thanks to you. '
     flagToRaise: 
   optionB:
-    buttonText: 
-    responseText: 
+    buttonText: 'Sorry, but these relics are far too valuable for me to part with.  '
+    responseText: Value runs far deeper than money. You'd take care to remember that.
     flagToRaise: 
   displayLine: 

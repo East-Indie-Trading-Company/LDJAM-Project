@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5db986408bf78344ab413ccba7786039, type: 3}
-  m_Name: Wren48
+  m_Name: Wren62
   m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
   optionA:
-    buttonText: 'Of course, Dreams are what keep me going. '
-    responseText: 'And I, too traveler. And I, too. '
+    buttonText: 'A) It would bring me joy to see a smile upon your face, Wren. Yes,
+      the items are yours. '
+    responseText: 'Truly, you are a gift. '
     flagToRaise: 
   optionB:
-    buttonText: 'Dreams? There is no room for dreams in a cruel world such as this. '
-    responseText: I see.
+    buttonText: 'What is rusted and worn is best left that way. '
+    responseText: 'Perhaps it is. '
     flagToRaise: 
   displayLine: 

@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Wren56
   m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
   optionA:
-    buttonText: 
-    responseText: 
+    buttonText: 'I think that sometimes the things we fear most are the things that
+      hold us back. Don''t worry of the dragon, look the the future you see before
+      you. '
+    responseText: Wise words, and ones I'll take to heart.
     flagToRaise: 
   optionB:
-    buttonText: 
-    responseText: 
+    buttonText: 'I haven''t time to listen to you woes. Dragons are fiersome things,
+      take it from me. You''d do well to concern yourself with it. '
+    responseText: I see. So my worries are founded...
     flagToRaise: 
   displayLine: 

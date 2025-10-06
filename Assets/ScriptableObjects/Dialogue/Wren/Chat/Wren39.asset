@@ -20,5 +20,5 @@ MonoBehaviour:
     choice: {fileID: 0}
   isOneOff: 1
   flags:
-  - 
+  - Act1
   hasPlayed: 0

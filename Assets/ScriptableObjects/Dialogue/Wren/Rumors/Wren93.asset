@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd1bb3f9a2130d840ba2b8ba51e9463d, type: 3}
-  m_Name: Wren51
+  m_Name: Wren93
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
   npc: {fileID: 11400000, guid: e6f3b67865fa44033b84f40fe4016471, type: 2}
   lines:
-  - dialogueText: It's dangerous to walk about Dursim at night. There is a way I
-      could protect the town, but I'll need some potent ingredients, the 2 reagents
-      you carry with you now will do. I'll pay you handsomely for them.
-    choice: {fileID: 11400000, guid: f948e201eac404d26b0e280a81287312, type: 2}
-  isOneOff: 1
+  - dialogueText: 'Of the few travlers that have passed through Dursim, many have
+      told me tales of Trestel. The glacial pools there are said to the bear the
+      freshest fish you''ll ever taste. '
+    choice: {fileID: 0}
+  isOneOff: 0
   flags:
-  - Act1
-  - HasThresholdReagents2
+  - Act2
   hasPlayed: 0

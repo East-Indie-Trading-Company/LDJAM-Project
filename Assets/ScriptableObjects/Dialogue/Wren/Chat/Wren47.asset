@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1bb3f9a2130d840ba2b8ba51e9463d, type: 3}
   m_Name: Wren47
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
-  npc: {fileID: 0}
-  lines: []
+  npc: {fileID: 11400000, guid: e6f3b67865fa44033b84f40fe4016471, type: 2}
+  lines:
+  - dialogueText: 'Pray tell me, traveler. Do you think dreams are worth persuing? '
+    choice: {fileID: 11400000, guid: c99af4abcfa9b402896347f86305f6af, type: 2}
   isOneOff: 0
-  flags: []
+  flags:
+  - Act1
   hasPlayed: 0

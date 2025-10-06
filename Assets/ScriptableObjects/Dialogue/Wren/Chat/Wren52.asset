@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Wren52
   m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
   optionA:
-    buttonText: 
-    responseText: 
+    buttonText: 'I''m in the business of making money. The reagents are all yours.  '
+    responseText: My thanks indeed. I could have gotten them from Brightspire, but
+      Eapram isn't too fond of my levity.
     flagToRaise: 
   optionB:
-    buttonText: 
-    responseText: 
+    buttonText: I'm not in the business of taking on other's woes.
+    responseText: Very well. Just remember, what we do or don't do for others always
+      has a way of coming back to us.
     flagToRaise: 
   displayLine: 
