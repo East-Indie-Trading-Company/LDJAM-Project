@@ -455,9 +455,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 994012944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 352319309d6afc044b0ce94699fbbde6, type: 3}
+  m_Script: {fileID: 11500000, guid: afbbd4ef1a21cc24e8cdadf72d7b00a4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapManager1
+  m_EditorClassIdentifier: Assembly-CSharp::MapManager
   towns:
   - {fileID: 1158064366}
   - {fileID: 1447563682}
@@ -467,7 +467,7 @@ MonoBehaviour:
   - {fileID: 1529660092}
   - {fileID: 1885830356}
   mapView: {fileID: 666787218}
-  gameManager1: {fileID: 994012953}
+  gameManager: {fileID: 994012953}
   zoomDuration: 1
   stopDistance: 3
 --- !u!114 &994012953
@@ -479,9 +479,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 994012944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 973c349da5d65c14a92771a8562237da, type: 3}
+  m_Script: {fileID: 11500000, guid: 03f2cf68153a46a4abbd8ca9b1122d7f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManager1
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
   campaignMaxDays: 30
   currentTown: {fileID: 0}
   flagManager: {fileID: 994012948}
@@ -905,7 +905,7 @@ PrefabInstance:
     - target: {fileID: 278512504001028855, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 994012952}
+      objectReference: {fileID: 0}
     - target: {fileID: 278512504001028855, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown1
@@ -917,7 +917,7 @@ PrefabInstance:
     - target: {fileID: 334280861132249791, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 994012952}
+      objectReference: {fileID: 0}
     - target: {fileID: 334280861132249791, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown2
@@ -961,7 +961,7 @@ PrefabInstance:
     - target: {fileID: 1270132870796508390, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 994012952}
+      objectReference: {fileID: 0}
     - target: {fileID: 1270132870796508390, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown4
@@ -981,7 +981,7 @@ PrefabInstance:
     - target: {fileID: 1552531338552921332, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 994012952}
+      objectReference: {fileID: 0}
     - target: {fileID: 1552531338552921332, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown5
@@ -1005,7 +1005,7 @@ PrefabInstance:
     - target: {fileID: 1860639229622769023, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 994012952}
+      objectReference: {fileID: 0}
     - target: {fileID: 1860639229622769023, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown6
@@ -1069,7 +1069,7 @@ PrefabInstance:
     - target: {fileID: 3709112934622566806, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 994012952}
+      objectReference: {fileID: 0}
     - target: {fileID: 3709112934622566806, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown7
@@ -1081,7 +1081,7 @@ PrefabInstance:
     - target: {fileID: 4042857210236503034, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 994012952}
+      objectReference: {fileID: 0}
     - target: {fileID: 4042857210236503034, guid: 82b3c29f8e14af3469f22b999cff81e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TravelToTown3
