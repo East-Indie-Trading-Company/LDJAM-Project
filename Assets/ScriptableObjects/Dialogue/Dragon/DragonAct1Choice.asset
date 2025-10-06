@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db986408bf78344ab413ccba7786039, type: 3}
+  m_Name: DragonAct1Choice
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChoice
+  optionA:
+    buttonText: Here take it. I value my life.
+    responseText: "Wise choice, two-legged. I shall take my share. Perhaps you aren\u2019t
+      as mindless as other mortals."
+    flagToRaise: 
+  optionB:
+    buttonText: "I earned these resources. I\u2019m not handing them over. "
+    responseText: "You dare refuse me? It\u2019s always the same with you two-leggeds,
+      so unreliable. I could extinguish you here, but I\u2019ll give you one more
+      chance. Just. One. More. Chance. "
+    flagToRaise: DragonDeath
+  displayLine: 

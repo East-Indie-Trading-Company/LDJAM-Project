@@ -9,7 +9,7 @@ public class FlagManager : MonoBehaviour
     private Dictionary<string, bool> flags = new Dictionary<string, bool>();
     private Dictionary<string, int> counters = new Dictionary<string, int>();
 
-    // Evento público que outros sistemas vão escutar
+    // Evento pï¿½blico que outros sistemas vï¿½o escutar
     public event Action<int> OnDayAdvancedEvent;
 
     private void Awake()
@@ -21,6 +21,8 @@ public class FlagManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        InitializeAllFlags();
     }
 
     public void SetFlag(string flag, bool value)
@@ -44,10 +46,33 @@ public class FlagManager : MonoBehaviour
         return counters.ContainsKey(key) ? counters[key] : 0;
     }
 
-    // Novo nome, mais claro: dispara os callbacks de "dia avançado"
+    // Novo nome, mais claro: dispara os callbacks de "dia avanï¿½ado"
     public void TriggerDayAdvanced(int newDay)
     {
         Debug.Log($"[FlagManager] Triggering Day Advanced {newDay}");
         OnDayAdvancedEvent?.Invoke(newDay);
+    }
+
+
+    public void InitializeAllFlags()
+    {
+        string DragonDeath = "DragonDeath";
+        string EndGameDragon = "EndGameDragon";
+        string EndGameKingdom = "EndGameKingdom";
+        string Act1 = "Act1";
+        string Act2 = "Act2";
+        string Act3 = "Act3";
+        string LowRep = "LowRep";
+        string HighRep = "HighRep";
+
+
+        SetFlag(DragonDeath, false);
+        SetFlag(EndGameDragon, false);
+        SetFlag(EndGameKingdom, false);
+        SetFlag(Act1, false);
+        SetFlag(Act2, false);
+        SetFlag(Act3, false);
+        SetFlag(LowRep, false);
+        SetFlag(HighRep, false);
     }
 }
