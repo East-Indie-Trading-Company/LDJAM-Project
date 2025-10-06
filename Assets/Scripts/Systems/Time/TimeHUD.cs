@@ -15,7 +15,7 @@ public class TimeHUD : DayAdvanceListener
         RefreshUI(newDay);
     }
 
-    protected override void Start()
+    private void Start()
     {
         base.Start(); // <- IMPORTANTE: chama o Start da classe base DayAdvanceListener
         RefreshUI(GameManager.Instance.CurrentDay);

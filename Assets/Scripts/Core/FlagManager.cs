@@ -52,19 +52,6 @@ public class FlagManager : MonoBehaviour
         Debug.Log($"[FlagManager] Triggering Day Advanced {newDay}");
         OnDayAdvancedEvent?.Invoke(newDay);
     }
-    public event Action<string> OnMilestoneTriggered;
-    public void TriggerMilestone(string actFlag, string milestoneName, int funding)
-    {
-        if (GetFlag(actFlag))
-        {
-            Debug.Log($"[FlagManager] Milestone '{milestoneName}' already triggered.");
-            return; // Prevents re-triggering if the flag is already true
-        }
-
-        SetFlag(actFlag, true);
-        Debug.Log($"[FlagManager] {milestoneName} reached! Funding: ${funding:N0}");
-    }
-
 
 
     public void InitializeAllFlags()
