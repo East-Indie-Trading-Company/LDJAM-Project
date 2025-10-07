@@ -17,7 +17,7 @@ public class MapLoadUI : MonoBehaviour
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("Scene Loaded: " + scene.name);
+        Debug.Log("MapLoadUI Scene Loaded: " + scene.name);
         if (scene.name == "Map")
         {
             permaUICanvas.SetActive(true);

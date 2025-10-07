@@ -51,7 +51,7 @@ namespace Trading
             if (!trading)   trading   = TradingManager.Instance;
             if(!inventory) inventory = InventoryManager.Instance;
             Debug.Log($"[TradingUI] Get trading manager: {trading}");
-            Debug.Log($"[TradingUI] Get trading manager: {inventory}");
+            Debug.Log($"[TradingUI] Get inventory manager: {inventory}");
             // Rebuild is called here primarily to ensure manager references are grabbed early.
             Rebuild();
         }
@@ -201,22 +201,36 @@ namespace Trading
         /// </summary>
         private void TryAutoFindRowsParent()
         {
-            if (rowsParent) return;
-
-            Transform content =
-                transform.Find("RightColumn/MarketScrollView/Viewport/Content") ??
-                transform.Find("LeftColumn/MarketScrollView/Viewport/Content") ??
-                transform.Find("MarketScrollView/Viewport/Content") ??
-                transform.Find("Viewport/Content");
-
-            if (!content)
+            Debug.Log("[TradingUI] Start of TryAutoFindRowsParent method");
+            try
             {
-                var scroll = GetComponentInChildren<ScrollRect>(true);
-                if (scroll && scroll.content) content = scroll.content.transform;
-            }
+                if (rowsParent)
+                {
+                    Debug.Log("[TradingUI] in TryAutoFindRowsParent method rowsParent found");
+                    return;
+                }
 
-            rowsParent = content ? content.GetComponent<RectTransform>() : null;
-            if (!rowsParent && logMissingRefs) Debug.LogWarning("[TradingUI] Could not locate rows parent. Assign it in the inspector.");
+                Transform content =
+                    transform.Find("RightColumn/MarketScrollView/Viewport/Content") ??
+                    transform.Find("LeftColumn/MarketScrollView/Viewport/Content") ??
+                    transform.Find("MarketScrollView/Viewport/Content") ??
+                    transform.Find("Viewport/Content");
+
+                if (!content)
+                {
+                    var scroll = GetComponentInChildren<ScrollRect>(true);
+                    if (scroll && scroll.content) content = scroll.content.transform;
+                }
+
+                rowsParent = content ? content.GetComponent<RectTransform>() : null;
+                if (!rowsParent && logMissingRefs) Debug.LogWarning("[TradingUI] Could not locate rows parent. Assign it in the inspector.");
+            }
+            catch
+            {
+                Debug.Log("[TradingUI] caught an Exception in TryAutoFindRowsParent method");
+            }
+            
+            Debug.Log("[TradingUI] End of TryAutoFindRowsParent method");
         }
 
         /// <summary>
@@ -224,6 +238,7 @@ namespace Trading
         /// </summary>
         private void TryAutoFindHeader()
         {
+            Debug.Log("[TradingUI] Start of TryAutoFindHeader method");
             if (headerTitleText) return;
 
             var t =
@@ -233,6 +248,7 @@ namespace Trading
 
             headerTitleText = t ? t.GetComponent<TMP_Text>() : null;
             if (!headerTitleText && logMissingRefs) Debug.LogWarning("[TradingUI] Could not locate header title text. Drag it into the inspector.");
+            Debug.Log("[TradingUI] End of TryAutoFindHeader method");
         }
 
         /// <summary>
