@@ -39,6 +39,7 @@ namespace Trading
             Debug.Log($"[TradingUI] Initializing instance: {gameObject.name}");
             TryAutoFindRowsParent();
             TryAutoFindHeader();
+            Debug.Log("[TradingUI] End of Awake method");
         }
 
         /// <summary>
@@ -46,8 +47,11 @@ namespace Trading
         /// </summary>
         private void Start()
         {
-            if(!trading)   trading   = TradingManager.Instance;
+            Debug.Log($"[TradingUI] in Start method");
+            if (!trading)   trading   = TradingManager.Instance;
             if(!inventory) inventory = InventoryManager.Instance;
+            Debug.Log($"[TradingUI] Get trading manager: {trading}");
+            Debug.Log($"[TradingUI] Get trading manager: {inventory}");
             // Rebuild is called here primarily to ensure manager references are grabbed early.
             Rebuild();
         }
@@ -99,6 +103,7 @@ namespace Trading
         /// </summary>
         public void Rebuild()
         {
+            Debug.Log($"[TradingUI] in Rebuild method");
             if (!EnsureManagers() || !EnsurePrefab() || !rowsParent)
             {
                 ClearChildren(rowsParent);
