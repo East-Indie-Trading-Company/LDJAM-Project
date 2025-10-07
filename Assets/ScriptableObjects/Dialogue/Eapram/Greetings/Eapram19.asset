@@ -15,9 +15,8 @@ MonoBehaviour:
   npc: {fileID: 11400000, guid: d1d50ab825af1254598ba5711804067c, type: 2}
   lines:
   - dialogueText: "Neeevermoooore *Coughs* Neeeveeeeermoooo\u2014O-oh! You... You
-      d-didn't see anything, it's the vapors, the vapors"
+      d-didn't see anything, it's the vapors, the vapors."
     choice: {fileID: 0}
   isOneOff: 1
-  flags:
-  - 
+  flags: []
   hasPlayed: 0

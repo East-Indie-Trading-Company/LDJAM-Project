@@ -18,6 +18,5 @@ MonoBehaviour:
       night of snoring and lice in the squalid quarters.
     choice: {fileID: 0}
   isOneOff: 0
-  flags:
-  - Act2
+  flags: []
   hasPlayed: 0

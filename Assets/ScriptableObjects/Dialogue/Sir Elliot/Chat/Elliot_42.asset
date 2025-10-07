@@ -18,6 +18,5 @@ MonoBehaviour:
       is as pleasant as I remember.
     choice: {fileID: 0}
   isOneOff: 0
-  flags:
-  - 
+  flags: []
   hasPlayed: 0

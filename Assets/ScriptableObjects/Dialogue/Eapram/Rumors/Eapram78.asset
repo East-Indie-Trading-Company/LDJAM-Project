@@ -15,7 +15,7 @@ MonoBehaviour:
   npc: {fileID: 11400000, guid: d1d50ab825af1254598ba5711804067c, type: 2}
   lines:
   - dialogueText: They raise the sword, they build the pyre, both king and beast
-      are slaves to fire
+      are slaves to fire.
     choice: {fileID: 0}
   isOneOff: 0
   flags:

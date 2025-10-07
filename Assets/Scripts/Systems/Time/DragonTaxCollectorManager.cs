@@ -5,10 +5,10 @@ public class DragonTaxCollectorManager : DayAdvanceListener
 {
     [Header("Config")]
     [Tooltip("How many days between each tax collection.")]
-    [SerializeField] private int taxInterval = 10;
+    [SerializeField] private int taxInterval = 30;
 
     [Tooltip("The first day when the dragon starts collecting taxes.")]
-    [SerializeField] private int firstCollectionDay = 10;
+    [SerializeField] private int firstCollectionDay = 30;
 
     private int lastTriggeredDay = -1;
 

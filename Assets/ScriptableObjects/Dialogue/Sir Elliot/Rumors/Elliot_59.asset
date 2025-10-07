@@ -17,6 +17,5 @@ MonoBehaviour:
   - dialogueText: I haven't got any word from the nearby towns lately...
     choice: {fileID: 0}
   isOneOff: 0
-  flags:
-  - 
+  flags: []
   hasPlayed: 0

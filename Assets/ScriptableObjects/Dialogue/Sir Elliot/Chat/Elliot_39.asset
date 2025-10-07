@@ -18,6 +18,5 @@ MonoBehaviour:
       were - a landmark between two kingdoms.
     choice: {fileID: 0}
   isOneOff: 0
-  flags:
-  - 
+  flags: []
   hasPlayed: 0

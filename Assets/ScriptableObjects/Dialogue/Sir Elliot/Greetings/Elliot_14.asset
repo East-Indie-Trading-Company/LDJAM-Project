@@ -19,5 +19,5 @@ MonoBehaviour:
     choice: {fileID: 0}
   isOneOff: 0
   flags:
-  - Rep <= -50
+  - LowRep
   hasPlayed: 0

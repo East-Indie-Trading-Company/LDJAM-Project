@@ -18,6 +18,5 @@ MonoBehaviour:
       the road. I don't expect them to succeed...
     choice: {fileID: 0}
   isOneOff: 0
-  flags:
-  - 
+  flags: []
   hasPlayed: 0

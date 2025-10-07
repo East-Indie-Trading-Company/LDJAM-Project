@@ -82,7 +82,7 @@ public class FlagManager : MonoBehaviour
         SetFlag(DragonDeath, false);
         SetFlag(EndGameDragon, false);
         SetFlag(EndGameKingdom, false);
-        SetFlag(Act1, false);
+        SetFlag(Act1, true);
         SetFlag(Act2, false);
         SetFlag(Act3, false);
         SetFlag(LowRep, false);

@@ -19,5 +19,5 @@ MonoBehaviour:
     choice: {fileID: 11400000, guid: ff51bc85bdf120748b5f91aa7fedefc0, type: 2}
   isOneOff: 1
   flags:
-  - Rep >= 60
+  - HighRep
   hasPlayed: 0

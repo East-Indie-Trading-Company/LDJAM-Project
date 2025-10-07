@@ -17,6 +17,6 @@ MonoBehaviour:
   - dialogueText: If I had to spend my days wallowin' in a dank bog I reckon I'd
       be as miserable as Eapram too.
     choice: {fileID: 0}
-  isOneOff: 1
+  isOneOff: 0
   flags: []
   hasPlayed: 0

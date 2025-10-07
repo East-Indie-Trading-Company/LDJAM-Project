@@ -17,6 +17,5 @@ MonoBehaviour:
   - dialogueText: Another dreamless night, and we are still living in this nightmare...
     choice: {fileID: 0}
   isOneOff: 0
-  flags:
-  - 
+  flags: []
   hasPlayed: 0

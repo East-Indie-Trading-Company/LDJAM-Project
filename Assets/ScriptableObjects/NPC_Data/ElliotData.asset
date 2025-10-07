@@ -26,6 +26,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cbf2ce82523d3e343b0e41e5fce90676, type: 2}
   - {fileID: 11400000, guid: 73cbce8f017577d43bdf4f784bff69ac, type: 2}
   - {fileID: 11400000, guid: 2751934cd21926d4ab62b00328cff376, type: 2}
+  - {fileID: 11400000, guid: c01f74df052423341866b9450fcaabab, type: 2}
+  - {fileID: 11400000, guid: b00c8f6342b22e1429b3be4bf255cf95, type: 2}
   npcRumorDialogueLines:
   - {fileID: 11400000, guid: 275a5f5048ffd4446b6948e479659f55, type: 2}
   - {fileID: 11400000, guid: 60212636bd0c9e9449bb40ace37d273c, type: 2}
@@ -38,6 +40,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 53b9be4d042a9954bbb354b4232ef617, type: 2}
   - {fileID: 11400000, guid: fcb186dfc08c8ce40b4abb435b72507f, type: 2}
   - {fileID: 11400000, guid: b0f39d3384db87446bce72b3f9028f84, type: 2}
+  - {fileID: 11400000, guid: 78141a9c791fb6047b67e450bf008114, type: 2}
+  - {fileID: 11400000, guid: 4c1c4b99d3ef60c468db95c89f73eb83, type: 2}
   npcGreetingDialogueLines:
   - {fileID: 11400000, guid: 06bb1b4b34328ee47b9ab5671c9f6a8a, type: 2}
   - {fileID: 11400000, guid: a89ea0bcb25faac4c9ddbb0eb4568737, type: 2}
@@ -60,3 +64,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f5f9519c5421c69418e1cf76a2e36a3e, type: 2}
   - {fileID: 11400000, guid: 22a9b539838c0404c850d5b0471391b9, type: 2}
   - {fileID: 11400000, guid: 01c92dd884be7a44b8afa4c53f84d601, type: 2}
+  - {fileID: 11400000, guid: fa3c21ad01c6b02408ba348b8fde43d6, type: 2}
+  - {fileID: 11400000, guid: c2c6834ebe56e8f429c07bf0d7502725, type: 2}
+  - {fileID: 11400000, guid: 2a25eb1404284da47a306629a26b6117, type: 2}
+  - {fileID: 11400000, guid: 749202dec4f610a4b86be43ebcffba63, type: 2}

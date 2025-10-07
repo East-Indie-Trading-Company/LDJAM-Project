@@ -18,6 +18,5 @@ MonoBehaviour:
       materials are a priority for scavengers.
     choice: {fileID: 0}
   isOneOff: 0
-  flags:
-  - Act2
+  flags: []
   hasPlayed: 0

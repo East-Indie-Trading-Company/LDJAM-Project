@@ -16,7 +16,7 @@ MonoBehaviour:
   lines:
   - dialogueText: This city was built by a cult, did you know? They believed that
       if they built a spire tall enough, they could physically touch the face of
-      futility. They were, of course, tragically correct
+      futility. They were, of course, tragically correct.
     choice: {fileID: 0}
   isOneOff: 1
   flags: []

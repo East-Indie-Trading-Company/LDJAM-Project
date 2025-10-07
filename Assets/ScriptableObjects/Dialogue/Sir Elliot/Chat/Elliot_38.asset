@@ -18,6 +18,5 @@ MonoBehaviour:
       from that, yet we must find the strength to endure.
     choice: {fileID: 0}
   isOneOff: 0
-  flags:
-  - 
+  flags: []
   hasPlayed: 0
