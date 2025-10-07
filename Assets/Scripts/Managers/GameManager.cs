@@ -68,15 +68,15 @@ public class GameManager : MonoBehaviour
 
         switch (CurrentDay)
         {
-            case 30:
+            case 1:
                 flagManager.TriggerMilestone("Act1", "Milestone 1", 30000);
                 break;
 
-            case 60:
+            case 30:
                 flagManager.TriggerMilestone("Act2", "Milestone 2", 445000);
                 break;
 
-            case 90:
+            case 60:
                 flagManager.TriggerMilestone("Act3", "Milestone 3", 150000000);
                 break;
         }
