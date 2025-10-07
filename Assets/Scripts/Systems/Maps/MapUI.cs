@@ -113,6 +113,6 @@ public class MapUI : MonoBehaviour
         cam.transform.position = targetPosition;
         isMoving = false;
 
-        Debug.Log($"[MapUI] Zoom finished → {target.name}");
+        //Debug.Log($"[MapUI] Zoom finished → {target.name}");
     }
 }
