@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Resources.LoadAll<GameObject>("");
         daysRemaining = campaignMaxDays - CurrentDay;
 
         // Initialize UI if PermaUIManager exists

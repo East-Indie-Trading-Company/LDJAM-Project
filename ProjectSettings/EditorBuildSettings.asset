@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TestScenes/TestLocalMika.unity
     guid: 64468eb317fc7f94c85033b5c28c44be
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestScenes/MapTest.unity
     guid: b2158c407f06e644498b0c812ec62d44
   - enabled: 1
