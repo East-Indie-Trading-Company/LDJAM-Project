@@ -3219,6 +3219,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3180128321475397705, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598944196912413928, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5f7012def1a33c348accc66bbdeb2cd8, type: 3}
     - target: {fileID: 4721831317631648393, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: campaignMaxDays
       value: 15
@@ -3227,9 +3235,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mangager
       objectReference: {fileID: 0}
+    - target: {fileID: 6701315610534753074, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701315610534753074, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701315610534753074, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701315610534753074, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701315610534753074, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701315610534753074, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6715284717419336914, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: gold
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6790693314756987065, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8600266343631513412, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: taxInterval
