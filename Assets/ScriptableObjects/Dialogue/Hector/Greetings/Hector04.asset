@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
   npc: {fileID: 11400000, guid: c3f093dade5bfab458ccb5de27b75b78, type: 2}
   lines:
-  - dialogueText: I trust you've acquired materials useful to the mage's college?
+  - dialogueText: Let's see here... Ahem, your patronage is appreciated, we hope
+      you enjoy our products, safe travels... and so on and so forth.
     choice: {fileID: 0}
   isOneOff: 0
   flags: []

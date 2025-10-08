@@ -16,6 +16,12 @@ MonoBehaviour:
   townStock: {fileID: 11400000, guid: bc196b9ac03178847969709cd775a697, type: 2}
   npcDialogueLines:
   - {fileID: 11400000, guid: c5c86d5128f0e1b4e9165a4d021d918c, type: 2}
+  - {fileID: 11400000, guid: 19c9b39b297dabf41be0bd87624a454c, type: 2}
+  - {fileID: 11400000, guid: 00090a23c0447b548869cc859ff4c7c7, type: 2}
+  - {fileID: 11400000, guid: c2cfc52c1ef3d0342ac992bce6e34143, type: 2}
+  - {fileID: 11400000, guid: 998c7164f0280c44a88eb1e210b127e5, type: 2}
+  - {fileID: 11400000, guid: eb1f3b206d52c164ea56dbf1df9d86cb, type: 2}
+  - {fileID: 11400000, guid: d774f229583a497429fda92756e58467, type: 2}
   npcRumorDialogueLines:
   - {fileID: 11400000, guid: 39cb8608646f00d488616aaa3c831e6a, type: 2}
   - {fileID: 11400000, guid: 9fa05ff47f74c394cbfd4f2d12a1b82e, type: 2}
@@ -30,6 +36,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f5b0bf052a474134e93c7551f237955f, type: 2}
   - {fileID: 11400000, guid: 933dca82611f68048a8887d9d2c5506d, type: 2}
   - {fileID: 11400000, guid: 42691d8362e6e22439888dcd971a8f10, type: 2}
-  - {fileID: 11400000, guid: 6bf42cc2f3e43a446af8ecd465134718, type: 2}
   - {fileID: 11400000, guid: 85518824ffde502408c15c7e99c83183, type: 2}
-  - {fileID: 11400000, guid: 80712f7a0e43e9041958faf24019970f, type: 2}

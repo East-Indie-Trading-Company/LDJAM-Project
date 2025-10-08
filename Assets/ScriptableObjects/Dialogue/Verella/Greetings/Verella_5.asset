@@ -17,6 +17,5 @@ MonoBehaviour:
   - dialogueText: 'Mind the fog: It hides more than graves.'
     choice: {fileID: 0}
   isOneOff: 0
-  flags:
-  - Act2
+  flags: []
   hasPlayed: 0

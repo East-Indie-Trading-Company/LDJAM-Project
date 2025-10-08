@@ -30,7 +30,7 @@ MonoBehaviour:
     flagToRaise: 
     reputationChangeValue: 0.1
     reputationEffect: 2
-    item: {fileID: 11400000, guid: f7bd0f0cd9aef224c9d14b2e2d4ca542, type: 2}
+    item: {fileID: 11400000, guid: cd6db6897c119934d8cfefc7a6db8ba2, type: 2}
     itemChangeValue: 1
     itemEffect: 1
     goldChangeValue: 0

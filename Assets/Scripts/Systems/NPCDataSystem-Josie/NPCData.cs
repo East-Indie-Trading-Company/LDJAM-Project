@@ -19,16 +19,19 @@ public class NPCData : ScriptableObject
 
     public void Talk()
     {
+        Debug.Log($"Pull {displayInfo.npcName} chat pool");
         DialogueManager.Instance.StartDialogue(PullDialogue(npcDialogueLines));
     }
 
     public void Rumor()
     {
+        Debug.Log($"Pull {displayInfo.npcName} rumor pool");
         DialogueManager.Instance.StartDialogue(PullDialogue(npcRumorDialogueLines));
     }
 
     public void Greeting(TextMeshProUGUI textComponent)
     {
+        Debug.Log($"Pull {displayInfo.npcName} greeting pool");
         DialogueConversation convo =  PullDialogue(npcGreetingDialogueLines);
 
         if (convo.lines.Count > 0)
@@ -46,52 +49,83 @@ public class NPCData : ScriptableObject
     {
         //Debug.Log($"[NPCData] Num of convos in this group: {conversations.Length}");
         DialogueConversation convoToWrite = null;
-        // TODO:: List/array of convos that don't need flags here
-        List<DialogueConversation> convosWithNoFlags = new List<DialogueConversation>();
+        
+        List<DialogueConversation> validConvos = new List<DialogueConversation>();
+        List<DialogueConversation> highPriorityConvos = new List<DialogueConversation>();
+
+        if (conversations.Length == 0)
+        {
+            Debug.LogWarning("NO CONVERSATIONS IN THIS POOL {displayInfo.npcName}");
+        }
         Array.ForEach(conversations, convo =>
         {
+            if (convo == null) Debug.LogWarning("THIS CONVO HAS NOT BEEN ASSIGNED");
+
             if (!convo.hasPlayed) // If the line is repeatable or has not played yet.
             {
                 if (convo.flags.Length > 0) // If the conversation has at least one requirement, check requirements.
                 {
                     bool flagsTrue = true;
+                    bool isHighPriority = false;
                     foreach (string flag in convo.flags) // Check all flags
                     {
-                        if (!FlagManager.Instance.GetFlag(flag))
+                        if (!FlagManager.Instance.GetFlag(flag)) // Check if flag is true
                         {
                             flagsTrue = false;
+                        }
+                        else // If flag is true
+                        {
+                            if (!(flag == "Act1" || flag == "Act2" || flag == "Act3" || flag == "highRep" || flag == "lowRep")) // Check if the flag is an act or rep requirement
+                            {
+                                isHighPriority = true; // Mark this convo as higher priority if unique
+                            }
                         }
                     }
                     if (flagsTrue) // If all flags are true
                     {
-                        convoToWrite = convo; // This is the convo to write
-                        return;
+                        if (isHighPriority)
+                        {
+                            highPriorityConvos.Add(convo);
+                        }
+                        else
+                        { 
+                            validConvos.Add(convo);
+                        }
                     }
                 }
                 else
                 {
-                    // Add to list that doesn't require flags
-                    convosWithNoFlags.Add(convo);
+                    validConvos.Add(convo);
                 }
             }
 
         });
 
-        if (convoToWrite == null) 
+        Debug.Log($"[NPCData] Num of high priority convos: {highPriorityConvos.Count}");
+
+        // Randomly choose from high priority conversations
+        if (highPriorityConvos.Count > 0)
         {
-            //Debug.Log($"[NPCData] Num of convos with no flags: {convosWithNoFlags.Count}");
-            // Randomly choose from a list that doesn't require flags
-            if (convosWithNoFlags.Count > 0)
+            int randomIndex = UnityEngine.Random.Range(0, highPriorityConvos.Count);
+            Debug.Log($"[NPCData] Random Index for high priority: {randomIndex}");
+            convoToWrite = highPriorityConvos[randomIndex];
+        }
+        
+        // If there are no high priority conversations, choose from all valid conversations
+        if (convoToWrite == null)
+        {
+            Debug.Log($"[NPCData] Num of valid conversations: {validConvos.Count}");
+            
+            if (validConvos.Count > 0)
             {
-                int randomIndex = UnityEngine.Random.Range(0, convosWithNoFlags.Count-1);
-                //Debug.Log($"[NPCData] Random Index: {randomIndex}");
-                convoToWrite = convosWithNoFlags[randomIndex];
+                int randomIndex = UnityEngine.Random.Range(0, validConvos.Count);
+                Debug.Log($"[NPCData] Random Index for valid convos: {randomIndex}");
+                convoToWrite = validConvos[randomIndex];
             }
             else
             {
-                Debug.LogWarning("[NPCData] NO VIABLE CONVERSATIONS"); ///////////   IF NO CONVERSATIONS ARE VIABLE, THIS WILL CAUSE PROBLEMS
+                Debug.LogWarning($"[NPCData] NO VIABLE CONVERSATIONS FOR {displayInfo.npcName}"); ///////////   IF NO CONVERSATIONS ARE VIABLE, THIS WILL CAUSE PROBLEMS
             }
-            
         }
 
         return convoToWrite;

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
   npc: {fileID: 11400000, guid: 45dc0525bf2554d48937d8937b86df60, type: 2}
   lines:
-  - dialogueText: ' come only for the coin in your pocket, not the creature who holds
-      it. Speak quickly! '
+  - dialogueText: 'I come only for the coin in your pocket, not the creature who
+      holds it. Speak quickly! '
     choice: {fileID: 0}
   isOneOff: 0
   flags:

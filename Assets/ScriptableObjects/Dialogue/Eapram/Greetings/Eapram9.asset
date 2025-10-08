@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
   npc: {fileID: 11400000, guid: d1d50ab825af1254598ba5711804067c, type: 2}
   lines:
-  - dialogueText: Oh, it's you. Again
+  - dialogueText: Oh, it's you. Again.
     choice: {fileID: 0}
   isOneOff: 0
   flags:

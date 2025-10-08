@@ -1423,8 +1423,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Traveling between towns takes time, so trade efficiently. You can also
-    pay money to travel faster.
+  m_text: 'Traveling between towns takes time, so trade efficiently. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1451,7 +1450,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.85
+  m_fontSize: 21.95
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3220,17 +3219,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2735760163450282067, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
-      propertyPath: dailyInflationRate
-      value: 1.001
+    - target: {fileID: 3180128321475397705, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50.2
       objectReference: {fileID: 0}
-    - target: {fileID: 4721831317631648393, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
-      propertyPath: permaUIManager
+    - target: {fileID: 4598944196912413928, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1027870882}
+      objectReference: {fileID: 21300000, guid: 5f7012def1a33c348accc66bbdeb2cd8, type: 3}
+    - target: {fileID: 4721831317631648393, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: campaignMaxDays
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5094501463796226850, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: m_Name
       value: Mangager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701315610534753074, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701315610534753074, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701315610534753074, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701315610534753074, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701315610534753074, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701315610534753074, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715284717419336914, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: gold
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6790693314756987065, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8600266343631513412, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: taxInterval
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8600266343631513412, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: firstCollectionDay
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5916,17 +5959,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027438939}
   m_CullTransparentMesh: 1
---- !u!114 &1027870882 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7529034560254078143, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
-  m_PrefabInstance: {fileID: 533496838}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b8ec709242bd47b8bef89f4a59ff3bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PermaUIManager
 --- !u!1 &1031042652
 GameObject:
   m_ObjectHideFlags: 0
@@ -8594,7 +8626,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Make money buy buying resources at towns and selling them for higher prices
+  m_text: Make money by buying resources at towns and selling them for higher prices
     at other towns.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8622,7 +8654,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.7
+  m_fontSize: 21.95
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

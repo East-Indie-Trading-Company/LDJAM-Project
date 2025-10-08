@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
   npc: {fileID: 11400000, guid: d1d50ab825af1254598ba5711804067c, type: 2}
   lines:
-  - dialogueText: My time is of trascendental importance, be quick
+  - dialogueText: My time is of trascendental importance, be quick.
     choice: {fileID: 0}
   isOneOff: 0
-  flags:
-  - 
+  flags: []
   hasPlayed: 0

@@ -20,4 +20,5 @@ MonoBehaviour:
   isOneOff: 1
   flags:
   - HighRep
+  - Act2
   hasPlayed: 0

@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cutscenes/EndingCutscene.unity
     guid: ac44a50fb6f9441ac8f64f8134f28fb5
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/PlayerDeath.unity
+    guid: 17f97c1ce7f604763a2614cea791d809
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

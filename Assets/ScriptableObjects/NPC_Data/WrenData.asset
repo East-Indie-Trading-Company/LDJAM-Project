@@ -16,6 +16,12 @@ MonoBehaviour:
   townStock: {fileID: 11400000, guid: 25bb33eeca5eaea4f98f1233faf98956, type: 2}
   npcDialogueLines:
   - {fileID: 11400000, guid: 5ea63a60c48d84d0286050dd7032a342, type: 2}
+  - {fileID: 11400000, guid: 7b00fa43c863a0a4aaae3e412a7bba47, type: 2}
+  - {fileID: 11400000, guid: 7916831d3720fa84488fc5a072298617, type: 2}
+  - {fileID: 11400000, guid: e7d4d9fa93e756741b1b096d3e4849a7, type: 2}
+  - {fileID: 11400000, guid: 75def8f201616f945a9286a4237c78de, type: 2}
+  - {fileID: 11400000, guid: 2cc76f03a4b400940bac680e0d961ce3, type: 2}
+  - {fileID: 11400000, guid: 116fa0f3ded91154f942d5ee4ff8fac9, type: 2}
   npcRumorDialogueLines:
   - {fileID: 11400000, guid: 6a86d7a998b397644aa534ed08ed8e72, type: 2}
   npcGreetingDialogueLines:

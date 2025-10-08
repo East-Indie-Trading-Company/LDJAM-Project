@@ -18,7 +18,7 @@ MonoBehaviour:
       trade goods. I hear Lockhaven is usually brimming with oddities. Do come back
       if you should happen upon some on your travels.
     choice: {fileID: 0}
-  isOneOff: 1
+  isOneOff: 0
   flags:
   - Act1
   hasPlayed: 0

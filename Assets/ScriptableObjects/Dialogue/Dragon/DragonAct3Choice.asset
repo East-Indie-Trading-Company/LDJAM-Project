@@ -21,7 +21,7 @@ MonoBehaviour:
     item: {fileID: 0}
     itemChangeValue: 0
     itemEffect: 0
-    goldChangeValue: 15
+    goldChangeValue: 1500
     goldEffect: 2
   optionB:
     buttonText: "You? An ally? I don\u2019t trust you. The kingdom has treated me

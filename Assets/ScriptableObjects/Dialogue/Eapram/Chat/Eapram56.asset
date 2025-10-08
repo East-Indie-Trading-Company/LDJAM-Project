@@ -15,7 +15,7 @@ MonoBehaviour:
   npc: {fileID: 11400000, guid: d1d50ab825af1254598ba5711804067c, type: 2}
   lines:
   - dialogueText: They say the Dragon is a collector. I find it to be a creature
-      of profound taste and wisdom. It collects proof of our folly
+      of profound taste and wisdom. It collects proof of our folly.
     choice: {fileID: 0}
   isOneOff: 0
   flags:

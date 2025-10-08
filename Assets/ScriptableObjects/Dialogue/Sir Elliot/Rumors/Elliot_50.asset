@@ -18,6 +18,5 @@ MonoBehaviour:
       sorrows, you've come to the right place.
     choice: {fileID: 0}
   isOneOff: 0
-  flags:
-  - Act2
+  flags: []
   hasPlayed: 0

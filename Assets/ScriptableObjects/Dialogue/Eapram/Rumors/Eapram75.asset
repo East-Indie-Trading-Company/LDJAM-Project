@@ -15,7 +15,7 @@ MonoBehaviour:
   npc: {fileID: 11400000, guid: d1d50ab825af1254598ba5711804067c, type: 2}
   lines:
   - dialogueText: The mayor is a man attempting to build a castle on sinking mud.
-      I find it endlessly amusing to watch
+      I find it endlessly amusing to watch.
     choice: {fileID: 0}
   isOneOff: 0
   flags: []

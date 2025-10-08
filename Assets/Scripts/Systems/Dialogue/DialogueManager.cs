@@ -200,9 +200,8 @@ public class DialogueManager : MonoBehaviour
         bool itemChangeValid = true;
         bool goldChangeValid = true;
         if (isTyping) return;
-        //Debug.Log($"You picked choice A. Response will be: {currentLine.choice.optionA.responseText}");
+        Debug.Log($"You picked choice A. Response will be: {currentLine.choice.optionA.responseText}");
         
-        DisableChoicePanel();
         
         // Inventory choice 
         switch (currentLine.choice.optionA.itemEffect)
@@ -230,29 +229,32 @@ public class DialogueManager : MonoBehaviour
                 break;
         }
 
+        // Rep choice 
+        switch (currentLine.choice.optionB.reputationEffect)
+        {
+            case Effect.NONE:
+                break;
+            case Effect.ADD:
+                ReputationManager.Instance.AddReputation(currentLine.choice.optionA.reputationChangeValue);
+                break;
+            case Effect.REMOVE:
+                ReputationManager.Instance.SubtractReputation(currentLine.choice.optionA.reputationChangeValue);
+                break;
+        }
+
+        Debug.Log($"[DialogueManager] Item change: {itemChangeValid}, Gold change: {goldChangeValid}");
         if (itemChangeValid && goldChangeValid)
         {
-
+            DisableChoicePanel();
             waitingForChoice = false;
 
-            // Rep choice 
-            switch (currentLine.choice.optionB.reputationEffect)
-            {
-                case Effect.NONE:
-                    break;
-                case Effect.ADD:
-                    ReputationManager.Instance.AddReputation(currentLine.choice.optionA.reputationChangeValue);
-                    break;
-                case Effect.REMOVE:
-                    ReputationManager.Instance.SubtractReputation(currentLine.choice.optionA.reputationChangeValue);
-                    break;
-            }
             // Raise flag
             raiseFlag = currentLine.choice.optionA.flagToRaise;
             if (raiseFlag != null)
             {
                 FlagManager.Instance.SetFlag(raiseFlag, true);
             }
+            currentTextToDisplay = currentLine.choice.optionA.responseText;
             StartCoroutine(StartTyping(currentLine.choice.optionA.responseText));
         }
         else
@@ -265,8 +267,7 @@ public class DialogueManager : MonoBehaviour
         bool itemChangeValid = true;
         bool goldChangeValid = true;
         if (isTyping) return;
-        //Debug.Log($"You picked choice B. Response will be: {currentLine.choice.optionB.responseText}");
-        DisableChoicePanel();
+        Debug.Log($"You picked choice B. Response will be: {currentLine.choice.optionB.responseText}");
 
         // Inventory choice 
         switch (currentLine.choice.optionB.itemEffect)
@@ -293,24 +294,24 @@ public class DialogueManager : MonoBehaviour
                 goldChangeValid = Trading.InventoryManager.Instance.RemoveGold(currentLine.choice.optionB.goldChangeValue);
                 break;
         }
-        
+        // Rep choice 
+        switch (currentLine.choice.optionB.reputationEffect)
+        {
+            case Effect.NONE:
+                break;
+            case Effect.ADD:
+                ReputationManager.Instance.AddReputation(currentLine.choice.optionB.reputationChangeValue);
+                break;
+            case Effect.REMOVE:
+                ReputationManager.Instance.SubtractReputation(currentLine.choice.optionB.reputationChangeValue);
+                break;
+        }
 
+        Debug.Log($"[DialogueManager] Item change: {itemChangeValid}, Gold change: {goldChangeValid}");
         if (itemChangeValid && goldChangeValid)
         {
-
+            DisableChoicePanel();
             waitingForChoice = false;
-            // Rep choice 
-            switch (currentLine.choice.optionB.reputationEffect)
-            {
-                case Effect.NONE:
-                    break;
-                case Effect.ADD:
-                    ReputationManager.Instance.AddReputation(currentLine.choice.optionB.reputationChangeValue);
-                    break;
-                case Effect.REMOVE:
-                    ReputationManager.Instance.SubtractReputation(currentLine.choice.optionB.reputationChangeValue);
-                    break;
-            }
 
             // Raise flag
             raiseFlag = currentLine.choice.optionB.flagToRaise;
@@ -319,13 +320,13 @@ public class DialogueManager : MonoBehaviour
                 Debug.Log($"[DialogueManager] Raise flag: {raiseFlag}");
                 FlagManager.Instance.SetFlag(raiseFlag, true);
             }
+            currentTextToDisplay = currentLine.choice.optionB.responseText;
             StartCoroutine(StartTyping(currentLine.choice.optionB.responseText));
         }
         else
         {
             choiceText.text = "You don't have enough to choose that option";
         }
-        
     }
 
     void EndDialogue()

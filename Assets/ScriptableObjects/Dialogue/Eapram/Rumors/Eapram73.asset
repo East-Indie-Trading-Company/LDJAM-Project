@@ -15,7 +15,7 @@ MonoBehaviour:
   npc: {fileID: 11400000, guid: d1d50ab825af1254598ba5711804067c, type: 2}
   lines:
   - dialogueText: Lock Haven is awash in rum, but their demand for enchanted objects
-      is, according to my records, pathetically high
+      is, according to my records, pathetically high.
     choice: {fileID: 0}
   isOneOff: 1
   flags:

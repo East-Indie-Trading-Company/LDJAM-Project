@@ -15,7 +15,7 @@ MonoBehaviour:
   npc: {fileID: 11400000, guid: d1d50ab825af1254598ba5711804067c, type: 2}
   lines:
   - dialogueText: So much magic in your bag... One would mistake you for someone
-      of a higher post than yourself
+      of a higher post than yourself.
     choice: {fileID: 0}
   isOneOff: 0
   flags:

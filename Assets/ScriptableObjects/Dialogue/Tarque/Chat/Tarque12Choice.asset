@@ -18,7 +18,7 @@ MonoBehaviour:
       A more dangerous brew than any mage's potions, it is. Muddlin' the mind, dullin'
       me claws... nay. I cannae be nothin' but sharp. Here, yer next drink's on me.
     flagToRaise: 
-    reputationChangeValue: 0.15
+    reputationChangeValue: 0.1
     reputationEffect: 1
     item: {fileID: 0}
     itemChangeValue: 0
@@ -32,8 +32,8 @@ MonoBehaviour:
       is a concoction of cow's milk, tea, and a helping of spice. Here, next cuppa's
       on me
     flagToRaise: 
-    reputationChangeValue: 0.1
-    reputationEffect: 2
+    reputationChangeValue: 0.5
+    reputationEffect: 1
     item: {fileID: 0}
     itemChangeValue: 0
     itemEffect: 0

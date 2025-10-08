@@ -15,7 +15,7 @@ MonoBehaviour:
   npc: {fileID: 11400000, guid: d1d50ab825af1254598ba5711804067c, type: 2}
   lines:
   - dialogueText: I received a missive that the survivors in the Scorched Village
-      are clamoring for grain. A predictable, tedious cycle of hunger and need
+      are clamoring for grain. A predictable, tedious cycle of hunger and need.
     choice: {fileID: 0}
   isOneOff: 1
   flags:

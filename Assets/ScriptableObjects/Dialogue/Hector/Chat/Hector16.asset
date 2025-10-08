@@ -18,6 +18,5 @@ MonoBehaviour:
       create an impenetrable defensive structure. More than enough to handle a dragon.
     choice: {fileID: 0}
   isOneOff: 0
-  flags:
-  - 
+  flags: []
   hasPlayed: 0

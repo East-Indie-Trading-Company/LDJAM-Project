@@ -56,13 +56,24 @@ public class FlagManager : MonoBehaviour
     public void TriggerMilestone(string actFlag, string milestoneName, int funding)
     {
         Debug.Log($"TRIGGER ACT {actFlag}");
-        if (GetFlag(actFlag))
-        {
-            Debug.Log($"[FlagManager] Milestone '{milestoneName}' already triggered.");
-            return; // Prevents re-triggering if the flag is already true
-        }
 
         SetFlag(actFlag, true);
+        switch (actFlag)
+        {
+            case "Act1":
+                SetFlag("Act3", false);
+                SetFlag("Act2", false);
+                break;
+            case "Act2":
+                SetFlag("Act1", false);
+                SetFlag("Act3", false);
+                break;
+            case "Act3":
+                SetFlag("Act1", false);
+                SetFlag("Act2", false);
+                break;
+
+        }
         Debug.Log($"[FlagManager] {milestoneName} reached! Funding: ${funding:N0}");
     }
 
@@ -77,15 +88,21 @@ public class FlagManager : MonoBehaviour
         string Act3 = "Act3";
         string LowRep = "LowRep";
         string HighRep = "HighRep";
+        string Dragon1 = "Dragon1";
+        string Dragon2 = "Dragon2";
+        string Dragon3 = "Dragon3";
 
 
         SetFlag(DragonDeath, false);
         SetFlag(EndGameDragon, false);
         SetFlag(EndGameKingdom, false);
-        SetFlag(Act1, false);
+        SetFlag(Act1, true);
         SetFlag(Act2, false);
         SetFlag(Act3, false);
         SetFlag(LowRep, false);
         SetFlag(HighRep, false);
+        SetFlag(Dragon1, false);
+        SetFlag(Dragon2, false);
+        SetFlag(Dragon3, false);
     }
 }
