@@ -53,12 +53,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f2cf68153a46a4abbd8ca9b1122d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  campaignMaxDays: 30
+  campaignMaxDays: 15
   currentTown: {fileID: 0}
   flagManager: {fileID: 5914027610104568424}
   economyManager: {fileID: 2735760163450282067}
-  permaUIManager: {fileID: 0}
+  permaUIManager: {fileID: 7529034560254078143}
   inventoryManager: {fileID: 6715284717419336914}
+  act1Convo: {fileID: 11400000, guid: 69d21c32bad354856ace030c7337baf8, type: 2}
+  act2Convo: {fileID: 11400000, guid: 054710d91b3264e779d9d1f2dd913908, type: 2}
+  act3Convo: {fileID: 11400000, guid: c80854c214f0f4a4697f2bf54ce6ff0d, type: 2}
   onCurrencyChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -86,8 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c139ea14e8fb74ea946b2ecd6e78f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragonTaxCollectorManager
-  taxInterval: 10
-  firstCollectionDay: 10
+  taxInterval: 15
+  firstCollectionDay: 15
 --- !u!114 &2735760163450282067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,7 +111,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9097f50ae04ea7b4b8fe6670a86471a5, type: 2}
   - {fileID: 11400000, guid: e9331866022ec0e469877a2227173566, type: 2}
   - {fileID: 11400000, guid: 3b08e9792096e8f46a7a6a5644300c84, type: 2}
-  dailyInflationRate: 1.2
+  dailyInflationRate: 1.001
   inflationIndex: 1
 --- !u!114 &1775615021160847715
 MonoBehaviour:
@@ -184,9 +187,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragonNarrativeTrigger
   taxCollector: {fileID: 8600266343631513412}
   timeline: {fileID: 0}
-  act1Convo: {fileID: 11400000, guid: 69d21c32bad354856ace030c7337baf8, type: 2}
-  act2Convo: {fileID: 11400000, guid: 054710d91b3264e779d9d1f2dd913908, type: 2}
-  act3Convo: {fileID: 11400000, guid: c80854c214f0f4a4697f2bf54ce6ff0d, type: 2}
 --- !u!1001 &1090277966522689278
 PrefabInstance:
   m_ObjectHideFlags: 0

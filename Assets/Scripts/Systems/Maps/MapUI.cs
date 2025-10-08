@@ -86,6 +86,21 @@ public class MapUI : MonoBehaviour
 
         // Move camera back to map view
         StartCoroutine(ZoomCameraCoroutine(mapViewPosition));
+        if (FlagManager.Instance.GetFlag("Dragon1"))
+        {
+            DialogueManager.Instance.StartDialogue(GameManager.Instance.act1Convo);
+            FlagManager.Instance.SetFlag("Dragon1", false);
+        }
+        else if (FlagManager.Instance.GetFlag("Dragon2"))
+        {
+            DialogueManager.Instance.StartDialogue(GameManager.Instance.act2Convo);
+            FlagManager.Instance.SetFlag("Dragon2", false);
+        }
+        else if (FlagManager.Instance.GetFlag("Dragon3"))
+        {
+            DialogueManager.Instance.StartDialogue(GameManager.Instance.act3Convo);
+            FlagManager.Instance.SetFlag("Dragon3", false);
+        }
     }
 
     private IEnumerator ZoomCameraCoroutine(Transform target)

@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private int campaignMaxDays = 30;   // total days per cycle
+    [SerializeField] private int campaignMaxDays = 10;   // total days per cycle
     private int daysRemaining;
 
     public static GameManager Instance { get; private set; }
@@ -21,6 +21,11 @@ public class GameManager : MonoBehaviour
     public EconomyManager economyManager;
     public PermaUIManager permaUIManager;
     public InventoryManager inventoryManager;
+
+    [Header("Dragon Conversations")]
+    public DialogueConversation act1Convo;
+    public DialogueConversation act2Convo;
+    public DialogueConversation act3Convo;
 
     [Header("Events")]
     public UnityEvent<int> onCurrencyChanged;
@@ -65,21 +70,17 @@ public class GameManager : MonoBehaviour
     {
         if (flagManager == null) return;
 
-        
-
-        switch (CurrentDay)
+        if (CurrentDay == campaignMaxDays*2)
         {
-            case 1:
-                flagManager.TriggerMilestone("Act1", "Milestone 1", 30000);
-                break;
-
-            case 30:
-                flagManager.TriggerMilestone("Act2", "Milestone 2", 445000);
-                break;
-
-            case 60:
-                flagManager.TriggerMilestone("Act3", "Milestone 3", 150000000);
-                break;
+            flagManager.TriggerMilestone("Act3", "Milestone 3", 150000000);
+        }
+        else if (CurrentDay == campaignMaxDays)
+        {
+            flagManager.TriggerMilestone("Act2", "Milestone 2", 445000);
+        }
+        else if (CurrentDay == 1)
+        {
+            flagManager.TriggerMilestone("Act1", "Milestone 1", 30000);
         }
     }
     public void AdvanceDay()
@@ -94,11 +95,10 @@ public class GameManager : MonoBehaviour
             Debug.Log("[GameManager] Cycle reset! Starting a new period.");
         }
 
-        CheckMilestones(); // This needs to be called before flag manager
-
         flagManager?.TriggerDayAdvanced(CurrentDay);
         economyManager?.AdvanceDay();
-
+        CheckMilestones(); // This needs to be called AFTER flag manager
+        
         
         UpdatePermaUIHUD();
 

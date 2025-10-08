@@ -18,7 +18,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f5614116e2445dd40958b37b5a05e2a3, type: 2}
   - {fileID: 11400000, guid: 27381f32a0ae7d54c8316bb04e23b970, type: 2}
   - {fileID: 11400000, guid: 1adb93416df65f041a3790bf29efa5b2, type: 2}
-  - {fileID: 11400000, guid: e63c9e0b4c8388342928887b49211271, type: 2}
+  - {fileID: 11400000, guid: 874b4b9dc2697de4ca4a43ccb9917581, type: 2}
+  - {fileID: 11400000, guid: d43307f9c811bf34fb899bbb9a0c492e, type: 2}
+  - {fileID: 11400000, guid: 5fd263cecf9ad064fb0431b4531cdd3c, type: 2}
+  - {fileID: 11400000, guid: 93257e1bae3bd0045bf4a7caa51aaeff, type: 2}
+  - {fileID: 11400000, guid: 7ec9f97f6bf78af4294ddfd212d4e83b, type: 2}
+  - {fileID: 11400000, guid: 8a944cdf8abf23a47a46a73f440242fb, type: 2}
   npcRumorDialogueLines:
   - {fileID: 11400000, guid: ce1dcc0f43f668248ad1229b9b8d3939, type: 2}
   - {fileID: 11400000, guid: 87e8f4c93f110da40abfc468baa6bbaa, type: 2}
@@ -81,3 +86,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 15a4b5063b3022b4d888a244e80c3e49, type: 2}
   - {fileID: 11400000, guid: 93051725dffc57642a290633a2208b94, type: 2}
   - {fileID: 11400000, guid: 1f6d2795b9ef48247b49ef10f5e18db9, type: 2}
+  - {fileID: 11400000, guid: fbebd1a0d8056f642819a3a8b195d68c, type: 2}
+  - {fileID: 11400000, guid: d46b4c82e0faa834590b88ba7db6721f, type: 2}
+  - {fileID: 11400000, guid: 28e3c492306b39144979e067be46e66a, type: 2}
+  - {fileID: 11400000, guid: b7c8754f489f36544b74a35fd55c4926, type: 2}
+  - {fileID: 11400000, guid: 13831d527ed10ac40bd80c3c16c6c11c, type: 2}
+  - {fileID: 11400000, guid: 006fc0711d24daf409afdff2bdba5c95, type: 2}
+  - {fileID: 11400000, guid: eec713560bf0033479e6ad14fc17f9d5, type: 2}

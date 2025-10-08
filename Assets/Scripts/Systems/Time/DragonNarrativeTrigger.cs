@@ -9,10 +9,6 @@ public class DragonNarrativeTrigger : MonoBehaviour
     [Header("Timeline (optional)")]
     [SerializeField] private PlayableDirector timeline;
 
-    [Header("Dragon Conversations")]
-    [SerializeField] private DialogueConversation act1Convo;
-    [SerializeField] private DialogueConversation act2Convo;
-    [SerializeField] private DialogueConversation act3Convo;
 
     //[Header("Dialogue (optional)")]
     //[SerializeField] private DialogueSystem dialogueSystem; // substitui pelo teu sistema real
@@ -42,17 +38,21 @@ public class DragonNarrativeTrigger : MonoBehaviour
         if (FlagManager.Instance.GetFlag("Act3"))
         {
             Debug.Log("[DragonNarrativeTrigger] Trigger narative Act3");
-            DialogueManager.Instance.StartDialogue(act3Convo);
+            FlagManager.Instance.SetFlag("Dragon3", true);
+            
         }
         else if (FlagManager.Instance.GetFlag("Act2"))
         {
             Debug.Log("[DragonNarrativeTrigger] Trigger narative Act2");
-            DialogueManager.Instance.StartDialogue(act2Convo);
+            
+            FlagManager.Instance.SetFlag("Dragon2", true);
         }
         else if (FlagManager.Instance.GetFlag("Act1"))
         {
             Debug.Log("[DragonNarrativeTrigger] Trigger narative Act1");
-            DialogueManager.Instance.StartDialogue(act1Convo);
+            
+            FlagManager.Instance.SetFlag("Dragon1", true);
+
         }
         else
         {

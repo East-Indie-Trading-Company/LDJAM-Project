@@ -17,6 +17,5 @@ MonoBehaviour:
   - dialogueText: "Don\u2019t mind the whispers. The ghosts get chatty after dusk."
     choice: {fileID: 0}
   isOneOff: 0
-  flags:
-  - Act2
+  flags: []
   hasPlayed: 0

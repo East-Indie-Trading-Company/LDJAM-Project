@@ -23,7 +23,7 @@ namespace Trading
         /// The player's current gold.
         /// </summary>
         [Header("Player Wallet")]
-        [SerializeField] private int gold = 0;
+        [SerializeField] private int gold = 500;
 
         /// <summary> The player's current inventory of items. </summary>
         [Header("Player Inventory")]
@@ -43,7 +43,7 @@ namespace Trading
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            gold = 500; // Starting gold
+            //gold = 500; // Starting gold
         }
 
         /// <summary>

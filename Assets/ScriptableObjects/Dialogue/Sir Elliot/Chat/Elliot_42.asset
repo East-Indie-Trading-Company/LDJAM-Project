@@ -16,7 +16,8 @@ MonoBehaviour:
   lines:
   - dialogueText: Have you word of Wren? No, why would you... I wonder if Dursim
       is as pleasant as I remember.
-    choice: {fileID: 0}
+    choice: {fileID: 11400000, guid: fca05742f2fcd014e8300d542d28d772, type: 2}
   isOneOff: 0
-  flags: []
+  flags:
+  - WrenQuest67
   hasPlayed: 0

@@ -19,6 +19,5 @@ MonoBehaviour:
     choice: {fileID: 11400000, guid: 182674c3e6f454b4ab147835fe294da6, type: 2}
   isOneOff: 1
   flags:
-  - Act2
-  - HasAlcohol
+  - HasThresholdAlcohol1
   hasPlayed: 0
