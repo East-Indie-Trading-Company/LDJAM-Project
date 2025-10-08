@@ -560,6 +560,14 @@ PrefabInstance:
       propertyPath: 'townPositions.Array.data[6]'
       value: 
       objectReference: {fileID: 1035196382187157849}
+    - target: {fileID: 2214975548338723457, guid: 83e0c7bf86d8cda4c870047559912e36, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -782
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214975548338723457, guid: 83e0c7bf86d8cda4c870047559912e36, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 133
+      objectReference: {fileID: 0}
     - target: {fileID: 7935986483723907085, guid: 83e0c7bf86d8cda4c870047559912e36, type: 3}
       propertyPath: m_LocalPosition.x
       value: -216.4499
@@ -912,11 +920,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8734964864800667127, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -291.8
+      value: -291.9
       objectReference: {fileID: 0}
     - target: {fileID: 8734964864800667127, guid: 78fd78bd04d34134ea3ff884d456aa3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 69.7
+      value: 55.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
