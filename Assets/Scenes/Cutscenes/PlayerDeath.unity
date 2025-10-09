@@ -167,10 +167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -534,7 +534,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: And thus concludes your venture.The dragon has collected its due. You Died.
+  m_text: "And thus concludes your venture.The dragon has collected its due. \nYou
+    Died."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -859,10 +860,10 @@ RectTransform:
   - {fileID: 2060421311}
   m_Father: {fileID: 708667362}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 3, y: 35}
-  m_SizeDelta: {x: 217.86292, y: 44.4657}
+  m_AnchorMin: {x: 0.7784792, y: 0.04077778}
+  m_AnchorMax: {x: 0.89172924, y: 0.086}
+  m_AnchoredPosition: {x: -2.5, y: -0.5}
+  m_SizeDelta: {x: -1.137085, y: -4.5343018}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1628456423
 MonoBehaviour:
@@ -970,7 +971,7 @@ GameObject:
   - component: {fileID: 1795813287}
   - component: {fileID: 1795813286}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: TextBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -991,10 +992,10 @@ RectTransform:
   - {fileID: 899689075}
   m_Father: {fileID: 708667362}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.6798096, y: -97}
-  m_SizeDelta: {x: -307.3606, y: -320.2835}
+  m_AnchorMin: {x: 0.68100005, y: 0.10737037}
+  m_AnchorMax: {x: 0.9893335, y: 0.9202963}
+  m_AnchoredPosition: {x: -1.3450317, y: -2}
+  m_SizeDelta: {x: -4.809326, y: 5.152298}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1795813286
 MonoBehaviour:
