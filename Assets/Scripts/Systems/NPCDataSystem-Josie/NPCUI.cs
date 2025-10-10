@@ -9,6 +9,7 @@ public class NPCUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI npcNameText;
     [SerializeField] Image npcPortrait;
     [SerializeField] TextMeshProUGUI townNameText;
+    [SerializeField] Image townIcon;
     [SerializeField] TextMeshProUGUI npcText;
     [SerializeField] Button chatButton;
     [SerializeField] Button rumorButton;
@@ -57,9 +58,12 @@ public class NPCUI : MonoBehaviour
         }
 
 
-        // ✅ Only update UI if everything exists
+        // Only update UI if everything exists
         if (npcPortrait != null)
             npcPortrait.sprite = npcData.displayInfo.npcIcon;
+
+        if (townIcon != null)
+            townIcon.sprite = npcData.displayInfo.townIcon;
 
         if (npcNameText != null)
             npcNameText.text = npcData.displayInfo.npcName;
