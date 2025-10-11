@@ -545,46 +545,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutroCutsceneManager
   economyGoalHit: 0
-  reputationGoalHit: 1
+  reputationGoalHit: 0
   sidedWithDragon: 0
   dragonPic: {fileID: 1058496162}
   kingdomPic: {fileID: 1843916689}
   cutsceneText: {fileID: 899689076}
-  dragonEconomyReputationCopy: "Hero is the word that comes to mind when folks say
-    your name. You barely remember how you first arrived here: without a dime in
-    your pockets and marked for death. Such is the wealth and good reputation that
-    you manage to hoard for yourself. With your aid, the king\u2019s crusade was
-    a resounding success, eradicating once and for all the vile creature and its
-    egg. And you enjoyed an easy life, full of prosperity and surrounded by your
-    friends, without ever worrying about your financial stability.  "
+  dragonEconomyReputationCopy: 'Intrepid is the word that comes to mind when folks
+    say your name. You barely remember how you first arrived here: marked for death
+    by a deceiving red dragon. Such is the good reputation that you have nurtured
+    here. With your aid, the dragon accumulated enough wealth to protect its egg,
+    and quickly departed, yet not before bestowing upon you a magical spell: you
+    enjoyed a plentiful life, full of friends and wealth wherever you went, and without
+    ever worrying about your financial stability again.'
   dragonEconomyNoReputationCopy: "Reckless is the word that comes to mind when folks
     say your name \u2013 when they don\u2019t spit right after it. With your aid,
     Tussau concealed her egg in a gilded carapace and escaped the land before the
     king could reach her. However, paranoia followed suit and spread faster than
     the plague. You watched the kingdom tear itself apart from the top of your fortress
     made of greed and solitude. No folks ever come to visit you, nor will the caravans
-    reach your gates. "
-  dragonNoEconomyReputationCopy: "Ally is the word that comes to mind when folks
+    reach your gates."
+  dragonNoEconomyReputationCopy: Peculiar is the word that comes to mind when folks
     say your name. Although things could have worked better in your favor, you chose
-    what you thought was right, and the kingdom certainly noticed that. With your
-    aid, the king\u2019s crusade was a resounding success, eradicating the vile creature
-    and keeping its egg as a trophy. After that, you lived in a modest village with
-    easy access to everything you could possibly need. For a price, of course - you
-    were not past having to work to guarantee your income. "
-  dragonNoEconomyNoReputationCopy: "Despair is the word that comes to mind when most
-    folks think of you. It makes them wonder what made you such a hateful creature
-    to side with the dragon and cast away their good faith. Tussau massacred the
-    king\u2019s army, and the kingdom fell into ruins; she left with you and her
-    egg shortly after the nearby towns erected their blockades. Yet Tussau is merciful,
-    and despite your incredible failure, there is always another chance, in another
-    kingdom, where you shall be used for work once more.  "
-  noDragonEconomyReputationCopy: 'Intrepid is the word that comes to mind when folks
-    say your name. You barely remember how you first arrived here: marked for death
-    by a deceiving red dragon. Such is the good reputation that you have nurtured
-    here. With your aid, the dragon accumulated enough wealth to protect its egg,
-    and quickly departed, yet not before bestowing upon you a magical spell: you
-    enjoyed a plentiful life, full of friends and wealth wherever you went, and without
-    ever worrying about your financial stability again. '
+    what you thought was right, and the dragon certainly noticed that. With your
+    aid, Tussau concealed her egg in a gilded carapace and escaped the land before
+    the king could reach her. And with your newly formed friendships, you lived in
+    a modest village with easy access to everything you could possibly need. For
+    a price, of course - you were not past having to work.
+  dragonNoEconomyNoReputationCopy: "Vermin is the word that comes to mind when folks
+    say your name. Tussau massacred the king\u2019s army, and the kingdom fell into
+    ruins. She left with her egg shortly after the nearby towns erected their blockages;
+    panic had spread throughout the land, and nobody wanted to take you in. And who
+    would be such a fool to trust you after all that\u2019s happened? You spend the
+    rest of your days serving the crossroad tax collectors: the highwaymen - people
+    more cruel and vile than any dragon can be."
+  noDragonEconomyReputationCopy: "Hero is the word that comes to mind when folks
+    say your name. You barely remember how you first arrived here: without a dime
+    in your pockets and marked for death. Such is the wealth and good reputation
+    that you manage to hoard for yourself. With your aid, the king\u2019s crusade
+    was a resounding success, eradicating once and for all the vile creature and
+    its egg. And you enjoyed an easy life, full of prosperity and surrounded by your
+    friends, without ever worrying about your financial stability. "
   noDragonEconomyNoReputationCopy: "Ruthless is the word that comes to mind when
     folks say your name \u2013 if they think of you at all. With your aid, the king\u2019s
     crusade was a resounding success, eradicating the vile creature and keeping its
@@ -592,20 +592,18 @@ MonoBehaviour:
     was a plausible solution - decent, even. You were exiled to live on the outskirts
     of Coronia, in a fortress made of your own greed and solitude. No folks ever
     come to visit you, nor can the caravans reach your gates. "
-  noDragonNoEconomyReputationCopy: 'Peculiar is the word that comes to mind when
-    folks say your name. Although things could have worked better in your favor,
-    you chose what you thought was right, and the dragon certainly noticed that.
-    With your aid, Tussau concealed her egg in a gilded carapace and escaped the
-    land before the king could reach her. And with your newly formed friendships,
-    you lived in a modest village with easy access to everything you could possibly
-    need. For a price, of course - you were not past having to work. '
-  noDragonNoEconomyNoReputationCopy: "Vermin is the word that comes to mind when
-    most folks think of you. Tussau massacred the king\u2019s army, and the kingdom
-    fell into ruins. She left with her egg shortly after the nearby towns erected
-    their blockages; panic had spread throughout the land, and nobody wanted to take
-    you in. And who would be such a fool to trust you after all that\u2019s happened?
-    You spend the rest of your days serving the crossroad tax collectors: the highwaymen
-    - people more cruel and vile than any dragon can be. "
+  noDragonNoEconomyReputationCopy: "Ally is the word that comes to mind when folks
+    say your name. Although things could have worked better in your favor, you chose
+    what you thought was right, and the kingdom certainly noticed that. With your
+    aid, the king\u2019s crusade was a resounding success, eradicating the vile creature
+    and keeping its egg as a trophy. After that, you lived in a modest village with
+    easy access to everything you could possibly need. For a price, of course - you
+    were not past having to work to guarantee your income. "
+  noDragonNoEconomyNoReputationCopy: Useless is the word that comes to mind when
+    folks say your name. The king's army only barely managed to fend the dragon off,
+    no thanks to your pitiful aid. The dragon flew away to terrorize a new kindom,
+    bringing her egg with her. And you? You end up the same way you started. With
+    little gold and no friends, alone in a strange land.
 --- !u!1 &899689074
 GameObject:
   m_ObjectHideFlags: 0

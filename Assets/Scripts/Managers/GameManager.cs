@@ -6,7 +6,9 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Game settings")]
     [SerializeField] private int campaignMaxDays = 10;   // total days per cycle
+    public int economyGoal = 100000;
     private int daysRemaining;
 
     public static GameManager Instance { get; private set; }
