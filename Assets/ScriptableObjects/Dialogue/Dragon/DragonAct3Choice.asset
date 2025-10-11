@@ -21,7 +21,7 @@ MonoBehaviour:
     item: {fileID: 0}
     itemChangeValue: 0
     itemEffect: 0
-    goldChangeValue: 1500
+    goldChangeValue: 1000000
     goldEffect: 2
   optionB:
     buttonText: "You? An ally? I don\u2019t trust you. The kingdom has treated me
@@ -36,5 +36,5 @@ MonoBehaviour:
     itemEffect: 0
     goldChangeValue: 0
     goldEffect: 0
-  displayLine: Give the dragon 15,000 gold and become her ally? Or use your wealth
+  displayLine: Give the dragon 1,000,000 gold and become her ally? Or use your wealth
     to fund the king's army and defeat the dragon once and for all?

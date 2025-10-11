@@ -15,15 +15,15 @@ MonoBehaviour:
   optionA:
     buttonText: "I\u2019ve really no choice, have I? Here, just take my hard earned
       coin.  "
-    responseText: "Wise choice, two-legged. Your\u2026intelligence is growing on
-      me.  "
+    responseText: "Wise choice, two-legged. Your\u2026 intelligence is growing on
+      me... My hunger grows again. Obtain even more gold by our next meeting mortal."
     flagToRaise: 
     reputationChangeValue: 0
     reputationEffect: 0
     item: {fileID: 0}
     itemChangeValue: 0
     itemEffect: 0
-    goldChangeValue: 5000
+    goldChangeValue: 100000
     goldEffect: 2
   optionB:
     buttonText: "This is my coin. I\u2019ll fight you for it. "
@@ -36,4 +36,4 @@ MonoBehaviour:
     itemEffect: 0
     goldChangeValue: 0
     goldEffect: 0
-  displayLine: Give the dragon 5,000 gold?
+  displayLine: Give the dragon 100,000 gold?
