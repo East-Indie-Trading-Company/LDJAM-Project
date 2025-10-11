@@ -31,7 +31,7 @@ public class ReputationManager: MonoBehaviour
     public void SetReputation( float newReputation )
     {
         newReputation = Mathf.Clamp(newReputation, reputationBounds.x, reputationBounds.y);
-        if (newReputation < 0)
+        if (newReputation <= 0)
         {
             FlagManager.Instance.SetFlag("HighRep", false);
             FlagManager.Instance.SetFlag("LowRep", true);
@@ -47,15 +47,19 @@ public class ReputationManager: MonoBehaviour
             FlagManager.Instance.SetFlag("LowRep", false);
         }
         currentReputation = newReputation;
+        Debug.Log($"[ReputationManager] New Reputation: {currentReputation}");
+        PermaUIManager.Instance?.SetReputationUI(currentReputation);
     }
 
     public void AddReputation( float reputationToAdd )
     {
+        Debug.Log($"[ReputationManager] Old Reputation: {currentReputation}, add {reputationToAdd}");
         SetReputation(currentReputation += reputationToAdd);
     }
 
     public void SubtractReputation(float reputationToSubtract)
     {
+        Debug.Log($"[ReputationManager] Old Reputation: {currentReputation}, remove {reputationToSubtract}");
         SetReputation(currentReputation -= reputationToSubtract);
     }
 }
