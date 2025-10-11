@@ -3221,7 +3221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2735760163450282067, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: dailyInflationRate
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3180128321475397705, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3232,8 +3232,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 5f7012def1a33c348accc66bbdeb2cd8, type: 3}
     - target: {fileID: 4721831317631648393, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
+      propertyPath: economyGoal
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721831317631648393, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: campaignMaxDays
-      value: 3
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5094501463796226850, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: m_Name
@@ -3265,7 +3269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6715284717419336914, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: gold
-      value: 5000000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 6790693314756987065, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: m_IsActive
@@ -3273,11 +3277,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8600266343631513412, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: taxInterval
-      value: 3
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8600266343631513412, guid: 806aa30e07e16db40b8b3f670df4158f, type: 3}
       propertyPath: firstCollectionDay
-      value: 3
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

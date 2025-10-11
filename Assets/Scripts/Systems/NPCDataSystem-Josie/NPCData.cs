@@ -60,7 +60,7 @@ public class NPCData : ScriptableObject
 
         if (conversations.Length == 0)
         {
-            Debug.LogWarning("NO CONVERSATIONS IN THIS POOL {displayInfo.npcName}");
+            Debug.LogWarning($"NO CONVERSATIONS IN THIS POOL {displayInfo.npcName}");
         }
         Array.ForEach(conversations, convo =>
         {
@@ -109,7 +109,7 @@ public class NPCData : ScriptableObject
         // Check high priority
         if (highPriorityConvos.Count > 0) // Cannot start as empty when checking against filters
         {
-            highPriorityConvosCopy = highPriorityConvos;
+            highPriorityConvosCopy = new List<DialogueConversation>(highPriorityConvos);
             convoToWrite = FilterPulls(highPriorityConvos, repeatFilter);
             if (convoToWrite == null)
             {
@@ -123,7 +123,7 @@ public class NPCData : ScriptableObject
         {
             if (validConvos.Count > 0) // Cannot start as empty when checking against filters
             {
-                validConvosCopy = validConvos;
+                validConvosCopy = new List<DialogueConversation>(validConvos);
                 convoToWrite = FilterPulls(validConvos, repeatFilter);
                 if (convoToWrite == null)
                 {
