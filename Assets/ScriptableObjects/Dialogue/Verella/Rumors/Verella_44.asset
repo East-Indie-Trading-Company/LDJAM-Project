@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
   npc: {fileID: 11400000, guid: 1675d500d37ee3f4aa27191578a9adda, type: 2}
   lines:
-  - dialogueText: The Necropolis has crypts built upon tombs built upon catacombs
+  - dialogueText: The cemetery here has crypts built upon tombs built upon catacombs
       built upon mounds and soforth back through the ages.
     choice: {fileID: 0}
   isOneOff: 0

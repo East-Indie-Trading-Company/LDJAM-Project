@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
   npc: {fileID: 11400000, guid: 1675d500d37ee3f4aa27191578a9adda, type: 2}
   lines:
-  - dialogueText: "Every grave in the Necropolis faces east, toward the sunrise.
-      The Keepers say it\u2019s so the dead remember light."
+  - dialogueText: "Every grave faces east, toward the sunrise. The Keepers say it\u2019s
+      so the dead remember light."
     choice: {fileID: 0}
   isOneOff: 0
   flags: []

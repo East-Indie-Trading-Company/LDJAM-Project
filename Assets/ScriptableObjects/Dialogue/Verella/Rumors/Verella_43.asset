@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversation
   npc: {fileID: 11400000, guid: 1675d500d37ee3f4aa27191578a9adda, type: 2}
   lines:
-  - dialogueText: The Grand Necropolis has been a final resting place since the dawn
-      of time.
+  - dialogueText: This area has been a final resting place for many souls since the
+      dawn of time.
     choice: {fileID: 0}
   isOneOff: 0
   flags: []
