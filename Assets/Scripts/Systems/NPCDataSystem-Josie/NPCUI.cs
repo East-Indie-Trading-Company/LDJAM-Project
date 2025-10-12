@@ -24,12 +24,16 @@ public class NPCUI : MonoBehaviour
     }
     public void onChat()
     {
+        if (npcData.displayInfo != null)
+            AudioManager.Instance?.PlayRandomVocal(npcData.displayInfo.npcName);
         marketCanvas.SetActive(false);
         npcData.Talk();
     }
 
     public void onRumor()
     {
+        if (npcData.displayInfo != null)
+            AudioManager.Instance?.PlayRandomVocal(npcData.displayInfo.npcName);
         marketCanvas.SetActive(false);
         npcData.Rumor();
     }
