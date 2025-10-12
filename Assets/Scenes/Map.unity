@@ -786,6 +786,135 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &957298258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 957298260}
+  - component: {fileID: 957298259}
+  m_Layer: 0
+  m_Name: Click Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &957298259
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957298258}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: d98fa8124ef3abf43bd3425488ffe585, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &957298260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957298258}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -205.99455, y: 0, z: 17379.197}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &959146174
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,13 +1010,15 @@ GameObject:
   - component: {fileID: 1455723719}
   - component: {fileID: 1455723721}
   - component: {fileID: 1455723720}
+  - component: {fileID: 1455723723}
+  - component: {fileID: 1455723722}
   m_Layer: 5
-  m_Name: CityNameText
+  m_Name: TooltipText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1455723719
 RectTransform:
   m_ObjectHideFlags: 0
@@ -902,11 +1033,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1362646146}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -13.98}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 300, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1455723720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1006,6 +1137,162 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455723718}
   m_CullTransparentMesh: 1
+--- !u!225 &1455723722
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455723718}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1455723723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455723718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca555e38cbd8124cbb9e1d55b274a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverTooltip
+  canvasGroup: {fileID: 1455723722}
+  tooltipText: {fileID: 1455723720}
+  offset: {x: 15, y: -15}
+--- !u!1 &1571818459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1571818461}
+  - component: {fileID: 1571818460}
+  m_Layer: 0
+  m_Name: Hover Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1571818460
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571818459}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: a49a613a88cf4104dbbab862db6ef0fc, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.504
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1571818461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571818459}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -205.99455, y: 0, z: 17379.197}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1811043623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1329,6 +1616,14 @@ PrefabInstance:
       value: Styx & Stones
       objectReference: {fileID: 0}
     - target: {fileID: 2744296248350459223, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: clickSound
+      value: 
+      objectReference: {fileID: 957298259}
+    - target: {fileID: 2744296248350459223, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: hoverSound
+      value: 
+      objectReference: {fileID: 1571818460}
+    - target: {fileID: 2744296248350459223, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: cityNameText
       value: 
       objectReference: {fileID: 1455723720}
@@ -1376,6 +1671,14 @@ PrefabInstance:
       propertyPath: cityName
       value: Dursin
       objectReference: {fileID: 0}
+    - target: {fileID: 3420235362683287403, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: clickSound
+      value: 
+      objectReference: {fileID: 957298259}
+    - target: {fileID: 3420235362683287403, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: hoverSound
+      value: 
+      objectReference: {fileID: 1571818460}
     - target: {fileID: 3420235362683287403, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: cityNameText
       value: 
@@ -1493,6 +1796,14 @@ PrefabInstance:
       value: Taraval
       objectReference: {fileID: 0}
     - target: {fileID: 5190632109266097239, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: clickSound
+      value: 
+      objectReference: {fileID: 957298259}
+    - target: {fileID: 5190632109266097239, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: hoverSound
+      value: 
+      objectReference: {fileID: 1571818460}
+    - target: {fileID: 5190632109266097239, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: cityNameText
       value: 
       objectReference: {fileID: 1455723720}
@@ -1501,6 +1812,14 @@ PrefabInstance:
       value: Trestel
       objectReference: {fileID: 0}
     - target: {fileID: 5364631875048014287, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: clickSound
+      value: 
+      objectReference: {fileID: 957298259}
+    - target: {fileID: 5364631875048014287, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: hoverSound
+      value: 
+      objectReference: {fileID: 1571818460}
+    - target: {fileID: 5364631875048014287, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: cityNameText
       value: 
       objectReference: {fileID: 1455723720}
@@ -1508,6 +1827,14 @@ PrefabInstance:
       propertyPath: cityName
       value: Brightspire
       objectReference: {fileID: 0}
+    - target: {fileID: 5841945986588447185, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: clickSound
+      value: 
+      objectReference: {fileID: 957298259}
+    - target: {fileID: 5841945986588447185, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: hoverSound
+      value: 
+      objectReference: {fileID: 1571818460}
     - target: {fileID: 5841945986588447185, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: cityNameText
       value: 
@@ -1733,6 +2060,14 @@ PrefabInstance:
       value: Scorched Village
       objectReference: {fileID: 0}
     - target: {fileID: 8770977366487354996, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: clickSound
+      value: 
+      objectReference: {fileID: 957298259}
+    - target: {fileID: 8770977366487354996, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: hoverSound
+      value: 
+      objectReference: {fileID: 1571818460}
+    - target: {fileID: 8770977366487354996, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: cityNameText
       value: 
       objectReference: {fileID: 1455723720}
@@ -1744,6 +2079,14 @@ PrefabInstance:
       propertyPath: cityName
       value: Loch Haven
       objectReference: {fileID: 0}
+    - target: {fileID: 8958368428989041455, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: clickSound
+      value: 
+      objectReference: {fileID: 957298259}
+    - target: {fileID: 8958368428989041455, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: hoverSound
+      value: 
+      objectReference: {fileID: 1571818460}
     - target: {fileID: 8958368428989041455, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: cityNameText
       value: 
@@ -1834,3 +2177,5 @@ SceneRoots:
   - {fileID: 1035196382187157848}
   - {fileID: 3782838418469003763}
   - {fileID: 151751146}
+  - {fileID: 1571818461}
+  - {fileID: 957298260}
