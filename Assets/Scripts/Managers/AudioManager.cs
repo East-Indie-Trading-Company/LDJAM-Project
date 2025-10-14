@@ -54,14 +54,14 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip[] verellaSyllaVocalSoundEffects;
     [SerializeField] private AudioClip[] wrenVocalSoundEffects;
 
-    private const string VOCAL_DRAGON = "dragon";
+    private const string VOCAL_DRAGON = "tussaecollector";
     private const string VOCAL_EAPRAM = "eapram";
     private const string VOCAL_HECTOR = "hector";
     private const string VOCAL_HESTA = "hesta";
     private const string VOCAL_RUFKIN = "rufkin";
     private const string VOCAL_SIR_ELLIOT = "sirelliot";
     private const string VOCAL_TARQUE = "tarque";
-    private const string VOCAL_VERELLA_SYLLA = "verellasylla";
+    private const string VOCAL_VERELLA_SYLLA = "verellagravefeather";
     private const string VOCAL_WREN = "wren";
 
     private bool isMuted;
@@ -185,7 +185,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayRandomVocal(string name)
     {
-        string localizedName = name.ToLower(); // TODO: Remove whitespaces and combine to form one word
+        string localizedName = name.ToLower().Replace(" ", "").Replace("the", "");
 
         switch (localizedName)
         {

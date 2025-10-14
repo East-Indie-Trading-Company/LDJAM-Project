@@ -24,18 +24,23 @@ public class OutroCutsceneManager : MonoBehaviour
 
     public void Start()
     {
-        //load player vars
-        economyGoalHit = PlayerPrefs.GetInt("economyGoalHit") == 1 ? true : false;
-        reputationGoalHit = PlayerPrefs.GetInt("reputationGoalHit") == 1 ? true : false;
-        sidedWithDragon = PlayerPrefs.GetInt("sidedWithDragon") == 1 ? true : false;
-
-        if (sidedWithDragon)
+        if (Trading.InventoryManager.Instance.Gold >= GameManager.Instance.economyGoal)
         {
+            economyGoalHit = true;
+        }
+        if (ReputationManager.Instance.GetReputation() > 0)
+        {
+            reputationGoalHit = true;
+        }
+        if (FlagManager.Instance.GetFlag("EndGameDragon"))
+        {
+            Debug.Log("[OutroCutsceneManager] Set scene: End game dragon");
             dragonPic.SetActive(true);
             kingdomPic.SetActive(false);
         }
-        else
+        else if (FlagManager.Instance.GetFlag("EndGameKingdom"))
         {
+            Debug.Log("[OutroCutsceneManager] Set scene: End game kingdom");
             dragonPic.SetActive(false);
             kingdomPic.SetActive(true);
         }
@@ -45,16 +50,18 @@ public class OutroCutsceneManager : MonoBehaviour
 
     public void SetEndText()
     {
-        if (sidedWithDragon)
+        if (FlagManager.Instance.GetFlag("EndGameDragon"))
         {
             if(economyGoalHit)
             {
                 if (reputationGoalHit)
                 {
+                    Debug.Log("[OutroCutsceneManager] End scene: dragonEconomyReputation");
                     cutsceneText.text = dragonEconomyReputationCopy;
                 }
                 else
                 {
+                    Debug.Log("[OutroCutsceneManager] End scene: dragonEconomyNoReputation");
                     cutsceneText.text = dragonEconomyNoReputationCopy;
                 }
             }
@@ -62,24 +69,28 @@ public class OutroCutsceneManager : MonoBehaviour
             {
                 if (reputationGoalHit)
                 {
+                    Debug.Log("[OutroCutsceneManager] End scene: dragonNoEconomyReputation");
                     cutsceneText.text = dragonNoEconomyReputationCopy;
                 }
                 else
                 {
+                    Debug.Log("[OutroCutsceneManager] End scene: dragonNoEconomyNoReputation");
                     cutsceneText.text = dragonNoEconomyNoReputationCopy;
                 }
             }
         }
-        else
+        else if (FlagManager.Instance.GetFlag("EndGameKingdom"))
         {
             if (economyGoalHit)
             {
                 if (reputationGoalHit)
                 {
+                    Debug.Log("[OutroCutsceneManager] End scene: noDragonEconomyReputation");
                     cutsceneText.text = noDragonEconomyReputationCopy;
                 }
                 else
                 {
+                    Debug.Log("[OutroCutsceneManager] End scene: noDragonEconomyNoReputation");
                     cutsceneText.text = noDragonEconomyNoReputationCopy;
                 }
             }
@@ -87,10 +98,12 @@ public class OutroCutsceneManager : MonoBehaviour
             {
                 if (reputationGoalHit)
                 {
+                    Debug.Log("[OutroCutsceneManager] End scene: noDragonNoEconomyReputation");
                     cutsceneText.text = noDragonNoEconomyReputationCopy;
                 }
                 else
                 {
+                    Debug.Log("[OutroCutsceneManager] End scene: noDragonNoEconomyNoReputation");
                     cutsceneText.text = noDragonNoEconomyNoReputationCopy;
                 }
             }

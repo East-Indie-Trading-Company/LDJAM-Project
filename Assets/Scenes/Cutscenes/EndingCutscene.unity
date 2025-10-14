@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 164429235}
   - component: {fileID: 164429234}
   m_Layer: 5
-  m_Name: Panel (1)
+  m_Name: TextBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,13 +148,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 899689075}
   m_Father: {fileID: 708667362}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: -79}
-  m_SizeDelta: {x: 471.9504, y: 244.7323}
+  m_AnchorMin: {x: 0.31912503, y: 0.1971852}
+  m_AnchorMax: {x: 0.68741655, y: 0.53514814}
+  m_AnchoredPosition: {x: -6, y: -3.8168335}
+  m_SizeDelta: {x: 14, y: 18.36615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &164429234
 MonoBehaviour:
@@ -242,12 +243,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -408,7 +409,6 @@ RectTransform:
   - {fileID: 1058496163}
   - {fileID: 1843916690}
   - {fileID: 164429233}
-  - {fileID: 899689075}
   - {fileID: 1628456422}
   m_Father: {fileID: 346104632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -459,8 +459,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13, y: -102}
-  m_SizeDelta: {x: 1538.2032, y: 1145.7866}
+  m_AnchoredPosition: {x: -90.878, y: -102}
+  m_SizeDelta: {x: 1940.75, y: 1145.787}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &718589737
 MonoBehaviour:
@@ -545,46 +545,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutroCutsceneManager
   economyGoalHit: 0
-  reputationGoalHit: 1
+  reputationGoalHit: 0
   sidedWithDragon: 0
   dragonPic: {fileID: 1058496162}
   kingdomPic: {fileID: 1843916689}
   cutsceneText: {fileID: 899689076}
-  dragonEconomyReputationCopy: "Hero is the word that comes to mind when folks say
-    your name. You barely remember how you first arrived here: without a dime in
-    your pockets and marked for death. Such is the wealth and good reputation that
-    you manage to hoard for yourself. With your aid, the king\u2019s crusade was
-    a resounding success, eradicating once and for all the vile creature and its
-    egg. And you enjoyed an easy life, full of prosperity and surrounded by your
-    friends, without ever worrying about your financial stability.  "
+  dragonEconomyReputationCopy: 'Intrepid is the word that comes to mind when folks
+    say your name. You barely remember how you first arrived here: marked for death
+    by a deceiving red dragon. Such is the good reputation that you have nurtured
+    here. With your aid, the dragon accumulated enough wealth to protect its egg,
+    and quickly departed, yet not before bestowing upon you a magical spell: you
+    enjoyed a plentiful life, full of friends and wealth wherever you went, and without
+    ever worrying about your financial stability again.'
   dragonEconomyNoReputationCopy: "Reckless is the word that comes to mind when folks
     say your name \u2013 when they don\u2019t spit right after it. With your aid,
     Tussau concealed her egg in a gilded carapace and escaped the land before the
     king could reach her. However, paranoia followed suit and spread faster than
     the plague. You watched the kingdom tear itself apart from the top of your fortress
     made of greed and solitude. No folks ever come to visit you, nor will the caravans
-    reach your gates. "
-  dragonNoEconomyReputationCopy: "Ally is the word that comes to mind when folks
+    reach your gates."
+  dragonNoEconomyReputationCopy: Peculiar is the word that comes to mind when folks
     say your name. Although things could have worked better in your favor, you chose
-    what you thought was right, and the kingdom certainly noticed that. With your
-    aid, the king\u2019s crusade was a resounding success, eradicating the vile creature
-    and keeping its egg as a trophy. After that, you lived in a modest village with
-    easy access to everything you could possibly need. For a price, of course - you
-    were not past having to work to guarantee your income. "
-  dragonNoEconomyNoReputationCopy: "Despair is the word that comes to mind when most
-    folks think of you. It makes them wonder what made you such a hateful creature
-    to side with the dragon and cast away their good faith. Tussau massacred the
-    king\u2019s army, and the kingdom fell into ruins; she left with you and her
-    egg shortly after the nearby towns erected their blockades. Yet Tussau is merciful,
-    and despite your incredible failure, there is always another chance, in another
-    kingdom, where you shall be used for work once more.  "
-  noDragonEconomyReputationCopy: 'Intrepid is the word that comes to mind when folks
-    say your name. You barely remember how you first arrived here: marked for death
-    by a deceiving red dragon. Such is the good reputation that you have nurtured
-    here. With your aid, the dragon accumulated enough wealth to protect its egg,
-    and quickly departed, yet not before bestowing upon you a magical spell: you
-    enjoyed a plentiful life, full of friends and wealth wherever you went, and without
-    ever worrying about your financial stability again. '
+    what you thought was right, and the dragon certainly noticed that. With your
+    aid, Tussau concealed her egg in a gilded carapace and escaped the land before
+    the king could reach her. And with your newly formed friendships, you lived in
+    a modest village with easy access to everything you could possibly need. For
+    a price, of course - you were not past having to work.
+  dragonNoEconomyNoReputationCopy: "Vermin is the word that comes to mind when folks
+    say your name. Tussau massacred the king\u2019s army, and the kingdom fell into
+    ruins. She left with her egg shortly after the nearby towns erected their blockages;
+    panic had spread throughout the land, and nobody wanted to take you in. And who
+    would be such a fool to trust you after all that\u2019s happened? You spend the
+    rest of your days serving the crossroad tax collectors: the highwaymen - people
+    more cruel and vile than any dragon can be."
+  noDragonEconomyReputationCopy: "Hero is the word that comes to mind when folks
+    say your name. You barely remember how you first arrived here: without a dime
+    in your pockets and marked for death. Such is the wealth and good reputation
+    that you manage to hoard for yourself. With your aid, the king\u2019s crusade
+    was a resounding success, eradicating once and for all the vile creature and
+    its egg. And you enjoyed an easy life, full of prosperity and surrounded by your
+    friends, without ever worrying about your financial stability. "
   noDragonEconomyNoReputationCopy: "Ruthless is the word that comes to mind when
     folks say your name \u2013 if they think of you at all. With your aid, the king\u2019s
     crusade was a resounding success, eradicating the vile creature and keeping its
@@ -592,20 +592,18 @@ MonoBehaviour:
     was a plausible solution - decent, even. You were exiled to live on the outskirts
     of Coronia, in a fortress made of your own greed and solitude. No folks ever
     come to visit you, nor can the caravans reach your gates. "
-  noDragonNoEconomyReputationCopy: 'Peculiar is the word that comes to mind when
-    folks say your name. Although things could have worked better in your favor,
-    you chose what you thought was right, and the dragon certainly noticed that.
-    With your aid, Tussau concealed her egg in a gilded carapace and escaped the
-    land before the king could reach her. And with your newly formed friendships,
-    you lived in a modest village with easy access to everything you could possibly
-    need. For a price, of course - you were not past having to work. '
-  noDragonNoEconomyNoReputationCopy: "Vermin is the word that comes to mind when
-    most folks think of you. Tussau massacred the king\u2019s army, and the kingdom
-    fell into ruins. She left with her egg shortly after the nearby towns erected
-    their blockages; panic had spread throughout the land, and nobody wanted to take
-    you in. And who would be such a fool to trust you after all that\u2019s happened?
-    You spend the rest of your days serving the crossroad tax collectors: the highwaymen
-    - people more cruel and vile than any dragon can be. "
+  noDragonNoEconomyReputationCopy: "Ally is the word that comes to mind when folks
+    say your name. Although things could have worked better in your favor, you chose
+    what you thought was right, and the kingdom certainly noticed that. With your
+    aid, the king\u2019s crusade was a resounding success, eradicating the vile creature
+    and keeping its egg as a trophy. After that, you lived in a modest village with
+    easy access to everything you could possibly need. For a price, of course - you
+    were not past having to work to guarantee your income. "
+  noDragonNoEconomyNoReputationCopy: Useless is the word that comes to mind when
+    folks say your name. The king's army only barely managed to fend the dragon off,
+    no thanks to your pitiful aid. The dragon flew away to terrorize a new kindom,
+    bringing her egg with her. And you? You end up the same way you started. With
+    little gold and no friends, alone in a strange land.
 --- !u!1 &899689074
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,17 +629,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899689074}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 708667362}
+  m_Father: {fileID: 164429233}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13.1798, y: -74.8711}
-  m_SizeDelta: {x: 426.4986, y: 197.6907}
+  m_AnchorMin: {x: 0.069358505, y: 0.12786196}
+  m_AnchorMax: {x: 0.9266132, y: 0.87226444}
+  m_AnchoredPosition: {x: 1.5, y: 0}
+  m_SizeDelta: {x: 3, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899689076
 MonoBehaviour:
@@ -698,8 +696,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -782,10 +780,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 708667362}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: -0}
-  m_SizeDelta: {x: 1005.5583, y: 586.6677}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1058496164
 MonoBehaviour:
@@ -1051,10 +1049,10 @@ RectTransform:
   - {fileID: 2060421311}
   m_Father: {fileID: 708667362}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: -237}
-  m_SizeDelta: {x: 217.86292, y: 44.4657}
+  m_AnchorMin: {x: 0.44216666, y: 0.11940741}
+  m_AnchorMax: {x: 0.55700004, y: 0.15559258}
+  m_AnchoredPosition: {x: 4.5, y: -3.500061}
+  m_SizeDelta: {x: -3.137085, y: 5.4656982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1628456423
 MonoBehaviour:
@@ -1182,10 +1180,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 708667362}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.000011, y: 0.0000076293945}
-  m_SizeDelta: {x: 1005.5583, y: 586.6677}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1843916691
 MonoBehaviour:

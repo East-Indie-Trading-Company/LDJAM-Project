@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d723cab5d830c774c9dadb2f9f0e78ea, type: 3}
   m_Name: Town_LockHaven_Stock
   m_EditorClassIdentifier: Assembly-CSharp::Trading.TownStock
-  townName: Trestel
+  townName: Lock Haven
   notes: 
   market:
   - item: {fileID: 11400000, guid: cd6db6897c119934d8cfefc7a6db8ba2, type: 2}

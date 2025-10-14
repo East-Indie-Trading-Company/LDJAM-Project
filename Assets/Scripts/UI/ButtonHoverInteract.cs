@@ -5,36 +5,48 @@ public class HoverInteract : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
     private Vector3 originalScale;
     private Vector3 hoverScale = new Vector3(.1f, .1f, .1f);
-    private AudioSource hoverSound;
-    private AudioSource clickSound;
+
+    [Header("City Info")]
+    [SerializeField] private string cityName;
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource hoverSound;
+    [SerializeField] private AudioSource clickSound;
 
     private void Awake()
     {
         originalScale = transform.localScale;
 
-        GameObject hoverObj = GameObject.Find("hoverSound");
-        if (hoverObj != null)
-            hoverSound = hoverObj.GetComponent<AudioSource>();
+        if (hoverSound == null)
+        {
+            GameObject h = GameObject.Find("hoverSound");
+            if (h != null) hoverSound = h.GetComponent<AudioSource>();
+        }
 
-        GameObject clickObj = GameObject.Find("clickSound");
-        if (clickObj != null)
-            clickSound = clickObj.GetComponent<AudioSource>();
+        if (clickSound == null)
+        {
+            GameObject c = GameObject.Find("clickSound");
+            if (c != null) clickSound = c.GetComponent<AudioSource>();
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         transform.localScale = originalScale + hoverScale;
-        Debug.Log("Hover sound played");
         hoverSound?.Play();
+        HoverTooltip.Instance?.Show(cityName);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         transform.localScale = originalScale;
+        HoverTooltip.Instance?.Hide();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         clickSound?.Play();
+        HoverTooltip.Instance?.Hide();
+        Debug.Log($"Clicked {cityName}");
     }
 }

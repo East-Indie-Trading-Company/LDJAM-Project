@@ -15,14 +15,15 @@ MonoBehaviour:
   optionA:
     buttonText: Here take it. I value my life.
     responseText: "Wise choice, two-legged. I shall take my share. Perhaps you aren\u2019t
-      as mindless as other mortals."
+      as mindless as other mortals. I shall expect a greater hoard the next time
+      I visit. Do not disappoint me."
     flagToRaise: 
     reputationChangeValue: 0
     reputationEffect: 0
     item: {fileID: 0}
     itemChangeValue: 0
     itemEffect: 0
-    goldChangeValue: 1000
+    goldChangeValue: 5000
     goldEffect: 2
   optionB:
     buttonText: "I earned these resources. I\u2019m not handing them over. "
@@ -36,4 +37,4 @@ MonoBehaviour:
     itemEffect: 0
     goldChangeValue: 0
     goldEffect: 0
-  displayLine: Give the dragon 1,000 gold?
+  displayLine: Give the dragon 5,000 gold?
