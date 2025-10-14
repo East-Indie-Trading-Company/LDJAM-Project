@@ -1515,6 +1515,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -15
       objectReference: {fileID: 0}
+    - target: {fileID: 902338287807503827, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: townName
+      value: Lock
+      objectReference: {fileID: 0}
     - target: {fileID: 1190866909349830911, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_LocalPosition.x
       value: -216.4499
@@ -1574,6 +1578,10 @@ PrefabInstance:
     - target: {fileID: 1715143261864960073, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915692109390815627, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
+      propertyPath: townName
+      value: Dursim
       objectReference: {fileID: 0}
     - target: {fileID: 2025068391747529984, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1669,7 +1677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3420235362683287403, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: cityName
-      value: Dursin
+      value: Dursim
       objectReference: {fileID: 0}
     - target: {fileID: 3420235362683287403, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: clickSound
@@ -2077,7 +2085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8958368428989041455, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: cityName
-      value: Loch Haven
+      value: Lock Haven
       objectReference: {fileID: 0}
     - target: {fileID: 8958368428989041455, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
       propertyPath: clickSound
@@ -2091,7 +2099,8 @@ PrefabInstance:
       propertyPath: cityNameText
       value: 
       objectReference: {fileID: 1455723720}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7008212477702466397, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4453539115461527912, guid: 4e571bdc7e0dc434d80e9ee18cd1dcde, type: 3}
