@@ -31,11 +31,17 @@ public class TownUI : MonoBehaviour
             Debug.LogWarning($"[TownUI] TownStock not assigned!");
         }
 
+        // Play town ambience
+        AudioManager.Instance?.PlayTownAmbience(newData.displayInfo.townName);
+
     }
 
     public void RemoveTownUI()
     {
         npcUI.CloseUI();
+
+        // Play map ambience
+        AudioManager.Instance?.PlayTownAmbience(AudioManager.AMBIENCE_MAP);
     }
     
 }

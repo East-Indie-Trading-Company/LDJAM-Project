@@ -72,6 +72,7 @@ public class AudioManager : MonoBehaviour
     private const string AMBIENCE_STYX_STONES = "styxandstones";
     private const string AMBIENCE_TARAVAL = "taraval";
     private const string AMBIENCE_TRESTEL = "trestel";
+    public static string AMBIENCE_MAP = "map";
 
     private bool isMuted;
 
@@ -108,8 +109,8 @@ public class AudioManager : MonoBehaviour
 
         if (townSFXSource == null)
         {
-            townSFXSource = gameObject.GetComponent<AudioSource>();
-            townSFXSource.loop = false;
+            townSFXSource = gameObject.AddComponent<AudioSource>();
+            townSFXSource.loop = true;
             townSFXSource.playOnAwake = false;
         }
 

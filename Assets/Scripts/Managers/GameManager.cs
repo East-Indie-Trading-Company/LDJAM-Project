@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour
     [Header("Events")]
     public UnityEvent<int> onCurrencyChanged;
 
-    private const string AMBIENCE_MAP = "map";
 
     private void Awake()
     {
@@ -158,7 +157,6 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("[GameManager] Returned to world map view");
         currentTown = null;
-        AudioManager.Instance?.PlayTownAmbience(AMBIENCE_MAP);
     }
 
     // --- PERMA UI UPDATE ---
