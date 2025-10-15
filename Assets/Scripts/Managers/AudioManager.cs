@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
     [Header("Setup")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioSource townSFXSource;
     [SerializeField] private AudioClip currentClip;
     [SerializeField] private AudioClip[] soundEffects;
     [Range(0f, 1f)] [SerializeField] private float defaultVolume = 0.8f;
@@ -64,6 +65,14 @@ public class AudioManager : MonoBehaviour
     private const string VOCAL_VERELLA_SYLLA = "verellagravefeather";
     private const string VOCAL_WREN = "wren";
 
+    private const string AMBIENCE_BRIGHTSPIRE = "brightspire";
+    private const string AMBIENCE_DURSIM = "dursim";
+    private const string AMBIENCE_LOCKHAVEN = "lockhaven";
+    private const string AMBIENCE_SCORCHED_VILLAGE = "scorchedvillage";
+    private const string AMBIENCE_STYX_STONES = "styxandstones";
+    private const string AMBIENCE_TARAVAL = "taraval";
+    private const string AMBIENCE_TRESTEL = "trestel";
+
     private bool isMuted;
 
     private int currentBGMIndex;
@@ -95,6 +104,13 @@ public class AudioManager : MonoBehaviour
             sfxSource = gameObject.AddComponent<AudioSource>();
             sfxSource.loop = false;
             sfxSource.playOnAwake = false;
+        }
+
+        if (townSFXSource == null)
+        {
+            townSFXSource = gameObject.GetComponent<AudioSource>();
+            townSFXSource.loop = false;
+            townSFXSource.playOnAwake = false;
         }
 
         audioSource.volume = defaultVolume;
@@ -142,6 +158,22 @@ public class AudioManager : MonoBehaviour
 
         sfxSource.clip = clip;
         sfxSource.Play();
+    }
+
+    private void PlayTownSFXMusic(AudioClip clip)
+    {
+        if (clip == null)
+        {
+            return;
+        }
+
+        if (townSFXSource == null)
+        {
+            return;
+        }
+
+        townSFXSource.clip = clip;
+        townSFXSource.Play();
     }
 
     private AudioClip GetRandomVocalClip(AudioClip[] vocalAudioClipArray)
@@ -218,6 +250,39 @@ public class AudioManager : MonoBehaviour
                 break;
             default:
                 PlaySFXMusic(GetRandomVocalClip(dragonVocalSoundEffects));
+                break;
+        }
+    }
+
+    public void PlayTownAmbience(string name)
+    {
+        string localizedName = name.ToLower().Replace(" ", "").Replace("the", "");
+
+        switch (localizedName)
+        {
+            case AMBIENCE_BRIGHTSPIRE:
+                PlayTownSFXMusic(brightSpireAudioClip);
+                break;
+            case AMBIENCE_DURSIM:
+                PlayTownSFXMusic(dursimAudioClip);
+                break;
+            case AMBIENCE_LOCKHAVEN:
+                PlayTownSFXMusic(lockHavenAudioClip);
+                break;
+            case AMBIENCE_SCORCHED_VILLAGE:
+                PlayTownSFXMusic(scorchedVillageAudioClip);
+                break;
+            case AMBIENCE_STYX_STONES:
+                PlayTownSFXMusic(styxStonesAudioClip);
+                break;
+            case AMBIENCE_TARAVAL:
+                PlayTownSFXMusic(taravalAudioClip);
+                break;
+            case AMBIENCE_TRESTEL:
+                PlayTownSFXMusic(trestelAudioClip);
+                break;
+            default:
+                PlayTownSFXMusic(mapScreenAudioClip);
                 break;
         }
     }

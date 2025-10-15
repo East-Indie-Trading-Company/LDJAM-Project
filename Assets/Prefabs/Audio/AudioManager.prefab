@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   audioSource: {fileID: 0}
   sfxSource: {fileID: 0}
+  townSFXSource: {fileID: 0}
   currentClip: {fileID: 8300000, guid: 5b8c06b7f8edacd409ac11255915197a, type: 3}
   soundEffects: []
   defaultVolume: 0.8
@@ -67,14 +68,14 @@ MonoBehaviour:
   useCoinsAudioClip: {fileID: 8300000, guid: a49a613a88cf4104dbbab862db6ef0fc, type: 3}
   weaponsAudioClip: {fileID: 8300000, guid: e71ec59387c4f63498dd6e28f75d4199, type: 3}
   buyItemAudioClip: {fileID: 0}
-  styxStonesAudioClip: {fileID: 8300000, guid: e2634b51e22b6a449a68744028525906, type: 3}
-  brightSpireAudioClip: {fileID: 8300000, guid: 2788001d596fc3b4da40b0852f978985, type: 3}
-  dursimAudioClip: {fileID: 8300000, guid: 9d570ab75f254ca4691389630aef8142, type: 3}
-  lockHavenAudioClip: {fileID: 8300000, guid: 112e1c8faac5fde4285a3435c5a923f1, type: 3}
-  scorchedVillageAudioClip: {fileID: 8300000, guid: d81be3add4f8de446af1b7b012529d10, type: 3}
-  trestelAudioClip: {fileID: 8300000, guid: 269e181e8f8777648ba6aecc6cf451fd, type: 3}
-  mapScreenAudioClip: {fileID: 8300000, guid: 128b481a66c263a4b807092507d88c8f, type: 3}
-  taravalAudioClip: {fileID: 8300000, guid: d9a5f3efff47f9343830c2e141e3af20, type: 3}
+  styxStonesAudioClip: {fileID: 8300000, guid: 7ea4a325e7c4bb34c9baed77c0327115, type: 3}
+  brightSpireAudioClip: {fileID: 8300000, guid: 640826913b9065e4db11e31f2b59bfc5, type: 3}
+  dursimAudioClip: {fileID: 8300000, guid: 846e9ba8265b9ec4fa7ba355e5c73b90, type: 3}
+  lockHavenAudioClip: {fileID: 8300000, guid: 4ce64359421fc7047a5dcb590f49fc84, type: 3}
+  scorchedVillageAudioClip: {fileID: 8300000, guid: 1aedebf85aca0074399c2110828c8bac, type: 3}
+  trestelAudioClip: {fileID: 8300000, guid: a632fc26f84db524c891698207bb9476, type: 3}
+  mapScreenAudioClip: {fileID: 8300000, guid: b69d7e8f520b6fb44816ef50b5d5916e, type: 3}
+  taravalAudioClip: {fileID: 8300000, guid: 02c6bc0076689f0478c439f880dfe950, type: 3}
   dragonVocalSoundEffects:
   - {fileID: 8300000, guid: 3cfc22fddc0e8bd41b9fb2e1daf222cf, type: 3}
   - {fileID: 8300000, guid: f3fbddc4d3c0db04a8693af01b198f7a, type: 3}
