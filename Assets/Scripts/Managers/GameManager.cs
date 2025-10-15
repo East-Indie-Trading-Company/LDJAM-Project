@@ -128,7 +128,6 @@ public class GameManager : MonoBehaviour
     public void EnterTown(TownData town)
     {
         currentTown = town;
-        AudioManager.Instance?.PlayTownAmbience(town.townName);
         Debug.Log($"[GameManager] Entered town: {town.townName}");
     }
 
