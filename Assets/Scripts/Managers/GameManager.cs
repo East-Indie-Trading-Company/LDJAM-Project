@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     [Header("Events")]
     public UnityEvent<int> onCurrencyChanged;
 
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
