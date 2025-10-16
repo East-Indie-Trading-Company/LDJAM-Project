@@ -80,7 +80,7 @@ public class NPCData : ScriptableObject
                         }
                         else // If flag is true
                         {
-                            if (!(flag == "Act1" || flag == "Act2" || flag == "Act3" || flag == "highRep" || flag == "lowRep")) // Check if the flag is an act or rep requirement
+                            if (!(flag == "Act1" || flag == "Act2" || flag == "Act3" || flag == "HighRep" || flag == "LowRep")) // Check if the flag is an act or rep requirement
                             {
                                 isHighPriority = true; // Mark this convo as higher priority if unique
                             }
