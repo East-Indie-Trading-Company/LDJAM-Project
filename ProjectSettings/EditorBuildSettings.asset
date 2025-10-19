@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/MainScenes/MainMenu.unity
     guid: d40696706e31641c5a919882d16a34d9
   - enabled: 0
     path: Assets/Scenes/TestScenes/TestLocalMika.unity
@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: 5748674e5e635d041835d7dfbe24f70b
   - enabled: 1
-    path: Assets/Scenes/Map.unity
+    path: Assets/Scenes/MainScenes/Map.unity
     guid: cbaa263b477f9364e953670cd167540d
   - enabled: 1
     path: Assets/Scenes/Cutscenes/EndingCutscene.unity
