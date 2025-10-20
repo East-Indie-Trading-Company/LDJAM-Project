@@ -41,6 +41,9 @@ public class PermaUIManager: MonoBehaviour
         if (scene.name == "Map")
         {
             permaUICanvas.SetActive(true);
+
+            // Play map town ambience music when the scene is first loaded
+            AudioManager.Instance?.PlayTownAmbience(AudioManager.AMBIENCE_MAP);
         }
     }
 
